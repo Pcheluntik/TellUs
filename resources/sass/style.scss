@@ -25,7 +25,6 @@ $slick-next-character: "\2192" !default;
   color: #{$colorBoldFont};
   line-height: $fontBoldSize + 0.3rem;
 }
-
 img {
   width: 100%;
   height: auto;
@@ -67,13 +66,22 @@ header {
 
 
     .nav-pannel {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       .logo {
         margin-top: 34px;
-        flex: none;
+        -webkit-box-flex: 0;
+            -ms-flex: none;
+                flex: none;
       }
 
       nav {
@@ -128,7 +136,6 @@ header {
           padding:  15px 36px;
 
           -webkit-box-shadow: 0px 20px 40px -15px #37e6dd;
-          -moz-box-shadow: 0px 20px 40px -15px #37e6dd;
           box-shadow: 0px 20px 40px -15px #37e6dd;
 
           border: none;
@@ -185,14 +192,28 @@ h3 {
     border-bottom: 1px solid rgba(89,92,94,1);
     width: 100%;
     padding-bottom: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       padding: 0;
       width: 90%;
       &:after {
@@ -223,7 +244,8 @@ h3 {
           img {
 
           width: 85px;
-          object-fit: contain;
+          -o-object-fit: contain;
+             object-fit: contain;
           }
         }
       }
@@ -246,8 +268,12 @@ h3 {
   }
 
   .reason-cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-bottom: 100px;
 
     .col {
@@ -266,8 +292,13 @@ h3 {
   .new-stock_carousel {
     margin-top: 70px;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding-left: 0;
     position: relative;
 
@@ -328,7 +359,13 @@ h3 {
       background-repeat: no-repeat;
       background-size: contain;
 
-      transform: scaleX(-1)
+      -webkit-transform: scaleX(-1)
+                translateY(-23px);
+
+          -ms-transform: scaleX(-1)
+                translateY(-23px);
+
+              transform: scaleX(-1)
                 translateY(-23px);
 
     }
@@ -337,11 +374,20 @@ h3 {
 
 .tegs {
   font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 
   button {
     display: none !important;
@@ -352,7 +398,9 @@ h3 {
   }
 
   .tag {
-    flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     padding: 0 4px;
     margin-right: 3px;
     background-color: #fff;
@@ -387,8 +435,13 @@ h4 {
   background-color: $colorBlackBackground;
   color: $colorFontAtBlackBcg;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 
 
   h2 {
@@ -422,7 +475,8 @@ h4 {
     width: 530px;
     left: 15%;
     top: 88px;
-    box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.35);
   }
 
   .col {
@@ -440,10 +494,17 @@ h4 {
     margin-bottom: 152px;
   }
   .work_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     position: relative;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 110px;
     .worked {
       padding-left: 100px;
@@ -505,7 +566,8 @@ h4 {
       @include boldText($fontBoldSize: 1.5rem, $colorBoldFont: #fff);
     }
     img {
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
     }
   }
 }
@@ -534,17 +596,34 @@ h4 {
 
 
 .main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 35px;
   padding-bottom: 30px;
   .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -558,12 +637,22 @@ h4 {
     }
   }
   .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding-top: 23px;
     ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -577,7 +666,6 @@ h4 {
 
   }
 }
-
 
 .copyright {
   background-color: #fff;
