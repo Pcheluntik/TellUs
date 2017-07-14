@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TellUs</title>
+  <link rel="stylesheet" href="resources/sass/style.scss">
+  <link rel="stylesheet" href="resources/css/style.css">
+
+  <link rel="stylesheet" href="resources/js/slick/slick.css">
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="resources/js/masonry.min.js"></script>
+  <script src="resources/js/images-loaded.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid">
+      <div class="nav-pannel">
+        <div class="logo">
+          <img src="resources/img/logo.png" alt="TellUs" width="182" height="64">
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="">Категории</a>
+            </li>
+            <li>
+              <a href="">О нас</a>
+            </li>
+            <li>
+              <a href="">Поиск</a>
+            </li>
+            <li>
+              <a href="">Профиль</a>
+            </li>
+            <li class="button">
+              <a href="">Стать партнером</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="search">
+        <h1>Найдем скидки</h1>
+        <p>Мы поможем получить скидку в твоем любимом заведении.</p>
+        <div class="search_panel">
+          <form class="" action="" method="post">
+            <input type="text" name="search" placeholder="Введи название заведения">
+            <label for="search_ok"></label>
+            <input type="submit" id="search_ok" value="">
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-fluid category">
+
+      <h2>Категории услуг</h2>
+      <div class="category_main-list">
+        <ul>
+          <li>
+            <a href="">
+              <p class="stock-quantity">135</p>
+              <img src="resources\img\category1.png" alt="">
+              <p>Рестораны</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="stock-quantity">55</p>
+              <img src="resources\img\category2.png" alt="">
+              <p>Косметика и парфюмерия</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="stock-quantity">35</p>
+              <img src="resources\img\category3.png" alt="">
+              <p>Магазины одежды</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="stock-quantity">1358</p>
+              <img src="resources\img\category4.png" alt="">
+              <p>Магазины бытовой техники</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="stock-quantity">135</p>
+              <img src="resources\img\category5.png" alt="">
+              <p>Цветочные магазины</p>
+            </a>
+          </li>
+        </ul>
+        <div class="category_show-more">
+          <p>Смотреть еще</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reason container-fluid">
+      <h2>Почему это выгодно</h2>
+      <div class="reason-cols">
+        <div class="col">
+          <img src="resources\img\reason1.png" alt="Выгода для клиентов" width="481" height="341">
+          <h3>Выгода для клиентов</h3>
+          <p>Возможность получить моментальную скидку, для это вам не нужно покупать купоны и количество скидок не ограничено. Вы сможете это сделать всего в несколько кликов, совершенно анонимно, а ваш отзыв пойдет напрямую директору заведенияю</p>
+        </div>
+        <div class="col">
+          <img src="resources\img\reason2.png" alt="Выгода для партнеров" width="481" height="341">
+          <h3>Выгода для партнеров</h3>
+          <p>Возможность увидеть, что нужно вашим клиентам, поток клиентов, узнавших о вас у нас на сайте, а также это дешево и вы сможете быть наравне с заведениями любого класса</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="new-stock container-fluid">
+      <h2>Новые скидки</h2>
+      <div class="new-stock_carousel">
+        <div>
+          <div class="stock_image">
+            <img src="resources\img\new-stock1.jpg" alt="Mc Donald's" width="385" height="352">
+
+            <p class="stock_way">Кафе <span class="stock_discount">10%</span></p>
+
+          </div>
+          <div class="tegs">
+            <div class="tag">#бургеры</div>
+            <div class="tag">#кафе</div>
+          </div>
+          <h4>Mc Donald's</h4>
+          <p>5 заведений</p>
+        </div>
+        <div>
+          <div class="stock_image">
+            <img src="resources\img\new-stock2.jpg" alt="Mc Donald's" width="385" height="352">
+            <p class="stock_way">Пиццерия <span class="stock_discount">5%</span></p>
+          </div>
+          <div class="tegs">
+            <p class="tag">#пицца</p>
+            <p class="tag">#кофе</p>
+          </div>
+          <h4>Papa Jonh's</h4>
+          <p class="">10 заведений</p>
+        </div>
+        <div>
+          <div class="stock_image">
+            <img src="resources\img\new-stock3.jpg" alt="Mc Donald's" width="385" height="352">
+            <p class="stock_way">Косметика <span class="stock_discount">10%</span></p>
+          </div>
+          <div class="tegs">
+            <p class="tag">#парфюмерия</p>
+            <p class="tag">#косметика</p>
+            <p class="tag">#бытовая химия</p>
+          </div>
+          <h4>Мила</h4>
+          <p>10 заведений</p>
+        </div>
+        <div>
+          <div class="stock_image">
+            <img src="resources\img\new-stock2.jpg" alt="Mc Donald's" width="385" height="352">
+            <p class="stock_way">Пиццерия <span class="stock_discount">5%</span></p>
+          </div>
+          <div class="tegs">
+            <div class="tag">#пицца</div>
+            <div class="tag">#кофе</div>
+          </div>
+          <h4>Papa Jonh's</h4>
+          <p class="">10 заведений</p>
+        </div>
+        <div>
+          <div class="stock_image">
+            <img src="resources\img\new-stock2.jpg" alt="Mc Donald's" width="385" height="352">
+            <p class="stock_way">Пиццерия <span class="stock_discount">5%</span></p>
+          </div>
+          <div class="tegs">
+            <div class="tag">#пицца</div>
+            <div class="tag">#кофе</div>
+          </div>
+          <h4>Papa Jonh's</h4>
+          <p class="">10 заведений</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="creator container-fluid">
+      <div class="img-col">
+        <img src="resources\img\creator.jpg" alt="Игнатов Никита" width="531" height="576">
+      </div>
+      <div class="col">
+        <h2>Игнатов Никита</h2>
+        <p class="undertitle">Создатель компании</p>
+        <p>При окрашивании применяется всемирно известная система восстановления и защиты волос Olaplex. Используется в сочетании с любыми парикмахерскими  услугами и как отдельная процедура. В салоне можно купить систему Olaplex в домашний уход. Предлагаем
+          и другие популярные услуги для оздоровления волос:  ботокс для волос – коллагеновое омоложение, полировка волос. </p>
+      </div>
+    </div>
+
+    <div class="how-it-work container-fluid">
+      <h2>Как это работает</h2>
+      <div class="work_list">
+        <div class="worked">
+          <h3>Выбрать</h3>
+          <p>Ввести в поиск название заведения, где вам нужна скидка</p>
+        </div>
+        <div class="worked">
+          <h3>Оценить</h3>
+          <p>Выставить рейтинг и написать отзыв (по желанию</p>
+        </div>
+        <div class="worked">
+          <h3>Получить</h3>
+          <p>Получить экран со скидкой и показать его продавцу (можно сделать скриншот)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popular-stock container-fluid">
+      <h2>Популярные скидки</h2>
+
+      <div class="popular-stock_list">
+      <div class="box">
+        <div class="stock_image">
+          <div class="stock_name">
+            <h4>Mc Donald's</h4>
+            <p>5 заведений</p>
+          </div>
+          <img src="resources\img\popular-stock1.jpg" alt="Mc Donald's" width="385" height="577">
+          <p class="stock_way">Кафе <span class="stock_discount">10%</span></p>
+        </div>
+      </div>
+
+
+
+      <div class="box">
+        <div class="stock_image">
+          <div class="stock_name">
+            <h4>Mc Donald's</h4>
+            <p>5 заведений</p>
+          </div>
+          <img src="resources\img\popular-stock4.jpg" alt="Mc Donald's" width="385" height="352">
+          <p class="stock_way">Кафе <span class="stock_discount">10%</span></p>
+        </div>
+      </div>
+
+
+      <div class="box">
+        <div class="stock_image">
+          <div class="stock_name">
+            <h4>Mc Donald's</h4>
+            <p>5 заведений</p>
+          </div>
+          <img src="resources\img\popular-stock3.jpg" alt="Mc Donald's" width="385" height="352">
+          <p class="stock_way">Кафе <span class="stock_discount">10%</span></p>
+        </div>
+      </div>
+
+      <div class="box w2">
+        <div class="stock_image">
+          <div class="stock_name">
+            <h4>Mc Donald's</h4>
+            <p>5 заведений</p>
+          </div>
+          <img src="resources\img\popular-stock2.jpg" alt="Mc Donald's" width="783" height="352">
+          <p class="stock_way">Кафе <span class="stock_discount">10%</span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <div class="container-fluid">
+    <div class="main-footer">
+      <div class="footer-nav">
+        <div class="logo">
+          <img src="resources\img\logo.png" alt="TellUs" width="182" height="64">
+        </div>
+        <ul>
+          <li>
+            <a href="">Категории</a>
+          </li>
+          <li>
+            <a href="">О нас</a>
+          </li>
+        </ul>
+</div>
+        <div class="contacts">
+          <ul>
+            <li><p>+375445852882</p></li>
+            <li><a href="">Профиль</a></li>
+            <li><div>
+              <a href="">Стать партнером</a>
+            </div></li>
+          </ul>
+
+
+
+        </div>
+
+</div></div>
+      <div class="copyright container-fluid">
+        ©TellUs,2017 ИП "Игнатов Никита Александрович" УНП 192710796
+      </div>
+
+
+  </footer>
+
+  <script type="text/javascript" src="resources\js\slick\slick.min.js"></script>
+  <script src="resources\js\carousel.js"></script>
+</body>
+
+</html>
