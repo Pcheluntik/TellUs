@@ -49,9 +49,9 @@ body {
   top: 0;
   right: 0;
   background-image: url("../img/background_main.png");
-  background-size: contain;
-  width: 900px;
-  height: 1200px;
+  background-size: cover;
+  width: 44%;
+  height: 1047px;
   background-repeat: no-repeat;
   z-index: -1;
 
@@ -64,7 +64,7 @@ body {
 
 header {
   .container-fluid {
-    padding-bottom: 153px;
+
 
     .nav-pannel {
       display: flex;
@@ -110,6 +110,7 @@ header {
       .search_panel {
         margin-top: 51px;
         position: relative;
+      margin-bottom: 153px;
 
         label {
           position: absolute;
@@ -170,6 +171,8 @@ h3 {
 
 .category {
   background-color: $colorBlackBackground;
+  position: relative;
+  z-index: -2;
 
   h2 {
     color: $colorFontAtBlackBcg;
