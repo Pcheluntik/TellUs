@@ -5867,12 +5867,17 @@ body {
     background-image: url("../img/background_main.png");
     background-size: cover;
     width: 44%;
-    height: 1047px;
+    height: 1185px;
     background-repeat: no-repeat;
     z-index: -1; }
 
 .container-fluid {
-  padding: 0 15%; }
+  width: 100%;
+  padding: 0; }
+
+.content {
+  max-width: 1185px;
+  margin: 0 auto; }
 
 .button {
   padding: 15px 25px; }
@@ -6012,11 +6017,53 @@ header .container-fluid .nav-pannel {
       color: #333333;
       font-size: 1.25rem;
       display: inline-block;
-      padding: 26px 14px 0; }
+      padding: 25px 22px 0;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      position: relative; }
+      header .container-fluid .nav-pannel nav ul li a:not(.button):after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        color: #76d8f8;
+        bottom: 0;
+        left: 0;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
       header .container-fluid .nav-pannel nav ul li a:not(.button):hover {
+        color: #76d8f8;
         text-decoration: none; }
+        header .container-fluid .nav-pannel nav ul li a:not(.button):hover:after {
+          width: 100%; }
     header .container-fluid .nav-pannel nav ul li .button {
-      margin-top: 11px; }
+      margin-top: 10px; }
+    header .container-fluid .nav-pannel nav ul .nav-search {
+      position: relative; }
+      header .container-fluid .nav-pannel nav ul .nav-search::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/search.png");
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 22px;
+        background-size: contain;
+        top: 26px;
+        left: -5px; }
+    header .container-fluid .nav-pannel nav ul .profile {
+      position: relative; }
+      header .container-fluid .nav-pannel nav ul .profile::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/profile.png");
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        background-size: contain;
+        top: 28px;
+        left: 0px; }
 
 header .container-fluid .search {
   margin-top: 100px; }
@@ -6142,6 +6189,8 @@ h3 {
           .category_main-list ul li a .stock-quantity {
             position: absolute;
             background-color: #74f3b1;
+            padding-left: 1px;
+            padding-right: 1px;
             border-radius: 10px;
             min-width: 27px;
             height: 13px;
@@ -6157,6 +6206,9 @@ h3 {
             max-height: 86px;
             -o-object-fit: contain;
             object-fit: contain; }
+          .category_main-list ul li a:hover p:not(.stock-quantity) {
+            cursor: pointer;
+            text-decoration: underline; }
     .category_main-list .category_show-more {
       color: #0ac3f1;
       font-size: 1rem;
@@ -6365,7 +6417,8 @@ h4 {
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
   -webkit-flex-direction: row-reverse;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  width: 100%; }
   .creator h2 {
     color: #f2f2f2;
     margin-top: 140px; }
@@ -6387,6 +6440,16 @@ h4 {
       position: absolute;
       bottom: -26px;
       left: 0; }
+  .creator::after {
+    position: absolute;
+    right: 73px;
+    top: -45px;
+    content: "";
+    background-image: url("../img/quotes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 494px;
+    height: 413px; }
   .creator img {
     position: absolute;
     width: 530px;
@@ -6398,7 +6461,9 @@ h4 {
     width: 44%;
     font-size: 1.25rem;
     line-height: 1.8rem;
-    margin-bottom: 66px; }
+    margin-bottom: 66px;
+    float: right;
+    color: #f2f2f2; }
 
 .how-it-work h2 {
   margin-top: 11.875rem;
@@ -6479,9 +6544,11 @@ h4 {
   .popular-stock .popular-stock_list {
     margin: 0 auto 70px; }
     .popular-stock .popular-stock_list .box {
-      width: 385px; }
+      width: 385px;
+      cursor: pointer; }
     .popular-stock .popular-stock_list .box.w2 {
-      width: 780px; }
+      width: 780px;
+      cursor: pointer; }
 
 .main-footer {
   display: -webkit-box;
@@ -6528,9 +6595,27 @@ h4 {
         .main-footer .footer-nav ul li a {
           font-family: "Gilroy Light", "Arial", sans-serif;
           color: #333333;
-          font-size: 1.25rem; }
+          font-size: 1.25rem;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          position: relative; }
+          .main-footer .footer-nav ul li a:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            color: #76d8f8;
+            bottom: 0;
+            left: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; }
           .main-footer .footer-nav ul li a:hover {
+            color: #76d8f8;
             text-decoration: none; }
+            .main-footer .footer-nav ul li a:hover:after {
+              width: 100%; }
   .main-footer .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6562,9 +6647,29 @@ h4 {
         .main-footer .contacts ul li a {
           font-family: "Gilroy Light", "Arial", sans-serif;
           color: #333333;
-          font-size: 1.25rem; }
+          font-size: 1.25rem;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          position: relative; }
+          .main-footer .contacts ul li a:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            color: #76d8f8;
+            bottom: 0;
+            left: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; }
           .main-footer .contacts ul li a:hover {
+            color: #76d8f8;
             text-decoration: none; }
+            .main-footer .contacts ul li a:hover:after {
+              width: 100%; }
+        .main-footer .contacts ul li .full-button:hover {
+          color: #333333; }
 
 .copyright {
   background-color: #fff;
