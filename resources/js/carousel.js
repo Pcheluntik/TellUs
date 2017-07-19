@@ -5,6 +5,7 @@ $(document).ready(function(){
    speed: 300,
    slidesToShow: 3,
    slidesToScroll: 3,
+   draggable: false,
     responsive: [
     {
       breakpoint: 1024,
@@ -46,6 +47,7 @@ $(document).ready(function(){
       columnWidth : '.box',
       gutter: 10,
       isFitWidth: true
+
     });
   });
 
