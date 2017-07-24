@@ -5956,8 +5956,8 @@ body {
   -webkit-filter: hue-rotate(0deg);
   filter: hue-rotate(0deg); }
   .full-button:hover {
-    -webkit-filter: hue-rotate(135deg);
-    filter: hue-rotate(135deg);
+    -webkit-filter: hue-rotate(73deg);
+    filter: hue-rotate(73deg);
     text-decoration: none; }
   .full-button:active {
     -webkit-transform: translate(5px, 5px);
@@ -6091,9 +6091,13 @@ header .container-fluid .nav-pannel {
           header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel input[type="text"] {
             padding: 15px 36px;
             width: 100%; }
-        header .container-fluid .nav-pannel nav ul li.nav-search:focus {
-          -webkit-animation-play-state: paused;
-          animation-play-state: paused; }
+        header .container-fluid .nav-pannel nav ul li.nav-search:focus .search_panel, header .container-fluid .nav-pannel nav ul li.nav-search:active .search_panel {
+          width: 562px;
+          opacity: 1;
+          z-index: 5; }
+          header .container-fluid .nav-pannel nav ul li.nav-search:focus .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul li.nav-search:active .search_panel input[type="text"] {
+            padding: 15px 36px;
+            width: 100%; }
       header .container-fluid .nav-pannel nav ul li.profile {
         position: relative;
         padding-left: 20px; }
@@ -6140,6 +6144,8 @@ header .container-fluid .search_panel {
     header .container-fluid .search_panel input[type="text"]:hover {
       -webkit-box-shadow: 0 13px 60px -15px #37e6dd;
       box-shadow: 0 13px 60px -15px #37e6dd; }
+    header .container-fluid .search_panel input[type="text"]:focus {
+      outline-color: transparent; }
 
 h1 {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
@@ -6265,18 +6271,21 @@ h3 {
             max-height: 86px;
             -o-object-fit: contain;
             object-fit: contain; }
-          .category_main-list ul li a:hover p:not(.stock-quantity) {
-            -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-            -webkit-text-decoration-color: #05aed9;
-            text-decoration-color: #05aed9; }
+          .category_main-list ul li a:hover {
+            cursor: pointer; }
+            .category_main-list ul li a:hover p:not(.stock-quantity) {
+              -webkit-text-decoration-line: underline;
+              text-decoration-line: underline;
+              -webkit-text-decoration-color: #05aed9;
+              text-decoration-color: #05aed9; }
     .category_main-list .category_show-more {
       color: #0ac3f1;
       font-size: 1rem;
       text-align: center;
       height: 162px;
       width: 120px;
-      position: relative; }
+      position: relative;
+      z-index: 5; }
       .category_main-list .category_show-more:before {
         content: "";
         width: 1px;
@@ -6321,6 +6330,13 @@ h3 {
           width: 22px;
           top: 42px;
           left: 43px; }
+      .category_main-list .category_show-more:hover {
+        cursor: pointer; }
+        .category_main-list .category_show-more:hover p:not(.stock-quantity) {
+          -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+          -webkit-text-decoration-color: #05aed9;
+          text-decoration-color: #05aed9; }
 
 .reason {
   background-color: #2f3336;
@@ -6365,7 +6381,7 @@ h3 {
     padding-left: 0;
     position: relative; }
     .new-stock .new-stock_carousel .slick-slide:not(.tag) {
-      margin-right: 15px; }
+      margin-right: 16px; }
       .new-stock .new-stock_carousel .slick-slide:not(.tag) h4 {
         position: relative;
         display: inline; }
@@ -6550,7 +6566,7 @@ h3 {
     position: absolute;
     bottom: -10px;
     right: 0;
-    padding: 15px 5%; }
+    padding: 15px 10px; }
     .stock_image .stock_way span {
       font-size: 2.25rem;
       line-height: 2.4rem; }
@@ -6841,6 +6857,18 @@ h4 {
             text-decoration: none; }
             .main-footer .contacts ul li a:hover:after {
               width: 100%; }
+        .main-footer .contacts ul li .profile {
+          position: relative; }
+          .main-footer .contacts ul li .profile::before {
+            content: "";
+            position: absolute;
+            background-image: url("../img/profile.png");
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+            background-size: contain;
+            top: 0;
+            left: -20px; }
         .main-footer .contacts ul li .full-button:hover {
           color: #333333; }
           .main-footer .contacts ul li .full-button:hover:after {
