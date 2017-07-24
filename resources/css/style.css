@@ -6842,7 +6842,11 @@ h4 {
       padding: 0;
       margin: 0; }
       .main-footer .contacts ul li {
+        margin-left: 10px;
         padding-left: 35px; }
+        .main-footer .contacts ul li:nth-child(3) {
+          margin-left: 0;
+          padding-left: 24px; }
         .main-footer .contacts ul li .full-button {
           margin-top: -23px; }
         .main-footer .contacts ul li a {

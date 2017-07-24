@@ -1174,10 +1174,17 @@ h4 {
       margin: 0;
 
       li {
+        margin-left: 10px;
         padding-left: 35px;
+
+        &:nth-child(3) {
+          margin-left: 0;
+          padding-left: 24px;
+        }
 
         .full-button {
           margin-top: -23px;
+
         }
 
         a {
