@@ -6084,6 +6084,9 @@ header .container-fluid .nav-pannel {
             width: 0; }
           header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label {
             left: 92%; }
+            header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label:hover {
+              background-image: url("../img/search_active.svg");
+              cursor: pointer; }
         header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel {
           width: 562px;
           opacity: 1;
@@ -6104,13 +6107,19 @@ header .container-fluid .nav-pannel {
         header .container-fluid .nav-pannel nav ul li.profile::before {
           content: "";
           position: absolute;
-          background-image: url("../img/profile.png");
+          background-image: url("../img/profile.svg");
           background-repeat: no-repeat;
           width: 18px;
           height: 18px;
           background-size: contain;
           top: 28px;
           left: -5px; }
+        header .container-fluid .nav-pannel nav ul li.profile:hover::before {
+          background-image: url("../img/profile_active.svg");
+          opacity: 0.9; }
+        header .container-fluid .nav-pannel nav ul li.profile:active::before {
+          background-image: url("../img/profile_active.svg");
+          opacity: 1; }
 
 header .container-fluid .search {
   margin-top: 100px; }
@@ -6133,6 +6142,9 @@ header .container-fluid .search_panel {
     background-image: url("../img/search.png");
     top: 15px;
     left: 46%; }
+    header .container-fluid .search_panel label:hover {
+      background-image: url("../img/search_active.svg");
+      cursor: pointer; }
   header .container-fluid .search_panel #search_ok, header .container-fluid .search_panel #search_from_header {
     display: none; }
   header .container-fluid .search_panel input[type="text"] {
@@ -6862,13 +6874,19 @@ h4 {
           .main-footer .contacts ul li .profile::before {
             content: "";
             position: absolute;
-            background-image: url("../img/profile.png");
+            background-image: url("../img/profile.svg");
             background-repeat: no-repeat;
             width: 18px;
             height: 18px;
             background-size: contain;
             top: 0;
             left: -20px; }
+          .main-footer .contacts ul li .profile:hover::before {
+            background-image: url("../img/profile_active.svg");
+            opacity: 0.9; }
+          .main-footer .contacts ul li .profile:active::before {
+            background-image: url("../img/profile_active.svg");
+            opacity: 1; }
         .main-footer .contacts ul li .full-button:hover {
           color: #333333; }
           .main-footer .contacts ul li .full-button:hover:after {

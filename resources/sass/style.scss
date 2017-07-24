@@ -269,6 +269,10 @@ header {
 
                 label {
                   left: 92%;
+                  &:hover {
+                    background-image: url("../img/search_active.svg");
+                    cursor: pointer;
+                  }
                 }
               }
 
@@ -306,13 +310,26 @@ header {
               &::before {
                 content: "";
                 position: absolute;
-                background-image: url("../img/profile.png");
+                background-image: url("../img/profile.svg");
                 background-repeat: no-repeat;
                 width: 18px;
                 height: 18px;
                 background-size: contain;
                 top: 28px;
                 left: -5px;
+              }
+
+              &:hover {
+                  &::before  {
+                    background-image: url("../img/profile_active.svg");
+                    opacity: 0.9;
+                  }
+              }
+              &:active {
+                  &::before  {
+                    background-image: url("../img/profile_active.svg");
+                    opacity: 1;
+                  }
               }
             }
           }
@@ -345,6 +362,11 @@ header {
         background-image: url("../img/search.png");
         top: 15px;
         left: 46%;
+
+        &:hover {
+          background-image: url("../img/search_active.svg");
+          cursor: pointer;
+        }
       }
 
       #search_ok, #search_from_header {
@@ -1191,13 +1213,26 @@ h4 {
           &::before {
             content: "";
             position: absolute;
-            background-image: url("../img/profile.png");
+            background-image: url("../img/profile.svg");
             background-repeat: no-repeat;
             width: 18px;
             height: 18px;
             background-size: contain;
             top: 0;
             left: -20px;
+          }
+
+          &:hover {
+              &::before  {
+                background-image: url("../img/profile_active.svg");
+                opacity: 0.9;
+              }
+          }
+          &:active {
+              &::before  {
+                background-image: url("../img/profile_active.svg");
+                opacity: 1;
+              }
           }
         }
 
