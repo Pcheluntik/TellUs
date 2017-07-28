@@ -1342,9 +1342,6 @@ h4 {
         text-decoration: none;
         transition: all 0.5s;
         color: $colorBlackBackground;
-        p {
-          z-index: 1;
-        }
 
         .stock-quantity {
           position: absolute;
@@ -1360,12 +1357,18 @@ h4 {
           right: 14px;
         }
 
-        img {
+        .image {
           width: 80px;
-          max-height: 61px;
+          height: 61px;
+          margin: 0 auto;
+          margin-bottom: 14px;
+          img {
+            width: 80px;
+            height: 61px;
           -o-object-fit: contain;
           object-fit: contain;
-          margin-bottom: 14px;
+        }
+
         }
       }
 
