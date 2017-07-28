@@ -1334,7 +1334,7 @@ h4 {
       a {
         width: 100%;
         padding: 38px 29px 15px;
-        text-decoration: none;
+      
         font-size: 1rem;
         position: relative;
         display: inline-block;
@@ -1342,6 +1342,7 @@ h4 {
         border-radius: 0;
         text-decoration: none;
         transition: all 0.5s;
+        color: $colorBlackBackground;
 
 
         .stock-quantity {
@@ -1387,7 +1388,7 @@ h4 {
         display: inline-block;
         position: relative;
         border-radius: 0;
-        text-decoration: none;
+
         transition: all 0.5s;
         -webkit-background-clip: text;
       }

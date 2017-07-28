@@ -6975,7 +6975,6 @@ h4 {
     .category-list ul li a {
       width: 100%;
       padding: 38px 29px 15px;
-      text-decoration: none;
       font-size: 1rem;
       position: relative;
       display: inline-block;
@@ -6984,7 +6983,8 @@ h4 {
       text-decoration: none;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      color: #2f3336; }
       .category-list ul li a .stock-quantity {
         position: absolute;
         background-color: #74f3b1;
@@ -7026,7 +7026,6 @@ h4 {
       display: inline-block;
       position: relative;
       border-radius: 0;
-      text-decoration: none;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s;
