@@ -1272,7 +1272,6 @@ h4 {
   font-size: 0.87rem;
 }
 /*Категории*/
-
 .category-page.top {
   div {
     width: 55%;
@@ -1344,7 +1343,6 @@ h4 {
         transition: all 0.5s;
         color: $colorBlackBackground;
 
-
         .stock-quantity {
           position: absolute;
           background-color: #74f3b1;
@@ -1375,11 +1373,9 @@ h4 {
       .b-green,
       .b-green:before {
         background: rgba(8,201,238,1);
-        background: -moz-linear-gradient(-90deg, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
-        background: -webkit-gradient( right, left, color-stop(0%, rgba(8,201,238,1)), color-stop(100%, rgba(111,239,169,1)));
-        background: -webkit-linear-gradient(-90deg, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
-        background: -o-linear-gradient(-90deg, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
-        background: -ms-linear-gradient(-90deg, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
+        background: -webkit-gradient(linear, right top, left top, from(rgba(8,201,238,1)), to(rgba(111,239,169,1)));
+        background: -webkit-linear-gradient(right, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
+        background: -o-linear-gradient(right, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
         background: linear-gradient(-90deg, rgba(8,201,238,1) 0%, rgba(111,239,169,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#08c9ee', endColorstr='#6fefa9', GradientType=1 );
       }
@@ -1388,7 +1384,6 @@ h4 {
         display: inline-block;
         position: relative;
         border-radius: 0;
-
         transition: all 0.5s;
         -webkit-background-clip: text;
       }
@@ -1433,7 +1428,6 @@ h4 {
   }
 }
 /*Страница организации*/
-
 .organisation-page {
   position: relative;
   display: flex;
@@ -1454,15 +1448,13 @@ h4 {
     width: 485px;
     object-fit: cover;
   }
-
-
 }
 
 .review {
   margin-top: 68px;
 }
-
 /*Звезды для отзывов*/
+
 #reviewStars-input input:checked ~ label,
 #reviewStars-input label,
 #reviewStars-input label:hover,
@@ -1541,15 +1533,18 @@ h4 {
   .week {
     display: flex;
     flex-direction: row;
+
     div {
       font-size: 0;
       margin-right: 3px;
       width: 10px;
       height: 10px;
       background-color: rgba(8,201,238,1);
+
       &.short-day {
         background-color: grey;
       }
+
       &.closed {
         background-color: yellow;
       }

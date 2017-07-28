@@ -7013,11 +7013,6 @@ h4 {
     .category-list ul li .b-green,
     .category-list ul li .b-green:before {
       background: #08c9ee;
-      background: -moz-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
-      background: -webkit-gradient(right, left, color-stop(0%, #08c9ee), color-stop(100%, #6fefa9));
-      background: -webkit-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
-      background: -o-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
-      background: -ms-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
       background: -webkit-gradient(linear, right top, left top, from(#08c9ee), to(#6fefa9));
       background: -webkit-linear-gradient(right, #08c9ee 0%, #6fefa9 100%);
       background: -o-linear-gradient(right, #08c9ee 0%, #6fefa9 100%);
