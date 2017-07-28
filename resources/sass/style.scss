@@ -1342,6 +1342,9 @@ h4 {
         text-decoration: none;
         transition: all 0.5s;
         color: $colorBlackBackground;
+        p {
+          z-index: 1;
+        }
 
         .stock-quantity {
           position: absolute;

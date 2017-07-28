@@ -6986,6 +6986,8 @@ h4 {
       -o-transition: all 0.5s;
       transition: all 0.5s;
       color: #2f3336; }
+      .category-list ul li a p {
+        z-index: 1; }
       .category-list ul li a .stock-quantity {
         position: absolute;
         background-color: #74f3b1;
