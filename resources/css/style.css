@@ -6975,6 +6975,7 @@ h4 {
     .category-list ul li a {
       width: 100%;
       padding: 38px 29px 15px;
+      text-shadow: none;
       font-size: 1rem;
       position: relative;
       display: inline-block;
