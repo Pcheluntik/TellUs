@@ -1272,19 +1272,10 @@ h4 {
 }
 /*Категории*/
 .category-page.top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 
-  div:nth-child(1) {
-    width: 60%;
+
+  div {
+    width: 55%;
 
     h1 {
       margin-top: 105px;
@@ -1295,11 +1286,19 @@ h4 {
     }
   }
 
-  div img {
+
+    position: relative;
+    img {
+    position: absolute;
+    width: 485px;
+    right:0;
+    top: 0;
     margin-top: 80px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 3px 29px 0 rgba(0, 0, 0, 0.35);
-  }
+    z-index: 5;
+
+}
 }
 
 .category-list {
