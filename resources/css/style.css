@@ -6167,7 +6167,8 @@ h1 {
   font-weight: bold;
   font-size: 5rem;
   color: #333333;
-  line-height: 5.3rem; }
+  line-height: 5.3rem;
+  margin-bottom: 65px; }
 
 h2 {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
@@ -6983,8 +6984,7 @@ h4 {
       text-decoration: none;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
-      transition: all 0.5s;
-      -webkit-background-clip: text; }
+      transition: all 0.5s; }
       .category-list ul li a .stock-quantity {
         position: absolute;
         background-color: #74f3b1;
@@ -7064,3 +7064,118 @@ h4 {
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s; }
+
+/*Страница организации*/
+.organisation-page {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+  .organisation-page .description {
+    width: 55%; }
+    .organisation-page .description:after {
+      content: "";
+      clear: both; }
+  .organisation-page .stock_image {
+    position: absolute;
+    left: 0;
+    width: 485px;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.review {
+  margin-top: 68px; }
+
+/*Звезды для отзывов*/
+#reviewStars-input input:checked ~ label,
+#reviewStars-input label,
+#reviewStars-input label:hover,
+#reviewStars-input label:hover ~ label {
+  background: url("../img/stars.png") no-repeat; }
+
+#reviewStars-input {
+  /*fix floating problems*/
+  overflow: hidden;
+  *zoom: 1;
+  /*end of fix floating problems*/
+  position: relative;
+  float: left; }
+
+#reviewStars-input input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  width: 43px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  z-index: 0; }
+
+#reviewStars-input input:checked ~ label {
+  background-position: 0 -40px;
+  height: 40px;
+  width: 43px; }
+
+#reviewStars-input label {
+  background-position: 0 0;
+  height: 40px;
+  width: 43px;
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1; }
+
+#reviewStars-input label:hover,
+#reviewStars-input label:hover ~ label {
+  background-position: 0 -40px;
+  height: 40px;
+  width: 43px; }
+
+#reviewStars-input #star-0 {
+  left: 0; }
+
+#reviewStars-input #star-1 {
+  left: 53px; }
+
+#reviewStars-input #star-2 {
+  left: 106px; }
+
+#reviewStars-input #star-3 {
+  left: 159px; }
+
+#reviewStars-input #star-4 {
+  left: 212px; }
+
+#reviewStars-input #star-5 {
+  left: 265px; }
+
+.org-address .week {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .org-address .week div {
+    font-size: 0;
+    margin-right: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: #08c9ee; }
+    .org-address .week div.short-day {
+      background-color: grey; }
+    .org-address .week div.closed {
+      background-color: yellow; }
+
+#map-container {
+  width: 100%;
+  height: 600px; }
