@@ -428,7 +428,12 @@ h2 {
   }
 }
 
+.black-bcg:not(h2) {
+  background: $colorBlackBackground;
+}
+
 h2.black-bcg {
+  color: $colorFontAtBlackBcg;
   &::after {
     background-image: url("../img/subtitle_black.svg");
     background-repeat: no-repeat;
@@ -1281,7 +1286,6 @@ h4 {
     }
 
     p {
-    
       margin-bottom: 72px;
     }
   }
@@ -1360,15 +1364,14 @@ h4 {
         .image {
           width: 80px;
           height: 61px;
-          margin: 0 auto;
-          margin-bottom: 14px;
+          margin: 0 auto 14px;
+
           img {
             width: 80px;
             height: 61px;
-          -o-object-fit: contain;
-          object-fit: contain;
-        }
-
+            -o-object-fit: contain;
+            object-fit: contain;
+          }
         }
       }
 
@@ -1438,26 +1441,68 @@ h4 {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
+  padding-top: 80px;
 
   .description {
     width: 55%;
 
-    &:after {
-      content: "";
-      clear: both;
+    p {
+      margin-bottom: 140px;
     }
   }
 
   .stock_image {
     position: absolute;
     left: 0;
-    width: 485px;
-    object-fit: cover;
+    top: 90px;
+    width: 494px;
+    height: 501px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 29px 0 rgba(0, 0, 0, 0.35);
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+    }
   }
 }
 
 .review {
-  margin-top: 68px;
+  margin-top: 164px;
+  background: $colorFontAtBlackBcg;
+  padding: 45px 65px;
+  display: flex;
+  flex-direction: column;
+
+  .review-star {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    @include regularText($colorRegularFont: #000, $fontRegularSize: 0.87rem);
+  }
+
+  .review-textareas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    textarea {
+      padding: 15px;
+      border: 1px solid #cbcccc;
+      border-radius: 3px;
+      resize: none;
+      width: 49%;
+      background-color: transparent;
+    }
+  }
+
+  a {
+    width: 231px;
+    text-align: center;
+    align-self: flex-end;
+  }
 }
 /*Звезды для отзывов*/
 
@@ -1535,24 +1580,30 @@ h4 {
   left: 265px;
 }
 
-.org-address {
-  .week {
-    display: flex;
-    flex-direction: row;
 
-    div {
-      font-size: 0;
-      margin-right: 3px;
-      width: 10px;
-      height: 10px;
-      background-color: rgba(8,201,238,1);
 
-      &.short-day {
-        background-color: grey;
-      }
+.org-addreses {
+  h2 {
+    margin-top: 100px;
+    margin-bottom: 94px;
+  }
+  .org-address {
+    background-color: $colorFontAtBlackBcg;
+    padding: 48px 42px;
+    .week {
+      display: flex;
+      flex-direction: row;
 
-      &.closed {
-        background-color: yellow;
+      div {
+        font-size: 0;
+        margin-right: 4px;
+        width: 12px;
+        height: 11px;
+        background-color: rgba(8,201,238,1);
+
+        &.closed {
+          background-color: #b6b6b6;
+        }
       }
     }
   }
