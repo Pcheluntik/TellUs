@@ -27,6 +27,7 @@ img {
   height: auto;
 }
 
+
 html {
   font-size: 16px;
 }
@@ -35,6 +36,106 @@ a {
   color: rgb(51,51,51);
 }
 
+/*Текстовые стили*/
+ .text {
+
+   p {
+     @include regularText($fontRegularSize: 1.25rem);
+     margin-bottom: 33px;
+   }
+
+  .vertical-img {
+    width: 50%;
+  }
+
+  img {
+    margin-top: 33px;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  ol {
+    counter-reset: myCounter;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    li {
+      list-style: none;
+      margin-bottom: 18px;
+    }
+
+    li:before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      background: #baefee;
+      display: inline-block;
+      text-align: center;
+      margin: 5px 10px;
+      line-height: 26px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    li {
+      padding-left: 52px;
+      position: relative;
+        margin-bottom: 18px;
+      &:before {
+        content: "";
+        background-image: url("../img/ul-li.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 32px;
+        height: 10px;
+
+      }
+    }
+  }
+
+  blockquote {
+    background-color: $colorBlackBackground;
+    border: none;
+    @include regularText($colorRegularFont: #fff);
+    margin-left: 58px;
+    padding: 90px 50px  73px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 46px;
+      left: 50px;
+      width: 60px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-image: url("../img/subtitle_black.svg");
+    }
+  }
+
+  .image-signature {
+    @include regularText($fontRegularSize: 0.875rem, $colorRegularFont: #2f3336);
+    opacity: 0.5;
+    margin-bottom: 50px;
+    margin-top: 15px;
+  }
+}
+
+.about-page .content {
+  padding: 63px 100px;
+  background-color: #fff;
+}
+
+/*Основные стили*/
 .button:after,
 body {
   @include regularText();
@@ -155,10 +256,10 @@ body {
 
 input.full-button {
   border: none;
-  &:active {
 
-  }
+  &:active {}
 }
+
 .full-button,
 .full-button::before {
   text-decoration: none;
@@ -1315,7 +1416,6 @@ h4 {
   font-size: 0.87rem;
 }
 /*Категории*/
-
 .category-page.top {
   div {
     width: 55%;
@@ -1476,7 +1576,6 @@ h4 {
   }
 }
 /*Страница организации*/
-
 .organisation-page {
   position: relative;
   display: flex;
@@ -1515,9 +1614,10 @@ h4 {
   display: flex;
   flex-direction: column;
 
-    h3 {
-      font-size: 3.125rem;
-    }
+  h3 {
+    font-size: 3.125rem;
+  }
+
   .review-star {
     margin-top: 57px;
     display: flex;
@@ -1544,20 +1644,42 @@ h4 {
       width: 49%;
       background-color: transparent;
       font-size: 0.85rem;
-
     }
 
     .bad-review {
-      &::-webkit-input-placeholder {color:#c0392b;}
-      &::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
-      &:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
-      &:-ms-input-placeholder      {color:#c0392b;}
+      &::-webkit-input-placeholder {
+        color: #c0392b;
+      }
+
+      &::-moz-placeholder {
+        color: #c0392b;
+      }
+      /* Firefox 19+ */
+      &:-moz-placeholder {
+        color: #c0392b;
+      }
+      /* Firefox 18- */
+      &:-ms-input-placeholder {
+        color: #c0392b;
+      }
     }
+
     .positive-review {
-      &::-webkit-input-placeholder {color:#017c6f;}
-      &::-moz-placeholder          {color:#017c6f;}/* Firefox 19+ */
-      &:-moz-placeholder           {color:#017c6f;}/* Firefox 18- */
-      &:-ms-input-placeholder      {color:#017c6f;}
+      &::-webkit-input-placeholder {
+        color: #017c6f;
+      }
+
+      &::-moz-placeholder {
+        color: #017c6f;
+      }
+      /* Firefox 19+ */
+      &:-moz-placeholder {
+        color: #017c6f;
+      }
+      /* Firefox 18- */
+      &:-ms-input-placeholder {
+        color: #017c6f;
+      }
     }
   }
 
@@ -1566,12 +1688,14 @@ h4 {
     width: 231px;
     text-align: center;
     align-self: flex-end;
+
     &:focus {
       outline-offset: none;
     }
   }
 }
 /*Звезды для отзывов*/
+
 #reviewStars-input input:checked ~ label,
 #reviewStars-input label,
 #reviewStars-input label:hover,
@@ -1667,14 +1791,17 @@ h4 {
       margin-right: 15px;
       margin-bottom: 14px;
       transition: 0.5s;
+
       h4 {
         @include boldText($fontBoldSize: 1.5rem);
         transition: 0.5s;
       }
+
       .week {
         display: flex;
         flex-direction: row;
-          margin-bottom: 15px;
+        margin-bottom: 15px;
+
         div {
           font-size: 0;
           margin-right: 4px;
@@ -1687,10 +1814,12 @@ h4 {
           }
         }
       }
+
       p:not(.org-address_title) {
-          @include regularText($fontRegularSize: 1.125rem);
-          margin: 0 ;
+        @include regularText($fontRegularSize: 1.125rem);
+        margin: 0;
       }
+
       &_title {
         @include regularText($fontRegularSize: 0.875rem, $colorRegularFont: #b6b6b6);
         margin-top: 22px;
@@ -1701,6 +1830,7 @@ h4 {
       &:hover {
         cursor: pointer;
         background-color: #fff;
+
         h4 {
           color: rgba(8,201,238,1);
         }
@@ -1712,10 +1842,4 @@ h4 {
 #map-container {
   width: 100%;
   height: 700px;
-}
-
-
-svg:hover
-svg:hover {
-  fill: #111;
 }
