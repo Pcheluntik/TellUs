@@ -153,6 +153,12 @@ body {
   }
 }
 
+input.full-button {
+  border: none;
+  &:active {
+
+  }
+}
 .full-button,
 .full-button::before {
   text-decoration: none;
@@ -339,6 +345,37 @@ header {
                 }
               }
             }
+
+            &.shopper {
+              position: relative;
+              padding-left: 20px;
+
+              &::before {
+                content: "";
+                position: absolute;
+                background-image: url("../img/shopper.svg");
+                background-repeat: no-repeat;
+                width: 28px;
+                height: 18px;
+                background-size: contain;
+                top: 30px;
+                left: -15px;
+              }
+
+              &:hover {
+                &::before {
+                  background-image: url("../img/shopper_active.svg");
+                  opacity: 0.9;
+                }
+              }
+
+              &:active {
+                &::before {
+                  background-image: url("../img/shopper_active.svg");
+                  opacity: 1;
+                }
+              }
+            }
           }
         }
       }
@@ -434,6 +471,7 @@ h2 {
 
 h2.black-bcg {
   color: $colorFontAtBlackBcg;
+
   &::after {
     background-image: url("../img/subtitle_black.svg");
     background-repeat: no-repeat;
@@ -1277,6 +1315,7 @@ h4 {
   font-size: 0.87rem;
 }
 /*Категории*/
+
 .category-page.top {
   div {
     width: 55%;
@@ -1437,6 +1476,7 @@ h4 {
   }
 }
 /*Страница организации*/
+
 .organisation-page {
   position: relative;
   display: flex;
@@ -1464,7 +1504,6 @@ h4 {
       height: 100%;
       width: 100%;
       object-fit: cover;
-
     }
   }
 }
@@ -1476,14 +1515,23 @@ h4 {
   display: flex;
   flex-direction: column;
 
+    h3 {
+      font-size: 3.125rem;
+    }
   .review-star {
+    margin-top: 57px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     @include regularText($colorRegularFont: #000, $fontRegularSize: 0.87rem);
+
+    #reviewStars-input {
+      margin-left: 25px;
+    }
   }
 
   .review-textareas {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1495,17 +1543,35 @@ h4 {
       resize: none;
       width: 49%;
       background-color: transparent;
+      font-size: 0.85rem;
+
+    }
+
+    .bad-review {
+      &::-webkit-input-placeholder {color:#c0392b;}
+      &::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
+      &:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color:#c0392b;}
+    }
+    .positive-review {
+      &::-webkit-input-placeholder {color:#017c6f;}
+      &::-moz-placeholder          {color:#017c6f;}/* Firefox 19+ */
+      &:-moz-placeholder           {color:#017c6f;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color:#017c6f;}
     }
   }
 
-  a {
+  input[type="submit"].full-button {
+    margin-top: 30px;
     width: 231px;
     text-align: center;
     align-self: flex-end;
+    &:focus {
+      outline-offset: none;
+    }
   }
 }
 /*Звезды для отзывов*/
-
 #reviewStars-input input:checked ~ label,
 #reviewStars-input label,
 #reviewStars-input label:hover,
@@ -1580,29 +1646,63 @@ h4 {
   left: 265px;
 }
 
-
-
-.org-addreses {
+.org-addresses {
   h2 {
     margin-top: 100px;
     margin-bottom: 94px;
   }
-  .org-address {
-    background-color: $colorFontAtBlackBcg;
-    padding: 48px 42px;
-    .week {
-      display: flex;
-      flex-direction: row;
 
-      div {
-        font-size: 0;
-        margin-right: 4px;
-        width: 12px;
-        height: 11px;
-        background-color: rgba(8,201,238,1);
+  &-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: -15px;
+    margin-bottom: 80px;
 
-        &.closed {
-          background-color: #b6b6b6;
+    .org-address {
+      background-color: $colorFontAtBlackBcg;
+      padding: 45px 48px;
+      width: 32%;
+      margin-right: 15px;
+      margin-bottom: 14px;
+      transition: 0.5s;
+      h4 {
+        @include boldText($fontBoldSize: 1.5rem);
+        transition: 0.5s;
+      }
+      .week {
+        display: flex;
+        flex-direction: row;
+          margin-bottom: 15px;
+        div {
+          font-size: 0;
+          margin-right: 4px;
+          width: 12px;
+          height: 11px;
+          background-color: rgba(8,201,238,1);
+
+          &.closed {
+            background-color: #b6b6b6;
+          }
+        }
+      }
+      p:not(.org-address_title) {
+          @include regularText($fontRegularSize: 1.125rem);
+          margin: 0 ;
+      }
+      &_title {
+        @include regularText($fontRegularSize: 0.875rem, $colorRegularFont: #b6b6b6);
+        margin-top: 22px;
+        margin-bottom: 5px;
+        line-height: 1.4rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #fff;
+        h4 {
+          color: rgba(8,201,238,1);
         }
       }
     }
@@ -1611,5 +1711,11 @@ h4 {
 
 #map-container {
   width: 100%;
-  height: 600px;
+  height: 700px;
+}
+
+
+svg:hover
+svg:hover {
+  fill: #111;
 }
