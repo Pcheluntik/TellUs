@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
 $( function() {
   $( "#slider-range" ).slider({
     range: true,
@@ -12,3 +12,4 @@ $( function() {
   $( "#amount" ).val( "1 " + $( "#slider-range" ).slider( "values", 0 ) +
     " - 1 " + $( "#slider-range" ).slider( "values", 1 ) );
 } );
+});

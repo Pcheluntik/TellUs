@@ -52,7 +52,7 @@
                 </div>
               </li>
               <li class="profile">
-                <a href="good-reviews.html">Профиль</a>
+                <a href="">Профиль</a>
               </li>
               <li>
                 <a href="" class="button">Стать партнером</a>
@@ -77,14 +77,24 @@
 
     <div class="container-fluid black-bcg">
       <div class="content organisation-list-page">
-
+        <!--Выбор сортировки-->
         <form action="" name="sort-category" class="sort-category">
           <select class="sort" name="sort" tabindex="2">
-            <option value="1" selected>Скидка</option>
+            <option value="0" selected>Все</option>
+            <option value="1">Скидка</option>
             <option value="2">Подарок</option>
             <option value="3">Бонус</option>
           </select>
+
+          <select class="metro" name="metro" tabindex="2">
+            <option value="0" selected>Все</option>
+            <option value="1">Октябрьская</option>
+            <option value="2">Площадь Ленина</option>
+            <option value="3">Уручье</option>
+          </select>
         </form>
+
+
         <div class="organisation-list">
           <article class="organisation">
             <a href="bar.html">
@@ -287,6 +297,14 @@
   <script type="text/javascript" charset="utf-8">
     $(function() {
       $('.sort').dropkick({
+        startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
+        theme: 'black',
+        change: function(value, label) { // callback event
+          alert('You picked: ' + label + ':' + value);
+        }
+      });
+
+      $('.metro').dropkick({
         startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
         theme: 'black',
         change: function(value, label) { // callback event
