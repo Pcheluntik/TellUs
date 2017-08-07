@@ -2783,7 +2783,14 @@ h4 {
 
 #authorization {
   width:50%;
+}
 
+#partner {
+  width:50%;
+  .close-popup {
+    top: 25%;
+    right: 26%;
+  }
 }
 
 body.overlay {
@@ -2796,4 +2803,74 @@ body.overlay {
     height: 100%;
       z-index: 50;
   }
+}
+
+
+.profile-submenu {
+  display: none;
+}
+.profile:not(.auth) {
+  position: relative;
+  &:hover .profile-submenu{
+    height: auto;
+    background-color: #fff;
+      box-shadow: 0px 3px 19px 0px rgba(0, 0, 0, 0.07);
+      opacity: 1;
+    &:before {
+      border-bottom-color: #fff;
+    }
+    ul {
+        height: 100%;
+        li { height:100%;
+          a {
+            color: rgba(8,201,238,1) !important;
+            font-size: 1rem !important;
+          }
+        }
+    }
+  }
+
+.profile-submenu {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  color: rgba(8,201,238,1);
+  height: 0;
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3;
+  font-size: 1rem;
+  padding: 20px;
+  z-index: 25;
+  top: 60px;
+  left: -27px;
+  opacity: 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    top: -20px;
+    left: 20px;
+
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+      height: 0;
+      li { height: 0;
+        a {
+          color: transparent !important;
+            font-size: 0 !important;
+          padding: 0 !important;
+        }
+      }
+  }
+}
+
+
+
 }
