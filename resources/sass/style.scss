@@ -2346,6 +2346,7 @@ h4 {
   #statistic-bar {
     width: 90%;
     height: 350px;
+    margin-bottom: 88px;
   }
 
   #slider-range {
@@ -2389,6 +2390,35 @@ h4 {
       top: 87px;
       left: 59px;
       border-radius: 50%;
+    }
+  }
+}
+
+
+  .statistic-quantity {
+    position: relative;
+    padding-top: 30px;
+    &:before {
+      content: "";
+      width: 63px;
+      height: 7px;
+      background-image: url("../img/subtitle.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+.quantity-views {
+  p {
+    width: 250px;
+
+    span {
+      font-size: 5.625rem;
+      line-height: 5.7rem;
+
     }
   }
 }

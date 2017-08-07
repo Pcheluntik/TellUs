@@ -183,14 +183,14 @@
                 </div>
                 <div class="statistic-text">
 
-                  <div class="range">
+                  <!--<div class="range">
                     <p>
                       <label for="amount">Price range:</label>
                       <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                     </p>
 
                     <div id="slider-range"></div>
-                  </div>
+                  </div>-->
                 </div>
               </div>
               <div id="statistic-bar"> </div>
@@ -263,22 +263,22 @@
     $(document).ready(function() {
       $("#rating-diagramm").circliful({
         animationStep: 5,
-        foregroundBorderWidth: 8,
-        backgroundBorderWidth: 6,
-        percent: 1
+        foregroundBorderWidth: 7,
+        backgroundBorderWidth: 4,
+        percent: 95
       });
 
       $("#good-review-diagramm").circliful({
         animationStep: 5,
-        foregroundBorderWidth: 8,
-        backgroundBorderWidth: 6,
-        percent: 2
+        foregroundBorderWidth: 7,
+        backgroundBorderWidth: 4,
+        percent: 65
       });
       $("#bad-review-diagramm").circliful({
         animationStep: 5,
-        foregroundBorderWidth: 8,
-        backgroundBorderWidth: 6,
-        percent: 3,
+        foregroundBorderWidth: 7,
+        backgroundBorderWidth: 4,
+        percent: 15
       });
     });
   </script>

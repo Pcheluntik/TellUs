@@ -7879,7 +7879,8 @@ h4 {
   padding: 0 30px; }
   .statistic #statistic-bar {
     width: 90%;
-    height: 350px; }
+    height: 350px;
+    margin-bottom: 88px; }
   .statistic #slider-range {
     width: 100%;
     height: 50px; }
@@ -7920,6 +7921,26 @@ h4 {
       top: 87px;
       left: 59px;
       border-radius: 50%; }
+
+.statistic-quantity {
+  position: relative;
+  padding-top: 30px; }
+  .statistic-quantity:before {
+    content: "";
+    width: 63px;
+    height: 7px;
+    background-image: url("../img/subtitle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.quantity-views p {
+  width: 250px; }
+  .quantity-views p span {
+    font-size: 5.625rem;
+    line-height: 5.7rem; }
 
 .content-for-profile .control-reviews {
   padding: 40px 60px; }
