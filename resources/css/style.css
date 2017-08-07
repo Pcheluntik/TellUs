@@ -8085,6 +8085,8 @@ h4 {
       padding: 10px 20px;
       border-radius: 10px;
       border: 1px solid #ececec; }
+    .profile-settings .input-field textarea {
+      resize: vertical; }
     .profile-settings .input-field textarea:hover,
     .profile-settings .input-field select:hover,
     .profile-settings .input-field input:hover {
@@ -8304,6 +8306,131 @@ h4 {
   #partner .close-popup {
     top: 25%;
     right: 26%; }
+
+#flaer {
+  border-radius: 10px;
+  width: 591px;
+  height: 591px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  #flaer .close-popup {
+    top: 10px;
+    right: -50px; }
+  #flaer .image {
+    position: absolute;
+    height: 536px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    top: 0;
+    left: 0;
+    z-index: 51; }
+    #flaer .image img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    #flaer .image:after {
+      content: "";
+      width: 100%;
+      height: 540px;
+      z-index: 52;
+      position: absolute;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      top: 0;
+      left: 0;
+      opacity: 0.2;
+      background: #00c9ff;
+      background: -moz-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
+      background: -webkit-gradient(right, left, color-stop(0%, #08c9ee), color-stop(100%, #6fefa9));
+      background: -webkit-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
+      background: -o-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
+      background: -ms-linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
+      background: -webkit-gradient(linear, right top, left top, from(#08c9ee), to(#6fefa9));
+      background: -webkit-linear-gradient(right, #08c9ee 0%, #6fefa9 100%);
+      background: -o-linear-gradient(right, #08c9ee 0%, #6fefa9 100%);
+      background: linear-gradient(-90deg, #08c9ee 0%, #6fefa9 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#08c9ee', endColorstr='#6fefa9', GradientType=1 );
+      -webkit-box-shadow: inset -37px 200px 300px 200px rgba(0, 0, 0, 0.21);
+      -moz-box-shadow: inset -37px 200px 300px 200px rgba(0, 0, 0, 0.21);
+      box-shadow: inset -37px 200px 300px 200px rgba(0, 0, 0, 0.21); }
+    #flaer .image:before {
+      content: "";
+      width: 100%;
+      height: 540px;
+      background-color: transparent;
+      z-index: 53;
+      position: absolute;
+      background-image: url("../img/flaer.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 23px; }
+  #flaer .flaer-text {
+    text-align: center;
+    color: #fff; }
+    #flaer .flaer-text p {
+      position: relative;
+      z-index: 54;
+      font-size: 1.25rem;
+      margin-bottom: 0; }
+    #flaer .flaer-text .flaer-stock {
+      margin-top: 90px; }
+    #flaer .flaer-text .flaer-stock-quantity {
+      font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 13rem;
+      color: #fff;
+      line-height: 13.3rem; }
+    #flaer .flaer-text #flaer-company-name {
+      position: relative;
+      margin: 0 auto;
+      z-index: 54;
+      color: #fff;
+      max-width: 317px; }
+  #flaer .control-panel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    z-index: 55; }
+    #flaer .control-panel p {
+      font-family: "Gilroy Light", "Arial", sans-serif;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 0.875rem;
+      width: 300px;
+      margin: 0; }
+    #flaer .control-panel button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #00c9ff;
+      font-size: 1.25rem; }
+      #flaer .control-panel button span {
+        color: rgba(0, 0, 0, 0.5); }
+      #flaer .control-panel button:focus {
+        outline: none; }
 
 body.overlay {
   position: relative; }

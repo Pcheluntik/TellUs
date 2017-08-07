@@ -1,6 +1,10 @@
 var link = document.querySelectorAll("li.profile.auth");
 var partner = document.querySelectorAll("a.partner");
+var flaer = document.querySelector(".flaer");
+
 popaps();
+
+
 
 function popaps() {
   for (i = 0; i < link.length; i++) {
@@ -20,4 +24,13 @@ function popaps() {
       });
     });
   };
+
+
+    flaer.addEventListener("click", function(event) {
+      event.preventDefault();
+      $(function() {
+        $('#flaer').arcticmodal();
+      });
+    });
+
 };

@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TellUs</title>
 
-    <link rel="stylesheet" href="resources/css/reset.css">
   <link rel="stylesheet" href="resources/sass/style.scss">
   <link rel="stylesheet" href="resources/css/style.css">
 
-  <link rel="stylesheet" href="resources/js/slick/slick.css">
   <script src="resources/js/jquery-3.1.1.min.js"></script>
-  <script src="resources/js/masonry.min.js"></script>
-  <script src="resources/js/images-loaded.js"></script>
+
+
+  <script src="resources\js\jquery.arcticmodal-0.3.min.js"></script>
+  <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -72,7 +72,7 @@
                 </div>
               </li>
               <li>
-                <a href="" class="button">Стать партнером</a>
+                <a href="" class="button partner">Стать партнером</a>
               </li>
             </ul>
           </nav>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="submit-btn">
-            <button type="submit" class="full-button " name="" value="">Получить скидку</button>
+              <button type="submit" class="full-button flaer" name="" value="">Получить скидку</button>
             </div>
           </form>
         </div>
@@ -251,9 +251,9 @@
               <li>
                 <p>+375445852882</p>
               </li>
-              <li><a href="" class="profile">Профиль</a></li>
+              <li class="profile"><a href="" class="profile">Профиль</a></li>
               <li>
-                <a href="" class="full-button ">Стать партнером</a>
+                <a href="" class="full-button partner">Стать партнером</a>
               </li>
             </ul>
           </div>
@@ -266,8 +266,51 @@
         </div>
       </div>
 
+      <div style="display: none;">
+        <div class="box-modal popup" id="flaer">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <div class="flaer-text">
+            <h3 id="flaer-company-name">Топас бар</h3>
+            <p class="flaer-stock">Ваша скидка</p>
+            <p class="flaer-stock-quantity"><span id="flaer-stock-quantity">10</span>%</p>
+          </div>
+          <div class="image">
+            <img src="resources\img\new-stock1.jpg" alt="">
+          </div>
+          <div class="control-panel">
+            <p>Сделайте скриншот или скачайте флаер. Покажите при оплате вашего заказа.</p>
+            <button>Скачать флаер <span>PDF</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="authorization">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Авторизация</h4>
+          <form action="">
+            <input type="text" name="auth-login" value="" placeholder="Логин">
+            <input type="password" name="auth-pass" value="" placeholder="Пароль">
+            <input type="submit" name="" class="full-button" value="Войти">
+          </form>
+        </div>
+      </div>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="partner">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Стать партнером</h4>
+          <form action="">
+            <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
+            <input type="text" name="partner-company" value="" placeholder="Название сети">
+            <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
+            <input type="submit" name="" class="full-button" value="Стать партнером">
+          </form>
+        </div>
+      </div>
 
       <script src="resources/js/map.js"></script>
+      <script src="resources\js\popap.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOZZ1ZsJPfFuyEN4GY6IVxFlOe_neUNoY&content_copy&callback=initMap" async defer></script>
   </footer>
 
