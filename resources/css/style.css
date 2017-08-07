@@ -7475,7 +7475,7 @@ h4 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-top: 30px; }
+  margin-top: 0px; }
   .organisation-list .organisation {
     width: 32%;
     margin-right: 15px;
@@ -7539,7 +7539,18 @@ h4 {
 
 .organisation-list-page form {
   position: relative;
-  z-index: 30; }
+  z-index: 30;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .organisation-list-page form .dk_container {
+    margin-right: 30px; }
 
 .organisation-list-page .sort-category {
   position: relative; }
@@ -8043,8 +8054,12 @@ h4 {
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 20px; }
+  .profile-settings .password input {
+    width: 60% !important; }
   .profile-settings h3 {
     margin-bottom: 38px; }
+  .profile-settings .password p, .profile-settings .address-settings p {
+    font-size: 0.875rem; }
   .profile-settings .input-field {
     display: -webkit-box;
     display: -webkit-flex;

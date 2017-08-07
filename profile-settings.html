@@ -67,6 +67,25 @@
               </li>
               <li class="profile">
                 <a href="">Профиль</a>
+                <div class="profile-submenu">
+                  <ul>
+                    <li>
+                      <a href="">Настройки профиля</a>
+                    </li>
+                    <li>
+                      <a href="">Положительные отзывы</a>
+                    </li>
+                    <li>
+                      <a href="">Отрицательные отзывы</a>
+                    </li>
+                    <li>
+                      <a href="">Статистика</a>
+                    </li>
+                    <li>
+                      <a href="">Выйти из профиля</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <a href="" class="button">Стать партнером</a>
@@ -172,7 +191,7 @@
                   <textarea name="company-description" id="company-description" placeholder="Чтобы люди могли понять чем вы занимаетесь" rows="4" cols="50"></textarea>
                 </div>
 
-            <div class="input-field">
+                <div class="input-field">
                   <label for="company-category">Категория заведения</label>
                   <select name="company-category" id="company-category">
                       <option value="bar">Бар</option>
@@ -183,7 +202,7 @@
 
 
 
-              <div class="input-field">
+                <div class="input-field">
                   <label for="company-tegs">Ключевые слова</label>
                   <input type="text" name="tegs" id="company-tegs" placeholder="Короткие указатели" list="tegs-list">
                   <datalist class="" id="tegs-list">
@@ -201,16 +220,16 @@
                     <img src="" alt="">
                   </div>
                   <div class="zone">
-                  <div id="dropzone">
-                    <div class="browser">
-                      <label>
+                    <div id="dropzone">
+                      <div class="browser">
+                        <label>
                       <span>Загрузите  фото </span>
                       <input type="file" name="file"/>
                     </label>
+                      </div>
+                      <div class="title">или перетяните сюда</div>
                     </div>
-                    <div class="title">или перетяните сюда</div>
-                  </div>
-                  <div class="reqs">Формат фото JPG или PNG, размер файла до 10 Мб.</div>
+                    <div class="reqs">Формат фото JPG или PNG, размер файла до 10 Мб.</div>
                   </div>
                 </div>
 
@@ -350,9 +369,24 @@
                     <a href="">Добавить адрес</a>
                   </div>
                 </div>
+                <div class="password">
+                  <p>Изменение пароля</p>
+                  <div class="input-field">
+                    <label for="edit-password-old">Введите старый пароль</label>
+                    <input type="password" name="edit-password-old" id="edit-password-old">
+                  </div>
+                  <div class="input-field">
+                    <label for="edit-password-new">Новый пароль</label>
+                    <input type="password" name="edit-password-new" id="edit-password-new" >
+                  </div>
+                  <div class="input-field">
+                    <label for="edit-password-new-repeat">Повторите новый пароль</label>
+                    <input type="password" name="edit-password-new-repeat" id="edit-password-new-repeat">
+                  </div>
+                </div>
 
                 <input type="submit" class="full-button" value="Сохранить изменения">
-                <p>После сохранения изменения будут отправлены модератору</p>
+                <p>После сохранения изменения будут отправлены модератору</p>
             </div>
             </form>
           </div>
