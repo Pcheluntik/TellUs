@@ -2722,11 +2722,12 @@ h4 {
 
 .popup {
   background-color: #fff;
-  position: absolute;
+
   padding: 30px 40px;
   padding-bottom: 10px;
   z-index: 100;
   border-radius: 10px;
+    margin: 0 auto;
   input {
     padding: 10px 25px;
     width: 100%;
@@ -2743,13 +2744,46 @@ h4 {
   display: flex;
   flex-direction: column;
 
+  .close-popup {
+    position: absolute;
+
+    right: 31%;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(187, 187, 187, 0.5);
+    background-color: transparent;
+
+    &:after,
+    &:before {
+      position: absolute;
+      left: 18px;
+      top: 10px;
+      content: ' ';
+      height: 20px;
+      width: 2px;
+      background-color: rgba(187, 187, 187, 1);    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+  }
 
 }
 
-.authorization {
-  top: 200px;
-  left: 35%;
-  width: 25%;
+#authorization {
+  width:50%;
+
 }
 
 body.overlay {

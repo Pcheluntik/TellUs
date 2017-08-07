@@ -8230,11 +8230,11 @@ h4 {
 
 .popup {
   background-color: #fff;
-  position: absolute;
   padding: 30px 40px;
   padding-bottom: 10px;
   z-index: 100;
   border-radius: 10px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8253,11 +8253,36 @@ h4 {
   .popup input[type="submit"] {
     width: 200px;
     border: none; }
+  .popup .close-popup {
+    position: absolute;
+    right: 31%;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(187, 187, 187, 0.5);
+    background-color: transparent; }
+    .popup .close-popup:after, .popup .close-popup:before {
+      position: absolute;
+      left: 18px;
+      top: 10px;
+      content: ' ';
+      height: 20px;
+      width: 2px;
+      background-color: #bbbbbb; }
+    .popup .close-popup:before {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .popup .close-popup:after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .popup .close-popup:focus {
+      outline: none; }
 
-.authorization {
-  top: 200px;
-  left: 35%;
-  width: 25%; }
+#authorization {
+  width: 50%; }
 
 body.overlay {
   position: relative; }

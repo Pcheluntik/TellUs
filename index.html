@@ -14,6 +14,9 @@
   <script src="resources/js/masonry.min.js"></script>
   <script src="resources/js/images-loaded.js"></script>
 
+  <script src="resources\js\jquery.arcticmodal-0.3.min.js"></script>
+  <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
+
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 </head>
@@ -48,11 +51,11 @@
                   </form>
                 </div>
               </li>
-              <li class="profile">
+              <li class="profile auth">
                 <a href="profile-settings.html">Профиль</a>
               </li>
               <li>
-                <a href="" class="button">Стать партнером</a>
+                <a href="" class="button partner">Стать партнером</a>
               </li>
             </ul>
           </nav>
@@ -335,9 +338,9 @@
               <li>
                 <p>+375445852882</p>
               </li>
-              <li><a href="profile-settings.html" class="profile">Профиль</a></li>
+              <li class="profile auth"><a href="profile-settings.html" class="profile">Профиль</a></li>
               <li>
-                <a href="" class="full-button ">Стать партнером</a>
+                <a href="" class="full-button partner">Стать партнером</a>
               </li>
             </ul>
           </div>
@@ -350,13 +353,30 @@
         </div>
       </div>
 
-      <div class="popup close authorization">
-        <h4>Авторизация</h4>
-        <form action="">
-          <input type="text" name="auth-login" value="" placeholder="Логин">
-          <input type="password" name="auth-pass" value="" placeholder="Пароль">
-          <input type="submit" name="" class="full-button" value="Войти">
-        </form>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="authorization">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Авторизация</h4>
+          <form action="">
+            <input type="text" name="auth-login" value="" placeholder="Логин">
+            <input type="password" name="auth-pass" value="" placeholder="Пароль">
+            <input type="submit" name="" class="full-button" value="Войти">
+          </form>
+        </div>
+      </div>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="partner">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Стать партнером</h4>
+          <form action="">
+            <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
+            <input type="text" name="partner-company" value="" placeholder="Название сети">
+            <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
+            <input type="submit" name="" class="full-button" value="Стать партнером">
+          </form>
+        </div>
       </div>
   </footer>
 
