@@ -18,7 +18,11 @@
   <script src="resources\js\RGraph.svg.common.tooltips.js"></script>
   <script src="resources\js\RGraph.svg.bar.js"></script>
 
+
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="resources\css\diagramm.css">
+  <script src="resources\js\diagramm.js"></script>
 
   <script src="resources\js\range_2.js"></script>
 
@@ -146,7 +150,7 @@
                       <use xlink:href='#bad-review' />
                   </svg>
                   Настройки профиля</a></li>
-                <li >
+                <li>
                   <a href="good-reviews.html">
                   <svg>
                       <use xlink:href='#bad-review' />
@@ -192,9 +196,20 @@
               <div id="statistic-bar"> </div>
               <div class="statistic-quantity">
                 <p>Возможность увидеть, что нужно вашим клиентам, поток клиентов, узнавших о вас у нас на сайте, а так же это дешево и вы сможете быть на равне с заведениями любого класса</p>
-                <div class="rating-diagramm"></div>
-                <div class="good-review-diagramm"></div>
-                <div class="bad-review-diagramm"></div>
+                <div class="diagramm">
+                  <div id="rating-diagramm">
+                    <p>434</p>
+                    <p>оценок рейтинга</p>
+                  </div>
+                  <div id="good-review-diagramm">
+                    <p>157</p>
+                    <p>положительные</p>
+                  </div>
+                  <div id="bad-review-diagramm">
+                    <p>15</p>
+                    <p>отрицательные</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -243,6 +258,32 @@
 
       <script src="resources\js\statistic-bar.js"></script>
   </footer>
+
+  <script>
+    $(document).ready(function() {
+      $("#rating-diagramm").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 8,
+        backgroundBorderWidth: 6,
+        percent: 1
+      });
+
+      $("#good-review-diagramm").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 8,
+        backgroundBorderWidth: 6,
+        percent: 2
+      });
+      $("#bad-review-diagramm").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 8,
+        backgroundBorderWidth: 6,
+        percent: 3,
+      });
+    });
+  </script>
+
+
   <svg style="display: none;">
 
     <symbol viewBox="0 0 18.18 17" id="star">
