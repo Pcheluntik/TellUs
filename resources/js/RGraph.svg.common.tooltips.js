@@ -52,10 +52,12 @@
     // @param obj The chart object
     // @param opt The options
     //
+
+
     RG.SVG.tooltip = function (opt)
     {
         var obj = opt.object;
-
+        console.log(opt);
         // Fire the beforetooltip event
         RG.SVG.fireCustomEvent(obj, 'onbeforetooltip');
 
@@ -89,10 +91,10 @@
 
             var tooltipObj        = document.createElement('DIV');
             tooltipObj.className  = prop.tooltipsCssClass;
-    
-    
-    
-    
+
+
+
+
             // Add the default CSS to the tooltip
             for (var i in RG.SVG.tooltips.style) {
                 if (typeof i === 'string') {
@@ -108,7 +110,7 @@
         } else {
             var tooltipObj = RG.SVG.REG.get('tooltip');
             tooltipObj.__object__.removeHighlight();
-            
+
             // This prevents the object from continuously growing
             tooltipObj.style.width = '';
         }
@@ -165,8 +167,8 @@
 
         // Add the tooltip to the document
         document.body.appendChild(tooltipObj);
-        
-        
+
+
         var width  = tooltipObj.offsetWidth,
             height = tooltipObj.offsetHeight;
 
@@ -243,7 +245,7 @@
                 e.stopPropagation();
             }
         };
-        
+
         // Add the body click handler that clears the tooltip
         document.body.addEventListener('mouseup', function (e)
         {
@@ -266,7 +268,10 @@
         // Fire the tooltip event
         //
         RG.SVG.fireCustomEvent(obj, 'ontooltip');
-    };
+
+        /*Вызов функции для перерисовки диаграмм при нажатии на месяц*/
+          };
+
 
 
 

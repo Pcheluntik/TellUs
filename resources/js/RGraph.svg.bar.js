@@ -38,13 +38,13 @@
             if (arguments.length === 1 && typeof name === 'object') {
                 for (i in arguments[0]) {
                     if (typeof i === 'string') {
-                    
+
                         var ret = RG.SVG.commonSetter({
                             object: this,
                             name:   i,
                             value:  arguments[0][i]
                         });
-                        
+
                         name  = ret.name;
                         value = ret.value;
 
@@ -52,13 +52,13 @@
                     }
                 }
             } else {
-                    
+
                 var ret = RG.SVG.commonSetter({
                     object: this,
                     name:   name,
                     value:  value
                 });
-                
+
                 name  = ret.name;
                 value = ret.value;
 
@@ -88,10 +88,10 @@
         this.stackedBackfaces = [];
         this.originalColors   = {};
         this.gradientCounter  = 1;
-        
+
         // Add this object to the ObjectRegistry
         RG.SVG.OR.add(this);
-        
+
         this.container.style.display = 'inline-block';
 
         this.properties =
@@ -100,7 +100,7 @@
             gutterRight:  35,
             gutterTop:    35,
             gutterBottom: 35,
-            
+
             variant:          null,
             variant3dOffsetx: 10,
             variant3dOffsety: 5,
@@ -122,7 +122,7 @@
             backgroundGridVlines:       true,
             backgroundGridVlinesCount:  null,
             backgroundGridBorder:       true,
-            
+
             // 20 colors. If you need more you need to set the colors property
             colors: [
                 'red', '#0f0', '#00f', '#ff0', '#0ff', '#0f0','pink','orange','gray','black',
@@ -130,7 +130,7 @@
             ],
             colorsSequential:     false,
             strokestyle:          'rgba(0,0,0,0)',
-            
+
             hmargin:              3,
             hmarginGrouped:       2,
 
@@ -138,13 +138,13 @@
             yaxisTickmarks:       true,
             yaxisTickmarksLength: 3,
             yaxisColor:           'black',
-            
+
             yaxisScale:           true,
             yaxisLabels:          null,
             yaxisLabelsOffsetx:   0,
             yaxisLabelsOffsety:   0,
             yaxisLabelsCount:     5,
-            
+
             yaxisUnitsPre:        '',
             yaxisUnitsPost:       '',
             yaxisStrict:          false,
@@ -165,7 +165,7 @@
             xaxisColor:           'black',
             xaxisLabelsOffsetx:   0,
             xaxisLabelsOffsety:   0,
-            
+
             labelsAbove:                  false,
             labelsAboveFont:              null,
             labelsAboveSize:              null,
@@ -185,7 +185,7 @@
             labelsAboveHalign:            'center',
             labelsAboveValign:            'bottom',
             labelsAboveSpecific:          null,
-            
+
             textColor:            'black',
             textFont:             'sans-serif',
             textSize:             12,
@@ -194,7 +194,7 @@
 
             linewidth:            1,
             grouping:             'grouped',
-            
+
             tooltips:             null,
             tooltipsOverride:     null,
             tooltipsEffect:       'fade',
@@ -204,7 +204,7 @@
             highlightStroke:      'rgba(0,0,0,0)',
             highlightFill:        'rgba(255,255,255,0.7)',
             highlightLinewidth:   1,
-            
+
             title:                '',
             titleSize:            16,
             titleX:               null,
@@ -215,7 +215,7 @@
             titleFont:            null,
             titleBold:            false,
             titleItalic:          false,
-            
+
             titleSubtitle:        '',
             titleSubtitleSize:    10,
             titleSubtitleX:       null,
@@ -226,7 +226,7 @@
             titleSubtitleFont:    null,
             titleSubtitleBold:    false,
             titleSubtitleItalic:  false,
-            
+
             shadow:               false,
             shadowOffsetx:        2,
             shadowOffsety:        2,
@@ -243,7 +243,7 @@
             keyTextBold:    null,
             keyTextItalic:  null,
             keyTextFont:    null,
-            
+
             attribution:        true,
             attributionX:       null,
             attributionY:       null,
@@ -306,7 +306,7 @@
             // Create the defs tag if necessary
             RG.SVG.createDefs(this);
 
-            
+
 
 
 
@@ -337,7 +337,7 @@
             for (var i=0,max=0; i<this.data.length; ++i) {
                 if (typeof this.data[i] === 'number') {
                     values.push(this.data[i]);
-                
+
                 } else if (RG.SVG.isArray(this.data[i]) && prop.grouping === 'grouped') {
                     values.push(RG.SVG.arrayMax(this.data[i]));
 
@@ -351,7 +351,7 @@
             if (typeof prop.yaxisMax === 'number') {
                 max = prop.yaxisMax;
             }
-            
+
             // Set the ymin to zero if it's szet mirror
             if (prop.yaxisMin === 'mirror' || prop.yaxisMin === 'middle' || prop.yaxisMin === 'center') {
                 var mirrorScale = true;
@@ -376,7 +376,7 @@
                 strict:    typeof prop.yaxisMax === 'number',
                 formatter: prop.yaxisFormatter
             });
-                
+
 
 
             //
@@ -429,16 +429,16 @@
                         d: 'M {1} {2} L {3} {4} L {5} {6} L {7} {8}'.format(
                             prop.gutterLeft,
                             prop.gutterTop,
-                            
+
                             prop.gutterLeft + prop.variant3dOffsetx,
                             prop.gutterTop - prop.variant3dOffsety,
-                            
+
                             prop.gutterLeft + prop.variant3dOffsetx,
                             this.height - prop.gutterBottom - prop.variant3dOffsety,
-                            
+
                             prop.gutterLeft,
                             this.height - prop.gutterBottom,
-                            
+
                             prop.gutterLeft,
                             prop.gutterTop
                         ),
@@ -472,16 +472,16 @@
                         d: 'M {1} {2} L {3} {4} L {5} {6} L {7} {8}'.format(
                             prop.gutterLeft,
                             this.getYCoord(0),
-                            
+
                             prop.gutterLeft + prop.variant3dOffsetx,
                             this.getYCoord(0) - prop.variant3dOffsety,
-                            
+
                             this.width - prop.gutterRight + prop.variant3dOffsetx,
                             this.getYCoord(0) - prop.variant3dOffsety,
-                            
+
                             this.width - prop.gutterRight,
                             this.getYCoord(0),
-                            
+
                             prop.gutterLeft,
                             this.getYCoord(0)
                         ),
@@ -503,15 +503,15 @@
             // Draw the axes over the bars
             RG.SVG.drawXAxis(this);
             RG.SVG.drawYAxis(this);
-            
-            
+
+
             // Draw the labelsAbove labels
             this.drawLabelsAbove();
 
 
 
-            
-            
+
+
             // Draw the key
             if (typeof prop.key !== null && RG.SVG.drawKey) {
                 RG.SVG.drawKey(this);
@@ -521,8 +521,8 @@
 
 
 
-            
-            
+
+
             // Add the attribution link. If you're adding this elsewhere on your page/site
             // and you don't want it displayed then there are options available to not
             // show it.
@@ -596,7 +596,7 @@
                     } else if (this.scale.min < 0 && this.scale.max > 0) {
                         height = (ma.abs(this.data[i]) / (this.scale.max - this.scale.min)) * this.graphHeight;
                         y      = this.getYCoord(0) - height;
-                        
+
                         if (this.data[i] < 0) {
                             y = this.getYCoord(0);
                         }
@@ -608,7 +608,7 @@
                     var rect = RG.SVG.create({
                         svg: this.svg,
                         type: 'rect',
-                        parent: prop.variant === '3d' && this.data[i] < 0 ? this.threed_xaxis_group : this.svg.all, 
+                        parent: prop.variant === '3d' && this.data[i] < 0 ? this.threed_xaxis_group : this.svg.all,
                         attr: {
                             stroke: prop.strokestyle,
                             fill: prop.colorsSequential ? (prop.colors[sequentialIndex] ? prop.colors[sequentialIndex] : prop.colors[prop.colors.length - 1]) : prop.colors[0],
@@ -659,7 +659,7 @@
                         //
                         // Add tooltip event listeners
                         //
-                        (function (idx, seq)
+                        (function (idx, seq, )
                         {
                             rect.addEventListener(prop.tooltipsEvent.replace(/^on/, ''), function (e)
                             {
@@ -674,18 +674,69 @@
                                     text: prop.tooltips[seq],
                                     event: e
                                 });
-                                
-                                // Highlight the rect that has been clicked on
+
                                 obj.highlight(e.target);
+                                var quantity_views = prop.tooltips[seq].split(' ');
+                                console.log(quantity_views[0] + " help");
+
+                                diagramms(quantity_views[0], quantity_month_grades, good_month_grades, bad_month_grades)
+
+                                // Highlight the rect that has been clicked on
+
+
                             }, false);
 
                             rect.addEventListener('mousemove', function (e)
                             {
                                 e.target.style.cursor = 'pointer'
+
                             }, false);
                         })(i, sequentialIndex);
                     }
 
+                    /*функция для перерисовки диаграмм при нажатии на месяц*/
+                          function diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades) {
+
+                            console.log(quantity_views);
+                            console.log(quantity_month_grades);
+                            console.log(good_month_grades);
+                            console.log(bad_month_grades);
+
+
+                            var rating_procent = quantity_month_grades * 100 / quantity_views; //процент общего количество оценок
+                            var good_reviews_procent = good_month_grades * 100 / quantity_month_grades; //количество положительных
+                            var bad_reviews_procent = bad_month_grades * 100 / quantity_month_grades; //количество отрицательных
+
+                            $("#rating-diagramm svg").remove();
+                            $("#good-review-diagramm svg").remove();
+                            $("#bad-review-diagramm svg").remove();
+
+                            $(".all-grades").html(quantity_month_grades);
+                            $(".good-grades").html(good_month_grades);
+                            $(".bad-grades").html(bad_month_grades);
+
+
+
+                            $("#rating-diagramm").circliful({
+                              animationStep: 5,
+                              foregroundBorderWidth: 7,
+                              backgroundBorderWidth: 4,
+                              percent: rating_procent
+                            });
+
+                            $("#good-review-diagramm").circliful({
+                              animationStep: 5,
+                              foregroundBorderWidth: 7,
+                              backgroundBorderWidth: 4,
+                              percent: good_reviews_procent
+                            });
+                            $("#bad-review-diagramm").circliful({
+                              animationStep: 5,
+                              foregroundBorderWidth: 7,
+                              backgroundBorderWidth: 4,
+                              percent: bad_reviews_procent
+                            });
+                          }
 
 
 
@@ -703,7 +754,7 @@
 
                         var width  = ( (innerSegment - ((this.data[i].length - 1) * prop.hmarginGrouped)) / this.data[i].length),
                             x      = (outerSegment * i) + prop.hmargin + prop.gutterLeft + (j * width) + ((j - 1) * prop.hmarginGrouped);
-                        
+
                         x = prop.gutterLeft + (outerSegment * i) + (width * j) + prop.hmargin + (j * prop.hmarginGrouped);
 
 
@@ -730,7 +781,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 } else if (this.scale.max <= 0 && this.scale.min < this.scale.max) {
     var height = ((this.data[i][j] - this.scale.max) / (this.scale.max - this.scale.min)) * this.graphHeight,
              y = this.getYCoord(this.scale.max);
-    
+
     height = ma.abs(height);
 
 // eg 10 -> -10
@@ -775,7 +826,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                                 filter: prop.shadow ? 'url(#dropShadow)' : ''
                             }
                         });
-                    
+
                         this.coords.push({
                             object: rect,
                             x:      x,
@@ -803,10 +854,10 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
                         // Add the tooltip data- attribute
                         if (!RG.SVG.isNull(prop.tooltips) && prop.tooltips[sequentialIndex]) {
-                        
+
                             var obj = this;
-    
-                        
+
+
                             //
                             // Add tooltip event listeners
                             //
@@ -827,12 +878,12 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                                         text: prop.tooltips[seq],
                                         event: e
                                     });
-                                    
+
                                     // Highlight the rect that has been clicked on
                                     obj.highlight(e.target);
-    
+
                                 }, false);
-                                
+
                                 rect.addEventListener('mousemove', function (e)
                                 {
                                     e.target.style.cursor = 'pointer'
@@ -859,11 +910,11 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
                     var section = (this.graphWidth / this.data.length);
 
-                    
+
                     // Intialise the Y coordinate to the bottom gutter
                     var y = this.getYCoord(0);
 
-                    
+
 
                     // Loop through the stack
                     for (var j=0; j<this.data[i].length; ++j,++sequentialIndex) {
@@ -876,7 +927,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                         // If this is the first iteration of the loop and a shadow
                         // is requested draw a rect here to create it.
                         if (j === 0 && prop.shadow) {
-                            
+
                             var fullHeight = ma.abs((RG.SVG.arraySum(this.data[i]) / (this.max - this.min)) * this.graphHeight);
 
                             var rect = RG.SVG.create({
@@ -894,7 +945,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                                     filter: 'url(#dropShadow)'
                                 }
                             });
-                            
+
                             this.stackedBackfaces[i] = rect;
                         }
 
@@ -956,10 +1007,10 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
                         // Add the tooltip data- attribute
                         if (!RG.SVG.isNull(prop.tooltips) && prop.tooltips[sequentialIndex]) {
-                        
+
                             var obj = this;
-    
-                        
+
+
                             //
                             // Add tooltip event listeners
                             //
@@ -980,11 +1031,11 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                                         text: prop.tooltips[seq],
                                         event: e
                                     });
-                                    
+
                                     // Highlight the rect that has been clicked on
                                     obj.highlight(e.target);
                                 }, false);
-                                
+
                                 rect.addEventListener('mousemove', function (e)
                                 {
                                     e.target.style.cursor = 'pointer';
@@ -1008,7 +1059,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
         /**
         * This function can be used to retrieve the relevant Y coordinate for a
         * particular value.
-        * 
+        *
         * @param int value The value to get the Y coordinate for
         */
         this.getYCoord = function (value)
@@ -1041,7 +1092,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
         /**
         * This function can be used to highlight a bar on the chart
-        * 
+        *
         * @param object rect The rectangle to highlight
         */
         this.highlight = function (rect)
@@ -1050,7 +1101,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                 y      = rect.getAttribute('y'),
                 width  = rect.getAttribute('width'),
                 height = rect.getAttribute('height');
-            
+
             var highlight = RG.SVG.create({
                 svg: this.svg,
                 parent: this.svg.all,
@@ -1068,9 +1119,9 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
 
             if (prop.tooltipsEvent === 'mousemove') {
-                
+
                 //var obj = this;
-                
+
                 //highlight.addEventListener('mouseout', function (e)
                 //{
                 //    obj.removeHighlight();
@@ -1095,7 +1146,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
         /**
         * This allows for easy specification of gradients
         */
-        this.parseColors = function () 
+        this.parseColors = function ()
         {
             // Save the original colors so that they can be restored when
             // the canvas is cleared
@@ -1146,17 +1197,17 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                     stacked_total = 0;;
 
                 for (var i=0; i<this.coords.length; ++i,seq++) {
-                    
+
                     var num = typeof this.data[i] === 'number' ? this.data[i] : data_seq[seq] ;
 
-            
-            
-            
-            
+
+
+
+
                     // If this is a stacked chart then only dothe label
                     // if it's the top segment
                     if (prop.grouping === 'stacked') {
-                        
+
                         var indexes   = RG.SVG.sequentialIndexToGrouped(i, this.data);
                         var group     = indexes[0];
                         var datapiece = indexes[1];
@@ -1229,18 +1280,18 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
         /**
         * Using a function to add events makes it easier to facilitate method
         * chaining
-        * 
+        *
         * @param string   type The type of even to add
-        * @param function func 
+        * @param function func
         */
         this.on = function (type, func)
         {
             if (type.substr(0,2) !== 'on') {
                 type = 'on' + type;
             }
-            
+
             RG.SVG.addCustomEventListener(this, type, func);
-    
+
             return this;
         };
 
@@ -1254,13 +1305,13 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
         //
         // Used in chaining. Runs a function there and then - not waiting for
         // the events to fire (eg the onbeforedraw event)
-        // 
+        //
         // @param function func The function to execute
         //
         this.exec = function (func)
         {
             func(this);
-            
+
             return this;
         };
 
@@ -1280,7 +1331,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
             if (highlight && highlight.parentNode) {
                 highlight.parentNode.removeChild(highlight);
             }
-            
+
             RG.SVG.REG.set('highlight', null);
         };
 
@@ -1307,7 +1358,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
 
             for (var i=0; i<2; ++i) {
-            
+
                 var color = (i === 0 ? rect.getAttribute('fill') : 'rgba(255,255,255,0.7)');
 
 
@@ -1360,11 +1411,11 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                 y     = parseInt(rect.getAttribute('y')),
                 w     = parseInt(rect.getAttribute('width')),
                 h     = parseInt(rect.getAttribute('height'));
-            
+
             rect.rgraph_3d_side_face = [];
 
             for (var i=0; i<2; ++i) {
-            
+
                 var color = (i === 0 ? rect.getAttribute('fill') : 'rgba(0,0,0,0.3)');
 
                 var face = RG.SVG.create({
@@ -1432,8 +1483,8 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
                     var   multiplier = (frame / frames)
                         * RG.SVG.FX.getEasingMultiplier(frames, frame)
                         * RG.SVG.FX.getEasingMultiplier(frames, frame);
-                
-                
+
+
 
 
                     // TODO Go through the data and update the value according to
@@ -1460,17 +1511,17 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
                         // This upadtes the size of the 3D sides to the bar
                         if (prop.variant === '3d') {
-                        
+
                             // Remove the 3D sides to the bar
                             if (obj.coords[i].object.rgraph_3d_side_face[0].parentNode) obj.coords[i].object.rgraph_3d_side_face[0].parentNode.removeChild(obj.coords[i].object.rgraph_3d_side_face[0]);
                             if (obj.coords[i].object.rgraph_3d_side_face[1].parentNode) obj.coords[i].object.rgraph_3d_side_face[1].parentNode.removeChild(obj.coords[i].object.rgraph_3d_side_face[1]);
-                            
+
                             if (obj.coords[i].object.rgraph_3d_top_face[0].parentNode) obj.coords[i].object.rgraph_3d_top_face[0].parentNode.removeChild(obj.coords[i].object.rgraph_3d_top_face[0]);
                             if (obj.coords[i].object.rgraph_3d_top_face[1].parentNode) obj.coords[i].object.rgraph_3d_top_face[1].parentNode.removeChild(obj.coords[i].object.rgraph_3d_top_face[1]);
-                            
+
                             // Add the 3D sides to the bar (again)
                             obj.drawSide3dFace({rect: obj.coords[i].object});
-                            
+
                             // Draw the top side of the 3D bar
                             if (prop.grouping === 'grouped') {
                                 obj.drawTop3dFace({rect: obj.coords[i].object   });
@@ -1511,17 +1562,17 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 
 
 
-    
+
                             // This updates the size of the 3D sides to the bar
                             if (prop.variant === '3d') {
 
                                 // Remove the 3D sides to the bar
                                 if (obj.coords[seq].object.rgraph_3d_side_face[0].parentNode) obj.coords[seq].object.rgraph_3d_side_face[0].parentNode.removeChild(obj.coords[seq].object.rgraph_3d_side_face[0]);
                                 if (obj.coords[seq].object.rgraph_3d_side_face[1].parentNode) obj.coords[seq].object.rgraph_3d_side_face[1].parentNode.removeChild(obj.coords[seq].object.rgraph_3d_side_face[1]);
-                                
+
                                 if (obj.coords[seq].object.rgraph_3d_top_face[0].parentNode) obj.coords[seq].object.rgraph_3d_top_face[0].parentNode.removeChild(obj.coords[seq].object.rgraph_3d_top_face[0]);
                                 if (obj.coords[seq].object.rgraph_3d_top_face[1].parentNode) obj.coords[seq].object.rgraph_3d_top_face[1].parentNode.removeChild(obj.coords[seq].object.rgraph_3d_top_face[1]);
-                                
+
                                 // Add the 3D sides to the bar (again)
                                 obj.drawSide3dFace({rect: obj.coords[seq].object});
 
@@ -1529,7 +1580,7 @@ if (this.scale.min === 0 && this.scale.max > this.scale.min) {
 // TODO Need to only draw the top face when the bar is either
 //      not stacked or is the last segment in the stack
 obj.drawTop3dFace({rect: obj.coords[seq].object});
-    
+
                                 // Now remove and immediately re-add the front face of
                                 // the bar - this is so that the front face appears
                                 // above the other sides
@@ -1551,7 +1602,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
                                 'height',
                                 accumulativeHeight
                             );
-    
+
                             obj.stackedBackfaces[i].setAttribute(
                                 'y',
                                 obj.height - prop.gutterBottom - accumulativeHeight
@@ -1572,7 +1623,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
             };
 
             iterate();
-            
+
             return this;
         };
 
@@ -1585,7 +1636,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
 
         /**
         * HBar chart Wave effect.
-        * 
+        *
         * @param object OPTIONAL An object map of options. You specify 'frames'
         *                        here to give the number of frames in the effect
         *                        and also callback to specify a callback function
@@ -1599,7 +1650,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
 
             var obj = this,
                 opt = arguments[0] || {};
-            
+
             opt.frames      = opt.frames || 60;
             opt.startFrames = [];
             opt.counters    = [];
@@ -1611,14 +1662,14 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
             for (var i=0,len=this.coords.length; i<len; i+=1) {
                 opt.startFrames[i] = ((opt.frames / 2) / (obj.coords.length - 1)) * i;
                 opt.counters[i]    = 0;
-                
+
                 // Now zero the width of the bar (and remove the 3D faces)
                 this.coords[i].object.setAttribute('height', 0);
-                
+
                 if (this.coords[i].object.rgraph_3d_side_face) {
                     this.svg.all.removeChild(this.coords[i].object.rgraph_3d_side_face[0]);
                     this.svg.all.removeChild(this.coords[i].object.rgraph_3d_side_face[1]);
-                    
+
                     this.svg.all.removeChild(this.coords[i].object.rgraph_3d_top_face[0]);
                     this.svg.all.removeChild(this.coords[i].object.rgraph_3d_top_face[1]);
                 }
@@ -1631,7 +1682,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
 
                 for (var i=0,len=obj.coords.length; i<len; i+=1) {
                     if (frame > opt.startFrames[i]) {
-                        
+
                         var originalHeight = obj.coords[i].object.getAttribute('data-original-height'),
                             height,
                             value = parseFloat(obj.coords[i].object.getAttribute('data-value'));
@@ -1654,14 +1705,14 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
 
                         // This updates the size of the 3D sides to the bar
                         if (prop.variant === '3d') {
-                        
+
                             // Remove the 3D sides to the bar
                             if (obj.coords[i].object.rgraph_3d_side_face[0].parentNode) obj.coords[i].object.rgraph_3d_side_face[0].parentNode.removeChild(obj.coords[i].object.rgraph_3d_side_face[0]);
                             if (obj.coords[i].object.rgraph_3d_side_face[1].parentNode) obj.coords[i].object.rgraph_3d_side_face[1].parentNode.removeChild(obj.coords[i].object.rgraph_3d_side_face[1]);
-                            
+
                             if (obj.coords[i].object.rgraph_3d_top_face[0].parentNode) obj.coords[i].object.rgraph_3d_top_face[0].parentNode.removeChild(obj.coords[i].object.rgraph_3d_top_face[0]);
                             if (obj.coords[i].object.rgraph_3d_top_face[1].parentNode) obj.coords[i].object.rgraph_3d_top_face[1].parentNode.removeChild(obj.coords[i].object.rgraph_3d_top_face[1]);
-                            
+
 
 
                             // Now remove and immediately re-add the front face of
@@ -1676,10 +1727,10 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
 
 
                         if (prop.grouping === 'stacked') {
-                            
+
                             var seq = obj.coords[i].object.getAttribute('data-sequential-index');
                             var indexes = RG.SVG.sequentialIndexToGrouped(seq, obj.data);
-                            
+
                             if (indexes[1] > 0) {
                                 obj.coords[i].object.setAttribute(
                                     'y',
@@ -1687,11 +1738,11 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
                                 );
                             }
                         }
-                        
+
                         if (prop.variant === '3d') {
                             // Add the 3D sides to the bar (again)
                             obj.drawSide3dFace({rect: obj.coords[i].object});
-    
+
                             // Draw the top side of the 3D bar
                             if (prop.grouping === 'grouped' || (prop.grouping === 'stacked' && (indexes[1] + 1) === obj.data[indexes[0]].length) ) {
                                 obj.drawTop3dFace({rect: obj.coords[i].object   });
@@ -1707,7 +1758,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
                     RG.SVG.FX.update(iterator);
                 }
             }
-            
+
             iterator();
 
             return this;
@@ -1729,7 +1780,7 @@ obj.drawTop3dFace({rect: obj.coords[seq].object});
             }
         }
     };
-            
+
     return this;
 
 // End module pattern

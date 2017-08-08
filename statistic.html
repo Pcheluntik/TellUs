@@ -63,13 +63,13 @@
                 <div class="profile-submenu">
                   <ul>
                     <li>
-                      <a href="">Настройки профиля</a>
+                      <a href="profile-settings.html">Настройки профиля</a>
                     </li>
                     <li>
-                      <a href="">Положительные отзывы</a>
+                      <a href="good-reviews.html">Положительные отзывы</a>
                     </li>
                     <li>
-                      <a href="">Отрицательные отзывы</a>
+                      <a href="bad-reviews.html">Отрицательные отзывы</a>
                     </li>
                     <li>
                       <a href="">Статистика</a>
@@ -81,7 +81,7 @@
                 </div>
               </li>
               <li>
-                <a href="" class="button">Стать партнером</a>
+                <a href="" class="button partner">Стать партнером</a>
               </li>
             </ul>
           </nav>
@@ -179,10 +179,10 @@
               <h3>Статистика</h3>
               <div class="statistic-info">
                 <div class="quantity-views">
-                  <p><span>634</span> просмотров профиля</p>
+                  <p><span>634</span><br> просмотров профиля</p>
                 </div>
                 <div class="statistic-text">
-
+                  <p>Приведена статистика за период <br>с <span class="from">января 2017</span> по <span class="to">июнь 2017</span></p>
                   <!--<div class="range">
                     <p>
                       <label for="amount">Price range:</label>
@@ -198,15 +198,15 @@
                 <p>Возможность увидеть, что нужно вашим клиентам, поток клиентов, узнавших о вас у нас на сайте, а так же это дешево и вы сможете быть на равне с заведениями любого класса</p>
                 <div class="diagramm">
                   <div id="rating-diagramm">
-                    <p>434</p>
+                    <p class="all-grades">434</p>
                     <p>оценок рейтинга</p>
                   </div>
                   <div id="good-review-diagramm">
-                    <p>157</p>
+                    <p class="good-grades">157</p>
                     <p>положительные</p>
                   </div>
                   <div id="bad-review-diagramm">
-                    <p>15</p>
+                    <p class="bad-grades">15</p>
                     <p>отрицательные</p>
                   </div>
                 </div>
@@ -260,27 +260,7 @@
   </footer>
 
   <script>
-    $(document).ready(function() {
-      $("#rating-diagramm").circliful({
-        animationStep: 5,
-        foregroundBorderWidth: 7,
-        backgroundBorderWidth: 4,
-        percent: 95
-      });
 
-      $("#good-review-diagramm").circliful({
-        animationStep: 5,
-        foregroundBorderWidth: 7,
-        backgroundBorderWidth: 4,
-        percent: 65
-      });
-      $("#bad-review-diagramm").circliful({
-        animationStep: 5,
-        foregroundBorderWidth: 7,
-        backgroundBorderWidth: 4,
-        percent: 15
-      });
-    });
   </script>
 
 
