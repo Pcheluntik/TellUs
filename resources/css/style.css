@@ -8357,7 +8357,8 @@ h4 {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   .popup input {
     padding: 10px 25px;
     width: 100%;
@@ -8369,8 +8370,8 @@ h4 {
     border: none; }
   .popup .close-popup {
     position: absolute;
-    right: 31%;
-    top: 30%;
+    right: -50px;
+    top: 20px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -8395,15 +8396,26 @@ h4 {
     .popup .close-popup:focus {
       outline: none; }
 
+/*
 #authorization {
-  width: 50%; }
+  width: 50%;
+}
 
 #partner {
-  width: 50%; }
-  #partner .close-popup {
-    top: 25%;
-    right: 26%; }
+  width: 50%;
 
+  .close-popup {
+    top: 25%;
+    right: 26%;
+  }
+}
+
+#add-address {
+  position: relative;
+  .close-popup {
+
+  }
+}*/
 #flaer {
   border-radius: 10px;
   width: 591px;
@@ -8421,10 +8433,11 @@ h4 {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
-  #flaer .close-popup {
+  justify-content: space-between;
+  /*  .close-popup {
     top: 10px;
-    right: -50px; }
+    right: -50px;
+  }*/ }
   #flaer .image {
     position: absolute;
     height: 536px;

@@ -14,6 +14,10 @@
   <script src="resources/js/dmuploader.js"></script>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+
+  <script src="resources\js\jquery.arcticmodal-0.3.min.js"></script>
+  <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
+
   <script src="resources/js/dropkick/jquery.dropkick-min.js"></script>
   <link rel="stylesheet" href="resources\js\dropkick\dropkick.css">
 
@@ -223,6 +227,7 @@
                   </div>
                   <div class="zone">
                     <div id="dropzone">
+                      <div class="plus"></div>
                       <div class="browser">
                         <label>
                       <span>Загрузите  фото </span>
@@ -365,9 +370,7 @@
                     </div>
                   </article>
                   <div class="add-address">
-                    <svg>
-                    <use xlink:href='#plus' />
-                  </svg>
+                    <div class="plus"></div>
                     <a href="">Добавить адрес</a>
                   </div>
                 </div>
@@ -379,7 +382,7 @@
                   </div>
                   <div class="input-field">
                     <label for="edit-password-new">Новый пароль</label>
-                    <input type="password" name="edit-password-new" id="edit-password-new" >
+                    <input type="password" name="edit-password-new" id="edit-password-new">
                   </div>
                   <div class="input-field">
                     <label for="edit-password-new-repeat">Повторите новый пароль</label>
@@ -420,9 +423,9 @@
               <li>
                 <p>+375445852882</p>
               </li>
-              <li><a href="" class="profile">Профиль</a></li>
+              <li class="profile"><a href="" class="profile">Профиль</a></li>
               <li>
-                <a href="" class="full-button ">Стать партнером</a>
+                <a href="" class="full-button partner ">Стать партнером</a>
               </li>
             </ul>
           </div>
@@ -435,14 +438,90 @@
         </div>
       </div>
 
-      <div class="popup close authorization">
-        <h4>Авторизация</h4>
-        <form action="">
-          <input type="text" name="auth-login" value="" placeholder="Логин">
-          <input type="password" name="auth-pass" value="" placeholder="Пароль">
-          <input type="submit" name="" class="full-button" value="Войти">
-        </form>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="add-address">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Добавление адреса</h4>
+          <form action="">
+            <input type="text" name="address" value="" placeholder="Улица, дом, офис">
+            <input type="tel" name="address-phone" value="" placeholder="+375 (29) __-__-___">
+            <div class="add-phone">
+              <button></button><input type="tel" name="address-phone-2" value="" placeholder="+375 (29) __-__-___">
+            </div>
+            <div class="address-work-time">
+              <p>Рабочее время <span class="equally">одинаково</span></p>
+              <input type="checkbox" class="equally-week">
+              <p class="week-days">по дням недели</p>
+              <div class="days">
+                <input type="checkbox" class="" value="" checked>
+                <p>Пн</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <input type="checkbox" class="" value="" checked>
+                <p>Вт</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <input type="checkbox" class="" value="" checked>
+                <p>Ср</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <input type="checkbox" class="" value="" checked>
+                <p>Чт</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <input type="checkbox" class="" value="" checked>
+                <p>Пт</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <input type="checkbox" class="" value="">
+                <p>Сб</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <input type="checkbox" class="" value="">
+                <p>Вс</p>
+                <div class="from-to">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+
+                <div class="from-to-for-all">
+                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <p>-</p>
+                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                </div>
+              </div>
+            </div>
+            <input type="submit" name="" class="full-button" value="Сохранить">
+          </form>
+        </div>
       </div>
+
   </footer>
   <script>
     $(document).ready(function() {
@@ -491,13 +570,12 @@
         theme: 'black',
         change: function(value, label) { // callback event
 
-          if(label=="Скидка") {
-        
+          if (label == "Скидка") {
+
             $(".company-bonus-procent").slideDown(); {
 
             }
-          }
-          else {
+          } else {
             $(".company-bonus-procent").slideUp();
 
           }
@@ -512,6 +590,16 @@
         }
       });
 
+    });
+  </script>
+
+  <script>
+    var address = document.querySelector(".add-address");
+    address.addEventListener("click", function(event) {
+      event.preventDefault();
+      $(function() {
+        $('#add-address').arcticmodal();
+      });
     });
   </script>
 
