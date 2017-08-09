@@ -1,7 +1,7 @@
 var link = document.querySelectorAll("li.profile.auth");
 var partner = document.querySelectorAll("a.partner");
 var flaer = document.querySelector(".flaer");
-var address = document.querySelector("#add-address");
+
 popaps();
 
 

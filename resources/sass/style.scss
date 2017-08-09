@@ -1801,50 +1801,9 @@ h4 {
     justify-content: flex-start;
     margin-right: -15px;
     margin-bottom: 80px;
+    }
 
     .org-address {
-      background-color: $colorFontAtBlackBcg;
-      padding: 45px 48px;
-      width: 32%;
-      margin-right: 15px;
-      margin-bottom: 14px;
-      transition: 0.5s;
-
-      h4 {
-        @include boldText($fontBoldSize: 1.5rem);
-        transition: 0.5s;
-      }
-
-      .week {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 15px;
-
-        div {
-          font-size: 0;
-          margin-right: 4px;
-          width: 12px;
-          height: 11px;
-          background-color: rgba(8,201,238,1);
-
-          &.closed {
-            background-color: #b6b6b6;
-          }
-        }
-      }
-
-      p:not(.org-address_title) {
-        @include regularText($fontRegularSize: 1.125rem);
-        margin: 0;
-      }
-
-      &_title {
-        @include regularText($fontRegularSize: 0.875rem, $colorRegularFont: #b6b6b6);
-        margin-top: 22px;
-        margin-bottom: 5px;
-        line-height: 1.4rem;
-      }
-
       &:hover {
         cursor: pointer;
         background-color: #fff;
@@ -1854,13 +1813,97 @@ h4 {
         }
       }
     }
-  }
 }
 
 #map-container {
   width: 100%;
   height: 700px;
 }
+
+
+  .address-content {
+    background-color: #fff;
+    max-width: 340px;
+    padding-left: 30px;
+
+    p:not(.org-address_title) {
+      @include regularText($fontRegularSize: 1.125rem);
+      margin: 0;
+    }
+
+        .week {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 15px;
+
+          div {
+            font-size: 0;
+            margin-right: 4px;
+            width: 12px;
+            height: 11px;
+            background-color: rgba(8,201,238,1);
+
+            &.closed {
+              background-color: #b6b6b6;
+            }
+          }
+        }
+
+  }
+
+
+
+  .org-address  {
+    width: 32%;
+    margin-right: 15px;
+    margin-bottom: 14px;
+    transition: 0.5s;
+    background-color: $colorFontAtBlackBcg;
+    .address-content {
+      width: 100%;
+      padding: 45px 48px;
+      background-color: $colorFontAtBlackBcg;
+      transition: 0.5s;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    h4 {
+      @include boldText($fontBoldSize: 1.5rem);
+      transition: 0.5s;
+    }
+
+    .week {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+
+      div {
+        font-size: 0;
+        margin-right: 4px;
+        width: 12px;
+        height: 11px;
+        background-color: rgba(8,201,238,1);
+
+        &.closed {
+          background-color: #b6b6b6;
+        }
+      }
+    }
+
+    p:not(.org-address_title) {
+      @include regularText($fontRegularSize: 1.125rem);
+      margin: 0;
+    }
+
+    &_title {
+      @include regularText($fontRegularSize: 0.875rem, $colorRegularFont: #b6b6b6);
+      margin-top: 22px;
+      margin-bottom: 5px;
+      line-height: 1.4rem;
+    }
+  }
+
 /*Список организаций*/
 
 .organisation-list {
