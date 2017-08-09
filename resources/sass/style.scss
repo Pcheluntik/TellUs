@@ -2679,6 +2679,9 @@ h4 {
       justify-content: flex-start;
       margin-left: 161px;
       margin-top: -26px;
+      &>div {
+        display: flex;
+        flex-direction: row;
 
       .tag {
         display: flex;
@@ -2717,6 +2720,7 @@ h4 {
             transform: rotate(-45deg);
           }
         }
+      }
       }
     }
 

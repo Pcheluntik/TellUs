@@ -8193,7 +8193,7 @@ h4 {
       justify-content: flex-start;
       margin-left: 161px;
       margin-top: -26px; }
-      .profile-settings .input-field.tegs-control .tag {
+      .profile-settings .input-field.tegs-control > div {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -8202,36 +8202,46 @@ h4 {
         -webkit-box-direction: normal;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
-        flex-direction: row;
-        background-color: #2f3336;
-        padding-left: 7px;
-        padding-right: 7px;
-        margin-right: 1px;
-        height: 20px;
-        line-height: 20px;
-        color: #fff; }
-        .profile-settings .input-field.tegs-control .tag + .delete-tag {
-          width: 20px;
-          height: 20px;
+        flex-direction: row; }
+        .profile-settings .input-field.tegs-control > div .tag {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
           background-color: #2f3336;
-          margin-right: 3px;
-          position: relative; }
-          .profile-settings .input-field.tegs-control .tag + .delete-tag:after, .profile-settings .input-field.tegs-control .tag + .delete-tag:before {
-            position: absolute;
-            left: 9px;
-            top: 3px;
-            content: ' ';
-            height: 14px;
-            width: 2px;
-            background-color: #fff; }
-          .profile-settings .input-field.tegs-control .tag + .delete-tag:after {
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg); }
-          .profile-settings .input-field.tegs-control .tag + .delete-tag:before {
-            -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
+          padding-left: 7px;
+          padding-right: 7px;
+          margin-right: 1px;
+          height: 20px;
+          line-height: 20px;
+          color: #fff; }
+          .profile-settings .input-field.tegs-control > div .tag + .delete-tag {
+            width: 20px;
+            height: 20px;
+            background-color: #2f3336;
+            margin-right: 3px;
+            position: relative; }
+            .profile-settings .input-field.tegs-control > div .tag + .delete-tag:after, .profile-settings .input-field.tegs-control > div .tag + .delete-tag:before {
+              position: absolute;
+              left: 9px;
+              top: 3px;
+              content: ' ';
+              height: 14px;
+              width: 2px;
+              background-color: #fff; }
+            .profile-settings .input-field.tegs-control > div .tag + .delete-tag:after {
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+            .profile-settings .input-field.tegs-control > div .tag + .delete-tag:before {
+              -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
     .profile-settings .input-field select,
     .profile-settings .input-field textarea,
     .profile-settings .input-field input {

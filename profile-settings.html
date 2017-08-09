@@ -27,16 +27,39 @@
 <body>
 
   <script>
-    $(function() {
-      $("#company-tegs").on('input', function() {
-        var txt = $(this).val();
-        $("#tegs-list").find("option").each(function() {
-          if ($(this).val() == txt) {
-            alert($(this).val());
-          }
-        })
-      });
-    })
+
+    $(document).ready(function() {
+      delete_tag();
+      //Удаление тега по щелчку на крестик
+      function delete_tag() {
+      var del_tag = $(".delete-tag")
+      var tag = $(".input-field .tag")
+      for (var k = 0; k < del_tag.length; k++) {
+        del_tag[k].addEventListener("click", function(event) {
+          event.preventDefault();
+          $(function() {
+            $(event.target).parent().remove();
+          });
+        });
+      };
+    };
+
+    $("#company-tegs").on('input', function() {
+      var txt = $(this).val();
+      $("#tegs-list").find("option").each(function() {
+        if ($(this).val() == txt) {    
+          $("#company-tegs").val("");
+          text = $(this).val().toLowerCase();
+          $(".tegs-control").append(function(i){
+       return "<div><div class='tag'><p>#"+text+"</p></div><div class='delete-tag'></div></div>";
+    });
+    delete_tag();
+        }
+      })
+    });
+
+
+    });
   </script>
 
 
@@ -210,7 +233,7 @@
 
                 <div class="input-field">
                   <label for="company-tegs">Ключевые слова</label>
-                  <input type="text" name="tegs" id="company-tegs" placeholder="Короткие указатели" list="tegs-list">
+                  <input type="text" name="tegs" id="company-tegs" placeholder="Начните вводить или выберите из списка" list="tegs-list">
                   <datalist class="" id="tegs-list">
                       <option value="Алкоголь"></option>
                       <option value="Вода"></option>
@@ -219,14 +242,18 @@
                     </datalist>
                 </div>
                 <div class="input-field tegs-control">
-                  <div class="tag">
-                    <p>#животные</p>
+                  <div>
+                    <div class="tag">
+                      <p>#животные</p>
+                    </div>
+                    <div class="delete-tag"></div>
                   </div>
-                  <div class="delete-tag"></div>
-                  <div class="tag">
-                    <p>#бар</p>
+                  <div>
+                    <div class="tag">
+                      <p>#бар</p>
+                    </div>
+                    <div class="delete-tag"></div>
                   </div>
-                  <div class="delete-tag"></div>
                 </div>
 
 
@@ -560,20 +587,20 @@
   </footer>
 
 
-    <div style="display: none;">
-      <div class="box-modal popup" id="partner">
-        <div class="box-modal_close arcticmodal-close close-popup"></div>
-        <h4>Стать партнером</h4>
-        <form action="">
-          <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
-          <input type="text" name="partner-company" value="" placeholder="Название сети">
-          <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
-          <input type="submit" name="" class="full-button" value="Стать партнером">
-        </form>
-      </div>
+  <div style="display: none;">
+    <div class="box-modal popup" id="partner">
+      <div class="box-modal_close arcticmodal-close close-popup"></div>
+      <h4>Стать партнером</h4>
+      <form action="">
+        <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
+        <input type="text" name="partner-company" value="" placeholder="Название сети">
+        <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
+        <input type="submit" name="" class="full-button" value="Стать партнером">
+      </form>
     </div>
+  </div>
 
-      <script src="resources\js\popap.js"></script>
+  <script src="resources\js\popap.js"></script>
   <script>
     $(document).ready(function() {
       var edit = $(".edit-address")
@@ -592,7 +619,11 @@
   </script>
 
   <script>
-  /*Функция проверки картинки профиля*/
+
+  </script>
+
+  <script>
+    /*Функция проверки картинки профиля*/
     $(document).ready(function() {
       $('#dropzone').dmUploader({
         url: 'upload.php',
@@ -645,13 +676,15 @@
             }
           } else {
             $(".company-bonus-procent").slideUp();
-
+            $(".company-bonus-procent").val(" ");
           }
 
           if (label == "Подарок") {
-            $(".company-present-procent").slideDown(); {}
+            $(".company-present-procent").slideDown();
+
           } else {
             $(".company-present-procent").slideUp();
+            $(".company-present-procent").val(" ");
           }
         }
       });
