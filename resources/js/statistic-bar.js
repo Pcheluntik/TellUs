@@ -6,8 +6,9 @@ $(document).ready(function() {
   var label_array = [date[0], 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль'] // Подписи для графика
 
 
+
+  var quantity_month_grades = 500;
   var quantity_views = 800;
-  var quantity_month_grades = 300;
   var good_month_grades = 160;
   var bad_month_grades = 140;
 

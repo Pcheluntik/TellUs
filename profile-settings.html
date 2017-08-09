@@ -218,12 +218,22 @@
                       <option value="Животные"></option>
                     </datalist>
                 </div>
+                <div class="input-field tegs-control">
+                  <div class="tag">
+                    <p>#животные</p>
+                  </div>
+                  <div class="delete-tag"></div>
+                  <div class="tag">
+                    <p>#бар</p>
+                  </div>
+                  <div class="delete-tag"></div>
+                </div>
 
 
                 <div class="input-field">
                   <label for="company-photo">Фото заведения</label>
                   <div class="pre-photo">
-                    <img src="" alt="">
+
                   </div>
                   <div class="zone">
                     <div id="dropzone">
@@ -246,7 +256,7 @@
                   <select name="company-bonus" id="company-bonus">
                       <option value="stock">Скидка</option>
                       <option value="bonus">Бонус</option>
-                      <option value="spec-bonus">Спецпредложение</option>
+                      <option value="spec-bonus">Подарок</option>
                 </select>
                 </div>
 
@@ -254,6 +264,11 @@
                   <label for="company-bonus-procent">Процент скидки</label>
                   <input type="number" min="1" max="100" value="10" id="company-bonus-procent">
                   <p>%</p>
+                </div>
+
+                <div class="input-field company-present-procent">
+                  <label for="company-present">Описание подарка</label>
+                  <input type="text" id="company-present" placeholder="Кратко опишите подарок">
                 </div>
 
                 <div class="address-settings">
@@ -389,9 +404,10 @@
                     <input type="password" name="edit-password-new-repeat" id="edit-password-new-repeat">
                   </div>
                 </div>
-
-                <input type="submit" class="full-button" value="Сохранить изменения">
-                <p>После сохранения изменения будут отправлены модератору</p>
+                <div class="input-field">
+                  <input type="submit" class="full-button" value="Сохранить изменения">
+                  <p>После сохранения изменения будут отправлены модератору</p>
+                </div>
             </div>
             </form>
           </div>
@@ -442,78 +458,97 @@
       <div style="display: none;">
         <div class="box-modal popup" id="add-address">
           <div class="box-modal_close arcticmodal-close close-popup"></div>
-          <h4>Добавление адреса</h4>
+          <h3>Добавление адреса</h3>
           <form action="">
             <input type="text" name="address" value="" placeholder="Улица, дом, офис">
             <input type="tel" name="address-phone" value="" placeholder="+375 (29) __-__-___">
             <div class="add-phone">
-              <button></button><input type="tel" name="address-phone-2" value="" placeholder="+375 (29) __-__-___">
+              <div class="plus"></div><input type="tel" name="address-phone-2" value="" placeholder="+375 (29) __-__-___">
             </div>
             <div class="address-work-time">
-              <p>Рабочее время <span class="equally">одинаково</span></p>
-              <input type="checkbox" class="equally-week">
-              <p class="week-days">по дням недели</p>
-              <div class="days">
-                <input type="checkbox" class="" value="" checked>
-                <p>Пн</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+              <div class="title">
+                <p>Рабочее время <span class="equally">одинаково</span></p>
+
+                <input type="checkbox" id="equally-week">
+                <label for="equally-week"></label>
+
+                <p class="week-days">по дням недели</p>
+              </div>
+              <div class="days eq">
+                <div class="day">
+                  <input type="checkbox" class="" id="monday" value="" checked>
+                  <label for="monday">пн</label>
+                  <div class="from-to">
+                    <input type="text" id="mon-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="mon-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
-                <input type="checkbox" class="" value="" checked>
-                <p>Вт</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                <div class="day">
+                  <input type="checkbox" class="" value="" id="tuesday" checked>
+                  <label for="tuesday">вт</label>
+                  <div class="from-to">
+                    <input type="text" id="tue-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="tue-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
-                <input type="checkbox" class="" value="" checked>
-                <p>Ср</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                <div class="day">
+                  <input type="checkbox" class="" value="" id="wednesday" checked>
+                  <label for="wednesday">ср</label>
+                  <div class="from-to">
+                    <input type="text" id="wed-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="wed-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
-                <input type="checkbox" class="" value="" checked>
-                <p>Чт</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                <div class="day">
+                  <input type="checkbox" class="" value="" id="thursday" checked>
+                  <label for="thursday">чт</label>
+                  <div class="from-to">
+                    <input type="text" id="thu-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="thu-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
-                <input type="checkbox" class="" value="" checked>
-                <p>Пт</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                <div class="day">
+                  <input type="checkbox" class="" value="" id="friday" checked>
+                  <label for="friday">пт</label>
+                  <div class="from-to">
+                    <input type="text" id="fri-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="fri-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
-                <input type="checkbox" class="" value="">
-                <p>Сб</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                <div class="day">
+                  <input type="checkbox" class="" value="" id="saturday">
+                  <label for="saturday">сб</label>
+                  <div class="from-to">
+                    <input type="text" id="sat-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="sat-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
-                <input type="checkbox" class="" value="">
-                <p>Вс</p>
-                <div class="from-to">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                <div class="day">
+                  <input type="checkbox" class="" value="" id="sunday">
+                  <label for="sunday">вс</label>
+                  <div class="from-to">
+                    <input type="text" id="sun-time-from" class="time-from" value="09:00">
+                    <p>-</p>
+                    <input type="text" id="sun-time-to" class="time-to" value="18:00">
+                  </div>
                 </div>
 
                 <div class="from-to-for-all">
-                  <input type="time" id="mon-time-from" class="time-from" value="09:00">
+                  <input type="text" id="mon-time-from" class="time-from" value="09:00">
                   <p>-</p>
-                  <input type="time" id="mon-time-to" class="time-to" value="18:00">
+                  <input type="text" id="mon-time-to" class="time-to" value="18:00">
                 </div>
               </div>
             </div>
@@ -525,18 +560,34 @@
   </footer>
   <script>
     $(document).ready(function() {
+      var edit = $(".edit-address")
+      for (var p = 0; p < edit.length; p++) {
+        edit[p].addEventListener("click", function(event) {
+          event.preventDefault();
+          $(function() {
+            $('#add-address h3').html("Редактировать адрес");
+            $('#add-address').arcticmodal();
+          });
+        });
+      };
+
+
+    });
+  </script>
+
+  <script>
+  /*Функция проверки картинки профиля*/
+    $(document).ready(function() {
       $('#dropzone').dmUploader({
         url: 'upload.php',
         dataType: 'json',
         maxFileSize: 256 * 1014,
         allowedTypes: 'image/*',
-        onBeforeUpload: function(id) {
-          $("div#output")
-            .html('<img src="static/loader.gif">')
-            .show();
-        },
+
+
+        /*Вызывает после успешной загрузки файла*/
         onUploadSuccess: function(id, response) {
-          $("div#output")
+          $(".pre-photo")
             .html('<img src="' + response.data.url + '">');
         },
         onUploadError: function(id, message) {
@@ -555,7 +606,7 @@
           });
         },
         onFallbackMode: function(message) {
-          $.jGrowl("Ваш браузер не поддерживается 8(", {
+          $.jGrowl("Ваш браузер не поддерживает эту функцию", {
             theme: 'error'
           });
         }
@@ -565,6 +616,7 @@
 
   <script type="text/javascript" charset="utf-8">
     $(function() {
+      $(".company-present-procent").slideUp();
       $('#company-bonus').dropkick({
         startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
         theme: 'black',
@@ -579,6 +631,12 @@
             $(".company-bonus-procent").slideUp();
 
           }
+
+          if (label == "Подарок") {
+            $(".company-present-procent").slideDown(); {}
+          } else {
+            $(".company-present-procent").slideUp();
+          }
         }
       });
 
@@ -586,7 +644,7 @@
         startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
         theme: 'black',
         change: function(value, label) { // callback event
-          alert('You picked: ' + label + ':' + value);
+
         }
       });
 
@@ -598,6 +656,7 @@
     address.addEventListener("click", function(event) {
       event.preventDefault();
       $(function() {
+        $('#add-address h3').html("Добавить адрес");
         $('#add-address').arcticmodal();
       });
     });

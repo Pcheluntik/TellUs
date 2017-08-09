@@ -8129,23 +8129,25 @@ h4 {
   color: #444;
   padding: 25px;
   text-align: center;
-  position: relative; }
-  .profile-settings #dropzone div {
-    text-align: right; }
-  .profile-settings #dropzone:before {
-    border: 1px solid #bbb;
-    border-radius: 50%;
-    width: 52px;
-    height: 52px;
-    position: absolute;
-    content: "";
-    left: 37px;
-    top: 32px; }
+  position: relative;
+  height: 99%; }
+  .profile-settings #dropzone .browser {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: -17px;
+    position: relative; }
+  .profile-settings #dropzone .plus {
+    float: left;
+    margin-left: 22px; }
 
 .profile-settings #dropzone .title {
   font-family: "Gilroy Light", "Arial", sans-serif;
   color: #333333;
-  font-size: 1rem; }
+  font-size: 1rem;
+  position: absolute;
+  right: 30px;
+  bottom: 39px; }
 
 .profile-settings #dropzone input {
   -moz-border-bottom-colors: none;
@@ -8163,10 +8165,11 @@ h4 {
   position: absolute;
   right: 0;
   top: 0;
-  width: 350px;
-  -webkit-transform: translate(-300px, 0px);
-  -ms-transform: translate(-300px, 0px);
-  transform: translate(-300px, 0px); }
+  width: 100%;
+  height: 216%; }
+
+.profile-settings #dropzone label {
+  position: relative; }
 
 .profile-settings #dropzone .browser span {
   cursor: pointer;
@@ -8193,13 +8196,30 @@ h4 {
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 20px; }
-  .profile-settings .password input {
-    width: 60% !important; }
+  .profile-settings .password {
+    border-bottom: 1px solid #bbbbbb;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 33px; }
+    .profile-settings .password input {
+      width: 60% !important; }
   .profile-settings h3 {
     margin-bottom: 38px; }
+  .profile-settings input[type="submit"] {
+    max-width: 292px;
+    font-size: 1.25rem; }
+    .profile-settings input[type="submit"] + p {
+      font-size: 1rem;
+      width: 50%;
+      margin-top: 10px; }
   .profile-settings .address-settings p,
   .profile-settings .password p {
     font-size: 0.875rem; }
+  .profile-settings .address-settings {
+    border-bottom: 1px solid #bbbbbb;
+    width: 100%;
+    padding-bottom: 55px;
+    margin-bottom: 33px; }
   .profile-settings .input-field {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8218,6 +8238,52 @@ h4 {
     color: #333333;
     font-size: 0.875rem;
     margin-bottom: 34px; }
+    .profile-settings .input-field.tegs-control {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      margin-left: 161px;
+      margin-top: -26px; }
+      .profile-settings .input-field.tegs-control .tag {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        background-color: #2f3336;
+        padding-left: 7px;
+        padding-right: 7px;
+        margin-right: 1px;
+        height: 20px;
+        line-height: 20px;
+        color: #fff; }
+        .profile-settings .input-field.tegs-control .tag + .delete-tag {
+          width: 20px;
+          height: 20px;
+          background-color: #2f3336;
+          margin-right: 3px;
+          position: relative; }
+          .profile-settings .input-field.tegs-control .tag + .delete-tag:after, .profile-settings .input-field.tegs-control .tag + .delete-tag:before {
+            position: absolute;
+            left: 9px;
+            top: 3px;
+            content: ' ';
+            height: 14px;
+            width: 2px;
+            background-color: #fff; }
+          .profile-settings .input-field.tegs-control .tag + .delete-tag:after {
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+          .profile-settings .input-field.tegs-control .tag + .delete-tag:before {
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
     .profile-settings .input-field select,
     .profile-settings .input-field textarea,
     .profile-settings .input-field input {
@@ -8265,11 +8331,17 @@ h4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    position: relative; }
     .profile-settings .company-bonus-procent input {
       width: 77px;
       position: relative;
       margin-left: 43px; }
+    .profile-settings .company-bonus-procent input + p {
+      font-size: 0.875rem;
+      position: absolute;
+      left: 211px;
+      top: 10px; }
 
 .company-address {
   border: 1px solid #ececec;
@@ -8449,12 +8521,232 @@ h4 {
   }
 }
 
+*/
+.add-address {
+  border: 1px dashed #bbbbbb;
+  border-radius: 10px;
+  padding: 20px 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  max-width: 280px;
+  position: relative; }
+  .add-address a {
+    display: block;
+    height: 100%;
+    margin-top: 15px;
+    margin-left: 24px;
+    color: #08c9ee;
+    font-size: 1rem; }
+
 #add-address {
   position: relative;
-  .close-popup {
+  padding-left: 67px;
+  padding-right: 37px;
+  width: 100%;
+  max-width: 541px; }
+  #add-address .add-phone {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    #add-address .add-phone .plus {
+      margin-right: 21px; }
+    #add-address .add-phone input {
+      margin-top: 6px; }
+  #add-address input[type="text"] {
+    width: 100%;
+    max-width: 368px;
+    font-size: 0.875rem; }
+  #add-address input[type="tel"] {
+    max-width: 237px;
+    width: 100%;
+    font-size: 0.875rem; }
+  #add-address .address-work-time input[type="text"] {
+    width: 67px;
+    height: 41px;
+    padding: 14px; }
+    #add-address .address-work-time input[type="text"]:focus {
+      outline-color: transparent; }
+  #add-address input:focus {
+    outline-color: transparent; }
+  #add-address .address-work-time .title {
+    font-size: 1.125rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    #add-address .address-work-time .title p {
+      margin-right: 5px; }
+  #add-address .days .day .from-to {
+    display: none; }
+  #add-address .days .day .from-to-for-all {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  #add-address .days {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #add-address .days .day {
+      width: 42px;
+      margin-right: 6px; }
+    #add-address .days input[type="checkbox"] {
+      width: 0;
+      height: 0;
+      position: absolute; }
+    #add-address .days label {
+      height: 42px;
+      min-width: 42px;
+      text-align: center;
+      border-radius: 10px;
+      font-family: "Gilroy Light", "Arial", sans-serif;
+      color: #333333;
+      font-size: 0.875rem;
+      line-height: 42px;
+      margin-right: 6px; }
+    #add-address .days input[type="checkbox"]:not(checked) + label {
+      border: 1px solid #c0c1c2;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+    #add-address .days input[type="checkbox"]:checked + label {
+      border: 1px solid #1bcac6; }
+    #add-address .days .from-to-for-all {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin-top: 20px; }
+      #add-address .days .from-to-for-all p {
+        line-height: 42px; }
+  #add-address .days.eq {
+    height: 208px;
+    width: 110%; }
+    #add-address .days.eq .from-to-for-all {
+      display: none; }
+    #add-address .days.eq .day {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      width: 48%; }
+      #add-address .days.eq .day .from-to {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        #add-address .days.eq .day .from-to p {
+          line-height: 42px; }
+  #add-address #equally-week {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px; }
+    #add-address #equally-week + label {
+      cursor: pointer; }
+    #add-address #equally-week:not(checked) {
+      position: absolute;
+      opacity: 0; }
+    #add-address #equally-week:not(checked) + label {
+      height: 20px;
+      position: relative;
+      /* будем позиционировать псевдочекбокс относительно label */
+      padding: 0 0 0 60px;
+      margin-top: 4px;
+      /* оставляем слева от label место под псевдочекбокс */ }
+    #add-address #equally-week:not(checked) + label:before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 50px;
+      height: 26px;
+      border-radius: 13px;
+      background: #fff;
+      -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
+    #add-address #equally-week:not(checked) + label:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background: #50e6c9;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      /* анимация, чтобы чекбокс переключался плавно */ }
+    #add-address #equally-week:checked + label:before {
+      background: #fff; }
+    #add-address #equally-week:checked + label:after {
+      left: 26px; }
+    #add-address #equally-week:focus + label:before {
+      -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
 
-  }
-}*/
+.plus {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #d6d7d7;
+  border-radius: 50%;
+  position: relative; }
+  .plus:after, .plus:before {
+    position: absolute;
+    left: 24px;
+    top: 13px;
+    content: ' ';
+    height: 22px;
+    width: 2px;
+    background-color: #50e6c9; }
+  .plus:before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
 #flaer {
   border-radius: 10px;
   width: 591px;
@@ -8654,3 +8946,6 @@ body.overlay {
           color: transparent !important;
           font-size: 0 !important;
           padding: 0 !important; }
+
+a:hover, a:active, a:focus {
+  text-decoration: none; }

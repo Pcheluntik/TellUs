@@ -676,11 +676,11 @@
                                 });
 
                                 obj.highlight(e.target);
-                                var quantity_views = prop.tooltips[seq].split(' ');
+                              /*  var quantity_views = prop.tooltips[seq].split(' ');
                                 console.log(quantity_views[0] + " help");
 
                                 diagramms(quantity_views[0], quantity_month_grades, good_month_grades, bad_month_grades)
-
+*/
                                 // Highlight the rect that has been clicked on
 
 
@@ -694,7 +694,7 @@
                         })(i, sequentialIndex);
                     }
 
-                    /*функция для перерисовки диаграмм при нажатии на месяц*/
+                    /*функция для перерисовки диаграмм при нажатии на месяц
                           function diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades) {
 
                             console.log(quantity_views);
@@ -739,7 +739,7 @@
                           }
 
 
-
+*/
 
                 //
                 // Grouped bars

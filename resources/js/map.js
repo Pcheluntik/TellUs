@@ -55,6 +55,7 @@ function addMarker(map, marker_lat, marker_lng, id_address) {
      infowindow.close();
   });
 
+
   google.maps.event.addListener(marker, 'mouseover', function() {
      marker.setAnimation(google.maps.Animation.BOUNCE);
      setTimeout (function() {
