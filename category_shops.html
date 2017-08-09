@@ -7,16 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TellUs</title>
 
-  <link rel="stylesheet" href="resources/css/reset.css">
   <link rel="stylesheet" href="resources/sass/style.scss">
   <link rel="stylesheet" href="resources/css/style.css">
 
 
   <script src="resources/js/jquery-3.1.1.min.js"></script>
 
-  <script src="resources/js/images-loaded.js"></script>
   <script src="resources/js/dropkick/jquery.dropkick-min.js"></script>
   <link rel="stylesheet" href="resources\js\dropkick\dropkick.css">
+
+  <script src="resources\js\jquery.arcticmodal-0.3.min.js"></script>
+  <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -103,14 +104,6 @@
             <option value="1" selected>Скидка</option>
             <option value="2">Подарок</option>
             <option value="3">Бонус</option>
-          </select>
-
-          <select class="metro" name="metro" tabindex="2">
-            <option value="0" selected disabled>Метро</option>
-            <option value="1" >Все станции</option>
-            <option value="2">Октябрьская</option>
-            <option value="3">Площадь Ленина</option>
-            <option value="4">Уручье</option>
           </select>
         </form>
 
@@ -311,7 +304,31 @@
       </div>
 
 
-      <script src="resources/js/drop.js"></script>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="authorization">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Авторизация</h4>
+          <form action="">
+            <input type="text" name="auth-login" value="" placeholder="Логин">
+            <input type="password" name="auth-pass" value="" placeholder="Пароль">
+            <input type="submit" name="" class="full-button" value="Войти">
+          </form>
+        </div>
+      </div>
+
+      <div style="display: none;">
+        <div class="box-modal popup" id="partner">
+          <div class="box-modal_close arcticmodal-close close-popup"></div>
+          <h4>Стать партнером</h4>
+          <form action="">
+            <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
+            <input type="text" name="partner-company" value="" placeholder="Название сети">
+            <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
+            <input type="submit" name="" class="full-button" value="Стать партнером">
+          </form>
+        </div>
+      </div>
   </footer>
 
   <script type="text/javascript" charset="utf-8">
@@ -335,6 +352,10 @@
     });
   </script>
 
+
+  <script src="resources/js/drop.js"></script>
+  <script src="resources/js/popap.js"></script>
+  <script src="resources\js\auth.js"></script>
 </body>
 
 </html>

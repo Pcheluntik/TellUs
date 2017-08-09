@@ -8,12 +8,9 @@
   <title>TellUs</title>
   <link rel="stylesheet" href="resources/sass/style.scss">
   <link rel="stylesheet" href="resources/css/style.css">
-
-  <link rel="stylesheet" href="resources/js/slick/slick.css">
-
-
-  <script src="resources/js/masonry.min.js"></script>
-  <script src="resources/js/images-loaded.js"></script>
+  <script src="resources/js/jquery-3.1.1.min.js"></script>
+  <script src="resources/js/jquery.arcticmodal-0.3.min.js"></script>
+  <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -71,7 +68,7 @@
                 </div>
               </li>
               <li>
-                <a href="" class="button partner">Стать партнером</a>
+                <a href="#" class="button partner">Стать партнером</a>
               </li>
             </ul>
           </nav>
@@ -336,9 +333,9 @@
               <li>
                 <p>+375445852882</p>
               </li>
-              <li><a href="good-reviews.html" class="profile">Профиль</a></li>
+              <li class="profile"><a href="good-reviews.html" class="profile">Профиль</a></li>
               <li>
-                <a href="" class="full-button ">Стать партнером</a>
+                <a href="" class="full-button partner">Стать партнером</a>
               </li>
             </ul>
           </div>
@@ -352,7 +349,34 @@
       </div>
   </footer>
 
+  <div style="display: none;">
+    <div class="box-modal popup" id="authorization">
+      <div class="box-modal_close arcticmodal-close close-popup"></div>
+      <h4>Авторизация</h4>
+      <form action="">
+        <input type="text" name="auth-login" value="" placeholder="Логин">
+        <input type="password" name="auth-pass" value="" placeholder="Пароль">
+        <input type="submit" name="" class="full-button" value="Войти">
+      </form>
+    </div>
+  </div>
 
+  <div style="display: none;">
+    <div class="box-modal popup" id="partner">
+      <div class="box-modal_close arcticmodal-close close-popup"></div>
+      <h4>Стать партнером</h4>
+      <form action="">
+        <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
+        <input type="text" name="partner-company" value="" placeholder="Название сети">
+        <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
+        <input type="submit" name="" class="full-button" value="Стать партнером">
+      </form>
+    </div>
+  </div>
+
+
+    <script src="resources\js\popap.js"></script>
+    <script src="resources\js\auth.js"></script>
 
   <svg style="display: none;">
     <!--Бытовая техника-->
@@ -457,6 +481,7 @@
     <path id="Shape_1_copy_4" data-name="Shape 1 copy 4" class="cls-1" d="M1254.42,667.846h0.04a1.363,1.363,0,0,0,1.32-1.4,3.264,3.264,0,0,0-.04-0.377v-0.036a1.356,1.356,0,0,0-2.71.1,3.361,3.361,0,0,0,.03.362v0.036A1.363,1.363,0,0,0,1254.42,667.846Zm6.41,9.14a4.957,4.957,0,0,1-4.96-4.949,1.36,1.36,0,0,0-2.72,0,7.68,7.68,0,0,0,7.68,7.657A1.354,1.354,0,1,0,1260.83,676.986Zm21.45,12.085c-0.29-.152-7.15-3.7-12.35-1.055-4.26,2.163-5.81,7.661-6.25,9.76l-1.58.8V685.048a13.1,13.1,0,0,0,11.84-13.011,9.332,9.332,0,0,0-.14-1.56,149.745,149.745,0,0,1,1.03-17.714,1.73,1.73,0,0,0-.39-1.808,1.371,1.371,0,0,0-1.23-.287c-0.54.138-1.08,0.286-1.62,0.439,0.18-2.548.39-4.352,0.49-5.123a1.612,1.612,0,0,0-.41-1.649,1.352,1.352,0,0,0-1.23-.3,38.267,38.267,0,0,0-11.19,4.725,47.868,47.868,0,0,0-7.4-2.528,1.355,1.355,0,0,0-1.23.289,1.648,1.648,0,0,0-.4,1.714c0.08,0.666.24,2,.4,3.87-0.78-.232-1.56-0.45-2.35-0.651a1.369,1.369,0,0,0-1.23.289c-0.55.477-.49,0.954-0.39,1.819a155.851,155.851,0,0,1,1.07,18.471,13.1,13.1,0,0,0,11.67,12.993v21.253l-2.09-1.06c-0.45-2.1-2-7.6-6.25-9.761-5.2-2.641-12.06.9-12.35,1.055a1.353,1.353,0,0,0-.71,1.391c0.04,0.323,1.2,7.941,6.4,10.582a9.651,9.651,0,0,0,4.41.976,18.806,18.806,0,0,0,7.39-1.766l3.2,1.622v2.323a1.355,1.355,0,0,0,2.71,0v-10.03l2.68-1.36a18.827,18.827,0,0,0,7.39,1.765,9.648,9.648,0,0,0,4.41-.975c5.2-2.643,6.36-10.26,6.41-10.583A1.367,1.367,0,0,0,1282.28,689.071Zm-34.17,14.523,4.84,2.459c-2.19.682-5.13,1.142-7.33,0.025-3.01-1.529-4.3-5.678-4.75-7.58,1.81-.758,5.94-2.151,8.94-0.623,2.21,1.123,3.5,3.657,4.2,5.678l-4.67-2.371A1.354,1.354,0,0,0,1248.11,703.594Zm22.42-49.337c0.48-.154.96-0.3,1.45-0.445-0.39,3.588-.66,7.275-0.8,11.024h0.01a30.03,30.03,0,0,0-8.36-7.359q1.845-.975,3.87-1.814C1267.92,655.157,1269.21,654.683,1270.53,654.257Zm-8.38-4.081a35.465,35.465,0,0,1,7.06-2.979c-0.13,1.156-.28,2.784-0.4,4.778h0c-0.82.281-1.63,0.58-2.42,0.892a33.94,33.94,0,0,0-4.24-2.692h0Zm-3.35,1.357a34.373,34.373,0,0,1,4.68,2.594h0c-1.19.558-2.32,1.154-3.4,1.782a52.072,52.072,0,0,0-6.66-2.89h0c-0.12-1.48-.24-2.708-0.34-3.633A43.116,43.116,0,0,1,1258.8,651.533Zm2.03,30.869a10.389,10.389,0,0,1-10.39-10.365,159.48,159.48,0,0,0-.94-17.435c0.74,0.215,1.48.445,2.2,0.686a48.85,48.85,0,0,1,7.76,3.362c5.03,2.743,8.81,6.122,10.64,9.513a9.293,9.293,0,0,1,1,2.683,6.215,6.215,0,0,1,.12,1.191A10.389,10.389,0,0,1,1260.83,682.4Zm14.52,16.23c-2.3,1.169-5.25.629-7.32-.028l4.83-2.456a1.354,1.354,0,1,0-1.23-2.412l-4.67,2.373c0.75-2.119,2.08-4.605,4.2-5.68,3.01-1.532,7.15-.13,8.95.626C1279.59,693.3,1278.16,697.206,1275.35,698.632Z" transform="translate(-1238 -644)"/>
     </symbol>
   </svg>
+
 
 </body>
 

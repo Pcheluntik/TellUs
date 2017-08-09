@@ -7356,7 +7356,6 @@ h4 {
 
 .address-content {
   background-color: #fff;
-  max-width: 340px;
   padding-left: 30px; }
   .address-content p:not(.org-address_title) {
     font-family: "Gilroy Light", "Arial", sans-serif;
@@ -7971,7 +7970,8 @@ h4 {
     background-color: #fff;
     margin-top: 40px;
     margin-bottom: 0;
-    padding: 0; }
+    padding: 0;
+    position: relative; }
     .content-for-profile .control-reviews .review .control-panel {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8039,6 +8039,12 @@ h4 {
       border: 1px solid rgba(242, 242, 242, 0.5);
       border-radius: 10px;
       padding: 50px 50px 10px; }
+    .content-for-profile .control-reviews .review .date-time {
+      font-size: 0.875rem;
+      color: #444;
+      position: absolute;
+      right: 10px;
+      bottom: 10px; }
 
 .good-reviews .review .review-description svg {
   fill: #06afd9;
@@ -8464,6 +8470,9 @@ h4 {
 }
 
 */
+#partner {
+  width: 50%; }
+
 .add-address {
   border: 1px dashed #bbbbbb;
   border-radius: 10px;
@@ -8805,15 +8814,15 @@ h4 {
       font-size: 0.875rem;
       width: 300px;
       margin: 0; }
-    #flaer .control-panel button {
+    #flaer .control-panel a {
       background-color: transparent;
       border: none;
       padding: 0;
       color: #00c9ff;
       font-size: 1.25rem; }
-      #flaer .control-panel button span {
+      #flaer .control-panel a span {
         color: rgba(0, 0, 0, 0.5); }
-      #flaer .control-panel button:focus {
+      #flaer .control-panel a:focus {
         outline: none; }
 
 body.overlay {

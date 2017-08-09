@@ -1755,7 +1755,7 @@ h4 {
 
 .address-content {
   background-color: #fff;
-  max-width: 340px;
+
   padding-left: 30px;
 
   p:not(.org-address_title) {
@@ -2449,6 +2449,7 @@ h4 {
       margin-top: 40px;
       margin-bottom: 0;
       padding: 0;
+      position: relative;
 
       .control-panel {
         display: flex;
@@ -2505,6 +2506,13 @@ h4 {
         border: 1px solid rgba(242, 242, 242, 0.5);
         border-radius: 10px;
         padding: 50px 50px 10px;
+      }
+      .date-time  {
+        font-size: 0.875rem;
+        color: #444;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
       }
     }
   }
@@ -2967,6 +2975,9 @@ h4 {
 
 */
 
+#partner {
+  width: 50%;
+}
 .add-address {
   border: 1px dashed rgba(187, 187, 187, 1);
   border-radius: 10px;
@@ -3321,7 +3332,7 @@ h4 {
       margin: 0;
     }
 
-    button {
+    a {
       background-color: transparent;
       border: none;
       padding: 0;
