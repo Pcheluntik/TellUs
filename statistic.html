@@ -19,12 +19,11 @@
   <script src="resources\js\RGraph.svg.bar.js"></script>
 
 
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="resources\js\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
 
   <link rel="stylesheet" href="resources\css\diagramm.css">
   <script src="resources\js\diagramm.js"></script>
 
-  <script src="resources\js\range_2.js"></script>
 
 
 </head>
@@ -182,15 +181,14 @@
                   <p><span>634</span><br> просмотров профиля</p>
                 </div>
                 <div class="statistic-text">
-                  <p>Приведена статистика за период <br>с <span class="from">января 2017</span> по <span class="to">июнь 2017</span></p>
-                  <!--<div class="range">
-                    <p>
-                      <label for="amount">Price range:</label>
-                      <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    </p>
-
-                    <div id="slider-range"></div>
-                  </div>-->
+                  <p>Приведена статистика за период <br>с <span class="from">июня 2017</span> по <span class="to">декабрь 2017</span></p>
+                  <div class="range">
+                    <div class="values">
+                      <p id="from-date">Июнь 2017</p>
+                      <p id="to-date">Декабрь 2017</p>
+                    </div>
+                    <div id="slider"></div>
+                  </div>
                 </div>
               </div>
               <div id="statistic-bar"> </div>
@@ -259,9 +257,17 @@
       <script src="resources\js\statistic-bar.js"></script>
   </footer>
 
-  <script>
 
+  <script type="text/javascript">
+    jQuery("#slider").slider({
+      min: 0,
+      max: 24,
+      values: [0, 12],
+      range: true,
+      disabled: false
+    });
   </script>
+
 
 
   <svg style="display: none;">
