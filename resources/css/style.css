@@ -8465,10 +8465,10 @@ h4 {
     .popup .close-popup:focus {
       outline: none; }
 
-/*
 #authorization {
-  width: 50%;
-}
+  width: 50%; }
+
+/*
 
 #partner {
   width: 50%;
@@ -8555,6 +8555,16 @@ h4 {
     flex-direction: row; }
     #add-address .address-work-time .title p {
       margin-right: 5px; }
+    #add-address .address-work-time .title .equally {
+      color: #50E6C9;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+    #add-address .address-work-time .title .week-days {
+      color: #000;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
   #add-address .days .day .from-to {
     display: none; }
   #add-address .days .day .from-to-for-all {
@@ -8591,7 +8601,11 @@ h4 {
       color: #333333;
       font-size: 0.875rem;
       line-height: 42px;
-      margin-right: 6px; }
+      margin-right: 6px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
     #add-address .days input[type="checkbox"]:not(checked) + label {
       border: 1px solid #c0c1c2;
       -webkit-transition: 0.3s;
@@ -8694,7 +8708,8 @@ h4 {
   height: 52px;
   border: 1px solid #d6d7d7;
   border-radius: 50%;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .plus:after, .plus:before {
     position: absolute;
     left: 24px;
@@ -8908,8 +8923,11 @@ body.overlay {
           font-size: 0 !important;
           padding: 0 !important; }
 
-a:not(.ui-slider-handle):hover, a:not(.ui-slider-handle):active, a:not(.ui-slider-handle):focus {
+a:not(.ui-slider-handle):active, a:not(.ui-slider-handle):focus, a:not(.ui-slider-handle):hover {
   text-decoration: none; }
+
+input:focus {
+  outline-color: transparent; }
 
 /*статистика*/
 /* Ширина слайдера */
@@ -8937,7 +8955,7 @@ a:not(.ui-slider-handle):hover, a:not(.ui-slider-handle):active, a:not(.ui-slide
 .ui-slider .ui-slider-range {
   position: absolute;
   z-index: 1;
-  font-size: .7em;
+  font-size: 0.7em;
   display: block;
   border: 0;
   overflow: hidden; }

@@ -14,49 +14,47 @@
   <script src="resources/js/dmuploader.js"></script>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-
+  <!--Всплывающие окна-->
   <script src="resources\js\jquery.arcticmodal-0.3.min.js"></script>
   <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
+  <script src="resources\js\maskedinput.min.js"></script>
 
   <script src="resources/js/dropkick/jquery.dropkick-min.js"></script>
   <link rel="stylesheet" href="resources\js\dropkick\dropkick.css">
-
-
 </head>
 
 <body>
 
   <script>
-
     $(document).ready(function() {
       delete_tag();
       //Удаление тега по щелчку на крестик
       function delete_tag() {
-      var del_tag = $(".delete-tag")
-      var tag = $(".input-field .tag")
-      for (var k = 0; k < del_tag.length; k++) {
-        del_tag[k].addEventListener("click", function(event) {
-          event.preventDefault();
-          $(function() {
-            $(event.target).parent().remove();
+        var del_tag = $(".delete-tag")
+        var tag = $(".input-field .tag")
+        for (var k = 0; k < del_tag.length; k++) {
+          del_tag[k].addEventListener("click", function(event) {
+            event.preventDefault();
+            $(function() {
+              $(event.target).parent().remove();
+            });
           });
-        });
+        };
       };
-    };
 
-    $("#company-tegs").on('input', function() {
-      var txt = $(this).val();
-      $("#tegs-list").find("option").each(function() {
-        if ($(this).val() == txt) {    
-          $("#company-tegs").val("");
-          text = $(this).val().toLowerCase();
-          $(".tegs-control").append(function(i){
-       return "<div><div class='tag'><p>#"+text+"</p></div><div class='delete-tag'></div></div>";
-    });
-    delete_tag();
-        }
-      })
-    });
+      $("#company-tegs").on('input', function() {
+        var txt = $(this).val();
+        $("#tegs-list").find("option").each(function() {
+          if ($(this).val() == txt) {
+            $("#company-tegs").val("");
+            text = $(this).val().toLowerCase();
+            $(".tegs-control").append(function(i) {
+              return "<div><div class='tag'><p>#" + text + "</p></div><div class='delete-tag'></div></div>";
+            });
+            delete_tag();
+          }
+        })
+      });
 
 
     });
@@ -300,117 +298,119 @@
 
                 <div class="address-settings">
                   <p>Настройки адреса</p>
-                  <article class="company-address">
-                    <div class="control-panel">
-                      <button class="delete-address">Удалить</button>
-                      <button class="edit-address">
+                  <div class="addresses">
+                    <article class="company-address">
+                      <div class="control-panel">
+                        <button class="delete-address">Удалить</button>
+                        <button class="edit-address">
                       <svg>
                         <use xlink:href='#edit' />
                       </svg>
                       Редактировать</button>
-                    </div>
-                    <h4>ул. Комсомольская, 9</h4>
-                    <div class="main-address-information">
-                      <div class="phones">
-                        <p class="company-address_title">Телефоны</p>
-                        <p>+37591036046</p>
-                        <p>+37591036046</p>
                       </div>
-                      <div class="work-time">
-                        <div class="week-time">
-                          <p class="company-address_title">Время работы</p>
-                          <div class="week">
-                            <div class="">Пн</div>
-                            <div class="">Вт</div>
-                            <div class="">Ср</div>
-                            <div class="">Чт</div>
-                            <div class="">Пт</div>
-                            <div class="closed">Сб</div>
-                            <div class="closed">Вс</div>
+                      <h4>ул. Комсомольская, 9</h4>
+                      <div class="main-address-information">
+                        <div class="phones">
+                          <p class="company-address_title">Телефоны</p>
+                          <p>+37591036046</p>
+                          <p>+37591036046</p>
+                        </div>
+                        <div class="work-time">
+                          <div class="week-time">
+                            <p class="company-address_title">Время работы</p>
+                            <div class="week">
+                              <div class="">Пн</div>
+                              <div class="">Вт</div>
+                              <div class="">Ср</div>
+                              <div class="">Чт</div>
+                              <div class="">Пт</div>
+                              <div class="closed">Сб</div>
+                              <div class="closed">Вс</div>
+                            </div>
+                          </div>
+                          <div class="day-time">
+                            <p>09:00-20:00 пн-пт</p>
+                            <p>10:00-18:00 сб</p>
+                            <p>Выходной вс</p>
                           </div>
                         </div>
-                        <div class="day-time">
-                          <p>09:00-20:00 пн-пт</p>
-                          <p>10:00-18:00 сб</p>
-                          <p>Выходной вс</p>
-                        </div>
                       </div>
-                    </div>
-                  </article>
-                  <article class="company-address">
-                    <div class="control-panel">
-                      <button class="delete-address">Удалить</button>
-                      <button class="edit-address">
+                    </article>
+                    <article class="company-address">
+                      <div class="control-panel">
+                        <button class="delete-address">Удалить</button>
+                        <button class="edit-address">
                       <svg>
                         <use xlink:href='#edit' />
                       </svg>
                       Редактировать</button>
-                    </div>
-                    <h4>ул. Комсомольская, 9</h4>
-                    <div class="main-address-information">
-                      <div class="phones">
-                        <p class="company-address_title">Телефоны</p>
-                        <p>+37591036046</p>
-                        <p>+37591036046</p>
                       </div>
-                      <div class="work-time">
-                        <div class="week-time">
-                          <p class="company-address_title">Время работы</p>
-                          <div class="week">
-                            <div class="">Пн</div>
-                            <div class="">Вт</div>
-                            <div class="">Ср</div>
-                            <div class="">Чт</div>
-                            <div class="">Пт</div>
-                            <div class="closed">Сб</div>
-                            <div class="closed">Вс</div>
+                      <h4>ул. Комсомольская, 9</h4>
+                      <div class="main-address-information">
+                        <div class="phones">
+                          <p class="company-address_title">Телефоны</p>
+                          <p>+37591036046</p>
+                          <p>+37591036046</p>
+                        </div>
+                        <div class="work-time">
+                          <div class="week-time">
+                            <p class="company-address_title">Время работы</p>
+                            <div class="week">
+                              <div class="">Пн</div>
+                              <div class="">Вт</div>
+                              <div class="">Ср</div>
+                              <div class="">Чт</div>
+                              <div class="">Пт</div>
+                              <div class="closed">Сб</div>
+                              <div class="closed">Вс</div>
+                            </div>
+                          </div>
+                          <div class="day-time">
+                            <p>09:00-20:00 пн-пт</p>
+                            <p>10:00-18:00 сб</p>
+                            <p>Выходной вс</p>
                           </div>
                         </div>
-                        <div class="day-time">
-                          <p>09:00-20:00 пн-пт</p>
-                          <p>10:00-18:00 сб</p>
-                          <p>Выходной вс</p>
-                        </div>
                       </div>
-                    </div>
-                  </article>
-                  <article class="company-address">
-                    <div class="control-panel">
-                      <button class="delete-address">Удалить</button>
-                      <button class="edit-address">
+                    </article>
+                    <article class="company-address">
+                      <div class="control-panel">
+                        <button class="delete-address">Удалить</button>
+                        <button class="edit-address">
                       <svg>
                         <use xlink:href='#edit' />
                       </svg>
                       Редактировать</button>
-                    </div>
-                    <h4>ул. Комсомольская, 9</h4>
-                    <div class="main-address-information">
-                      <div class="phones">
-                        <p class="company-address_title">Телефоны</p>
-                        <p>+37591036046</p>
-                        <p>+37591036046</p>
                       </div>
-                      <div class="work-time">
-                        <div class="week-time">
-                          <p class="company-address_title">Время работы</p>
-                          <div class="week">
-                            <div class="">Пн</div>
-                            <div class="">Вт</div>
-                            <div class="">Ср</div>
-                            <div class="">Чт</div>
-                            <div class="">Пт</div>
-                            <div class="closed">Сб</div>
-                            <div class="closed">Вс</div>
+                      <h4>ул. Комсомольская, 9</h4>
+                      <div class="main-address-information">
+                        <div class="phones">
+                          <p class="company-address_title">Телефоны</p>
+                          <p>+37591036046</p>
+                          <p>+37591036046</p>
+                        </div>
+                        <div class="work-time">
+                          <div class="week-time">
+                            <p class="company-address_title">Время работы</p>
+                            <div class="week">
+                              <div class="">Пн</div>
+                              <div class="">Вт</div>
+                              <div class="">Ср</div>
+                              <div class="">Чт</div>
+                              <div class="">Пт</div>
+                              <div class="closed">Сб</div>
+                              <div class="closed">Вс</div>
+                            </div>
+                          </div>
+                          <div class="day-time">
+                            <p>09:00-20:00 пн-пт</p>
+                            <p>10:00-18:00 сб</p>
+                            <p>Выходной вс</p>
                           </div>
                         </div>
-                        <div class="day-time">
-                          <p>09:00-20:00 пн-пт</p>
-                          <p>10:00-18:00 сб</p>
-                          <p>Выходной вс</p>
-                        </div>
                       </div>
-                    </div>
-                  </article>
+                    </article>
+                  </div>
                   <div class="add-address">
                     <div class="plus"></div>
                     <a href="">Добавить адрес</a>
@@ -501,9 +501,9 @@
 
                 <p class="week-days">по дням недели</p>
               </div>
-              <div class="days eq">
+              <div class="days">
                 <div class="day">
-                  <input type="checkbox" class="" id="monday" value="" checked>
+                  <input type="checkbox" class="day-check" id="monday" value="" checked>
                   <label for="monday">пн</label>
                   <div class="from-to">
                     <input type="text" id="mon-time-from" class="time-from" value="09:00">
@@ -513,7 +513,7 @@
                 </div>
 
                 <div class="day">
-                  <input type="checkbox" class="" value="" id="tuesday" checked>
+                  <input type="checkbox" class="day-check" value="" id="tuesday" checked>
                   <label for="tuesday">вт</label>
                   <div class="from-to">
                     <input type="text" id="tue-time-from" class="time-from" value="09:00">
@@ -522,8 +522,9 @@
                   </div>
                 </div>
 
+
                 <div class="day">
-                  <input type="checkbox" class="" value="" id="wednesday" checked>
+                  <input type="checkbox" class="day-check" value="" id="wednesday" checked>
                   <label for="wednesday">ср</label>
                   <div class="from-to">
                     <input type="text" id="wed-time-from" class="time-from" value="09:00">
@@ -532,8 +533,9 @@
                   </div>
                 </div>
 
+
                 <div class="day">
-                  <input type="checkbox" class="" value="" id="thursday" checked>
+                  <input type="checkbox" class="day-check" value="" id="thursday" checked>
                   <label for="thursday">чт</label>
                   <div class="from-to">
                     <input type="text" id="thu-time-from" class="time-from" value="09:00">
@@ -543,7 +545,7 @@
                 </div>
 
                 <div class="day">
-                  <input type="checkbox" class="" value="" id="friday" checked>
+                  <input type="checkbox" class="day-check" value="" id="friday" checked>
                   <label for="friday">пт</label>
                   <div class="from-to">
                     <input type="text" id="fri-time-from" class="time-from" value="09:00">
@@ -552,23 +554,24 @@
                   </div>
                 </div>
 
+
                 <div class="day">
-                  <input type="checkbox" class="" value="" id="saturday">
+                  <input type="checkbox" class="day-check" value="" id="saturday">
                   <label for="saturday">сб</label>
                   <div class="from-to">
-                    <input type="text" id="sat-time-from" class="time-from" value="09:00">
+                    <input type="text" id="sat-time-from" disabled class="time-from" value="09:00">
                     <p>-</p>
-                    <input type="text" id="sat-time-to" class="time-to" value="18:00">
+                    <input type="text" id="sat-time-to" disabled class="time-to" value="18:00">
                   </div>
                 </div>
 
                 <div class="day">
-                  <input type="checkbox" class="" value="" id="sunday">
+                  <input type="checkbox" class="day-check" value="" id="sunday">
                   <label for="sunday">вс</label>
                   <div class="from-to">
-                    <input type="text" id="sun-time-from" class="time-from" value="09:00">
+                    <input type="text" id="sun-time-from" disabled class="time-from" value="09:00">
                     <p>-</p>
-                    <input type="text" id="sun-time-to" class="time-to" value="18:00">
+                    <input type="text" id="sun-time-to" disabled class="time-to" value="18:00">
                   </div>
                 </div>
 
@@ -579,7 +582,7 @@
                 </div>
               </div>
             </div>
-            <input type="submit" name="" class="full-button" value="Сохранить">
+            <input type="submit" name="" class="full-button add-address-btn" value="Сохранить">
           </form>
         </div>
       </div>
@@ -619,7 +622,6 @@
   </script>
 
   <script>
-
   </script>
 
   <script>
@@ -692,16 +694,43 @@
       $('#company-category').dropkick({
         startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
         theme: 'black',
-        change: function(value, label) { // callback event
-
-        }
       });
 
+      delete_address();
+
+      function delete_address() {
+
+        var del_addr = $(".delete-address")
+        var addr_list = $(".addresses")
+        for (var g = 0; g < del_addr.length; g++) {
+          del_addr[g].addEventListener("click", function(event) {
+            event.preventDefault();
+            $(function() {
+              $(event.target).parent().parent().slideUp();
+
+              setTimeout(function() {
+                $(event.target).parent().parent().remove();
+              }, 1000);
+            });
+          });
+        };
+
+      };
     });
   </script>
 
   <script>
     var address = document.querySelector(".add-address");
+    $(".time-from").mask("99:99", {
+      placeholder: "09:00"
+    });
+    $(".time-to").mask("99:99", {
+      placeholder: "18:00"
+    });
+    $("#add-address input[type='tel']").mask("+375(99) 999-99-99", {
+      placeholder: "+375(__) ___-__-__"
+    });
+
     address.addEventListener("click", function(event) {
       event.preventDefault();
       $(function() {
@@ -709,6 +738,55 @@
         $('#add-address').arcticmodal();
       });
     });
+
+    var add_address_phone = document.querySelector(".add-phone .plus");
+    add_address_phone.addEventListener("click", function(event) {
+      event.preventDefault();
+      $(function() {
+
+      });
+    });
+
+    $("#equally-week").change(
+      function() {
+        if (this.checked) {
+          $(".days").slideUp();
+          $(".days").addClass("eq");
+          $(".days").slideDown();
+          $(".title .week-days").css("color", "#50E6C9");
+          $(".title .equally").css("color", "#000");
+          $("#friday").parent().insertAfter($("#monday").parent());
+          $("#saturday").parent().insertAfter($("#tuesday").parent());
+          $("#sunday").parent().insertAfter($("#wednesday").parent());
+        } else {
+          $(".days").slideUp();
+          $(".days").removeClass("eq");
+          $(".days").slideDown();
+          $(".title .equally").css("color", "#50E6C9");
+          $(".title .week-days").css("color", "#000");
+          $("#friday").parent().insertAfter($("#thursday").parent());
+          $("#saturday").parent().insertAfter($("#friday").parent());
+          $("#sunday").parent().insertAfter($("#saturday").parent());
+        }
+      });
+
+      $(".day-check").change(
+        function() {
+
+          if (this.checked) {
+
+            var temp = $(this).parent().find(".from-to");
+            $(temp).find("input").removeAttr("disabled");
+
+          /*  $(".from-to input").attr("disabled","true");*/
+
+          } else {
+
+            var temp = $(this).parent().find(".from-to");
+            $(temp).find("input").attr("disabled","true");
+            $(temp).find("input").attr("value"," ");
+          }
+        });
   </script>
 
   <svg style="display: none;">

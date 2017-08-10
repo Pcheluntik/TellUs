@@ -35,6 +35,7 @@ a {
   color: rgb(51,51,51);
 }
 /*Текстовые стили*/
+
 .text {
   p {
     @include regularText($fontRegularSize: 1.25rem);
@@ -133,7 +134,6 @@ a {
   background-color: #fff;
 }
 /*Основные стили*/
-
 .button:after,
 body {
   @include regularText();
@@ -1032,9 +1032,9 @@ h4 {
   @include boldText($fontBoldSize: 1.25rem);
 }
 
-
 .how-it-work {
   background-color: $colorBlackBackground;
+
   h2 {
     margin-top: 3.875rem;
     margin-bottom: 152px;
@@ -1074,6 +1074,7 @@ h4 {
         top: -40px;
         left: 0;
       }
+
       .worked-text {
         position: relative;
         z-index: 5;
@@ -1136,7 +1137,6 @@ h4 {
     color: $colorBlackBackground;
     margin-bottom: 95px;
   }
-
   color: $colorBlackBackground;
 
   .popular-stock_list {
@@ -1351,7 +1351,6 @@ h4 {
   font-size: 0.87rem;
 }
 /*Категории*/
-
 .category-page.top {
   div {
     width: 55%;
@@ -1520,7 +1519,6 @@ h4 {
   }
 }
 /*Страница организации*/
-
 .organisation-page {
   position: relative;
   display: flex;
@@ -1647,6 +1645,7 @@ h4 {
   }
 }
 /*Звезды для отзывов*/
+
 #reviewStars-input input:checked ~ label,
 #reviewStars-input label,
 #reviewStars-input label:hover,
@@ -1755,7 +1754,6 @@ h4 {
 
 .address-content {
   background-color: #fff;
-
   padding-left: 30px;
 
   p:not(.org-address_title) {
@@ -1836,6 +1834,7 @@ h4 {
   }
 }
 /*Список организаций*/
+
 .organisation-list {
   display: flex;
   flex-direction: row;
@@ -1996,6 +1995,7 @@ h4 {
   }
 }
 /*Пагинация*/
+
 .pagination {
   display: flex;
   flex-direction: row;
@@ -2507,7 +2507,8 @@ h4 {
         border-radius: 10px;
         padding: 50px 50px 10px;
       }
-      .date-time  {
+
+      .date-time {
         font-size: 0.875rem;
         color: #444;
         position: absolute;
@@ -2566,8 +2567,6 @@ h4 {
     position: relative;
     height: 99%;
 
-
-
     .browser {
       width: 100%;
       height: 100%;
@@ -2605,11 +2604,12 @@ h4 {
     top: 0;
     width: 100%;
     height: 216%;
-
   }
-   #dropzone label {
-     position: relative;
-   }
+
+  #dropzone label {
+    position: relative;
+  }
+
   #dropzone .browser span {
     cursor: pointer;
     line-height: 44px;
@@ -2633,14 +2633,14 @@ h4 {
   padding-top: 20px;
 
   .password {
-    border-bottom:1px solid rgba(187, 187, 187, 1);
+    border-bottom: 1px solid rgba(187, 187, 187, 1);
     width: 100%;
     padding-bottom: 30px;
     margin-bottom: 33px;
+
     input {
       width: 60% !important;
     }
-
   }
 
   h3 {
@@ -2651,23 +2651,25 @@ h4 {
     max-width: 292px;
     font-size: 1.25rem;
 
-  & + p {
-    font-size: 1rem;
-    width: 50%;
-    margin-top: 10px;
+    & + p {
+      font-size: 1rem;
+      width: 50%;
+      margin-top: 10px;
+    }
   }
-}
+
   & .address-settings p,
   .password p {
     font-size: 0.875rem;
   }
 
   .address-settings {
-    border-bottom:1px solid rgba(187, 187, 187, 1);
+    border-bottom: 1px solid rgba(187, 187, 187, 1);
     width: 100%;
     padding-bottom: 55px;
     margin-bottom: 33px;
   }
+
   .input-field {
     display: flex;
     flex-direction: row;
@@ -2679,48 +2681,49 @@ h4 {
       justify-content: flex-start;
       margin-left: 161px;
       margin-top: -26px;
-      &>div {
+
+      & > div {
         display: flex;
         flex-direction: row;
 
-      .tag {
-        display: flex;
-        flex-direction: row;
-        background-color: #2f3336;
-        padding-left: 7px;
-        padding-right: 7px;
-        margin-right: 1px;
-        height: 20px;
-        line-height: 20px;
-        color: #fff;
-
-        & + .delete-tag {
-          width: 20px;
-          height: 20px;
+        .tag {
+          display: flex;
+          flex-direction: row;
           background-color: #2f3336;
-          margin-right: 3px;
-          position: relative;
+          padding-left: 7px;
+          padding-right: 7px;
+          margin-right: 1px;
+          height: 20px;
+          line-height: 20px;
+          color: #fff;
 
-          &:after,
-          &:before {
-            position: absolute;
-            left: 9px;
-            top: 3px;
-            content: ' ';
-            height: 14px;
-            width: 2px;
-            background-color: #fff;
-          }
+          & + .delete-tag {
+            width: 20px;
+            height: 20px;
+            background-color: #2f3336;
+            margin-right: 3px;
+            position: relative;
 
-          &:after {
-            transform: rotate(45deg);
-          }
+            &:after,
+            &:before {
+              position: absolute;
+              left: 9px;
+              top: 3px;
+              content: ' ';
+              height: 14px;
+              width: 2px;
+              background-color: #fff;
+            }
 
-          &:before {
-            transform: rotate(-45deg);
+            &:after {
+              transform: rotate(45deg);
+            }
+
+            &:before {
+              transform: rotate(-45deg);
+            }
           }
         }
-      }
       }
     }
 
@@ -2795,8 +2798,8 @@ h4 {
       width: 77px;
       position: relative;
       margin-left: 43px;
-
     }
+
     input + p {
       font-size: 0.875rem;
       position: absolute;
@@ -2963,10 +2966,11 @@ h4 {
     }
   }
 }
-/*
 #authorization {
   width: 50%;
 }
+
+/*
 
 #partner {
   width: 50%;
@@ -2978,10 +2982,10 @@ h4 {
 }
 
 */
-
 #partner {
   width: 50%;
 }
+
 .add-address {
   border: 1px dashed rgba(187, 187, 187, 1);
   border-radius: 10px;
@@ -2998,9 +3002,9 @@ h4 {
     margin-left: 24px;
     color: rgba(8,201,238,1);
     font-size: 1rem;
-
   }
 }
+
 #add-address {
   position: relative;
   padding-left: 67px;
@@ -3056,6 +3060,14 @@ h4 {
       p {
         margin-right: 5px;
       }
+      .equally {
+        color: #50E6C9;
+        transition: 0.3s;
+      }
+      .week-days {
+        color:#000;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -3076,7 +3088,6 @@ h4 {
     flex-direction: row;
     flex-wrap: wrap;
 
-
     .day {
       width: 42px;
       margin-right: 6px;
@@ -3096,6 +3107,7 @@ h4 {
       @include regularText($fontRegularSize: 0.875rem);
       line-height: 42px;
       margin-right: 6px;
+      user-select: none;
     }
 
     input[type="checkbox"]:not(checked) + label {
@@ -3112,9 +3124,9 @@ h4 {
       flex-direction: row;
       margin-top: 20px;
 
-       p{
-         line-height: 42px;
-       }
+      p {
+        line-height: 42px;
+      }
     }
   }
 
@@ -3124,8 +3136,6 @@ h4 {
     }
     height: 208px;
     width: 110%;
-
-
 
     .day {
       display: flex;
@@ -3212,6 +3222,7 @@ h4 {
   border: 1px solid #d6d7d7;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 
   &:after,
   &:before {
@@ -3443,97 +3454,119 @@ body.overlay {
 }
 
 a:not(.ui-slider-handle) {
-  &:hover, &:active, &:focus {
+  &:active,
+  &:focus,
+  &:hover {
     text-decoration: none;
   }
 }
 
+input {
+  &:focus {
+    outline-color: transparent;
+  }
+}
 /*статистика*/
-
 /* Ширина слайдера */
 #slider {
-    width: 325px;
+  width: 325px;
 }
 /* Контейнер слайдера */
+
 .ui-slider {
-    position: relative;
+  position: relative;
 }
 /* Ползунок */
+
 .ui-slider .ui-slider-handle {
-    position: absolute;
-    z-index: 2;
-    width: 13px;   /* Задаем нужную ширину */
-    height: 13px;  /* и высоту */
-    background-color: rgba(8,201,238,1);
-    border-radius: 50%;
-    cursor: pointer;
-    &:focus {
-      outline-color: transparent;
-    }
+  position: absolute;
+  z-index: 2;
+  width: 13px;
+  /* Задаем нужную ширину */
+  height: 13px;
+  /* и высоту */
+  background-color: rgba(8,201,238,1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:focus {
+    outline-color: transparent;
+  }
 }
+
 .ui-slider .ui-slider-range {
-    position: absolute;
-    z-index: 1;
-    font-size: .7em;
-    display: block;
-    border: 0;
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
   overflow: hidden;
 }
 /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+
 .ui-slider-horizontal {
-     height: 3px; /* задаем высоту согласно дизайна */
+  height: 3px;
+  /* задаем высоту согласно дизайна */
 }
 /* позиционируем ползунки */
+
 .ui-slider-horizontal .ui-slider-handle {
-    top: -5px;
-    margin-left: -6px;
+  top: -5px;
+  margin-left: -6px;
 }
+
 .ui-slider-horizontal .ui-slider-range {
-    top: 0;
-    height: 100%;
+  top: 0;
+  height: 100%;
 }
+
 .ui-slider-horizontal .ui-slider-range-min {
-    left: 0;
+  left: 0;
 }
+
 .ui-slider-horizontal .ui-slider-range-max {
-    right: 0;
+  right: 0;
 }
 /* оформление полосы по которой ходит ползунок */
+
 .ui-widget-content {
-    height: 3px;
-    background: #fff;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 1px;
-      left: 0;
-      height: 1px;
-      width: 325px;
-      background-color: #D4D4D4;
-      z-index: 0;
-    }
+  height: 3px;
+  background: #fff;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 1px;
+    width: 325px;
+    background-color: #D4D4D4;
+    z-index: 0;
+  }
 }
 /* оформление активного участка (между двумя ползунками) */
-.ui-widget-header {
-    border: 1px solid #D4D4D4;
 
-    background: rgba(8,201,238,1);
+.ui-widget-header {
+  border: 1px solid #D4D4D4;
+  background: rgba(8,201,238,1);
 }
 /* скругление для полосы слайдера */
+
 .ui-corner-all {
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .values {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  p{
-  font-size: 1rem;
-  color: #000;
-  opacity: 1;
-}
+
+  p {
+    font-size: 1rem;
+    color: #000;
+    opacity: 1;
+  }
 }
