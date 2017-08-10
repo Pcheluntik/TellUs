@@ -604,25 +604,9 @@
   </div>
 
   <script src="resources\js\popap.js"></script>
-  <script>
-    $(document).ready(function() {
-      var edit = $(".edit-address")
-      for (var p = 0; p < edit.length; p++) {
-        edit[p].addEventListener("click", function(event) {
-          event.preventDefault();
-          $(function() {
-            $('#add-address h3').html("Редактировать адрес");
-            $('#add-address').arcticmodal();
-          });
-        });
-      };
+  <script src="resources\js\profile.js"></script>
 
 
-    });
-  </script>
-
-  <script>
-  </script>
 
   <script>
     /*Функция проверки картинки профиля*/
@@ -664,129 +648,11 @@
   </script>
 
   <script type="text/javascript" charset="utf-8">
-    $(function() {
-      $(".company-present-procent").slideUp();
-      $('#company-bonus').dropkick({
-        startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
-        theme: 'black',
-        change: function(value, label) { // callback event
 
-          if (label == "Скидка") {
-
-            $(".company-bonus-procent").slideDown(); {
-
-            }
-          } else {
-            $(".company-bonus-procent").slideUp();
-            $(".company-bonus-procent").val(" ");
-          }
-
-          if (label == "Подарок") {
-            $(".company-present-procent").slideDown();
-
-          } else {
-            $(".company-present-procent").slideUp();
-            $(".company-present-procent").val(" ");
-          }
-        }
-      });
-
-      $('#company-category').dropkick({
-        startSpeed: 400, // the speed of fade in effect. A low value (lowest is probably 100) to stop the effect.
-        theme: 'black',
-      });
-
-      delete_address();
-
-      function delete_address() {
-
-        var del_addr = $(".delete-address")
-        var addr_list = $(".addresses")
-        for (var g = 0; g < del_addr.length; g++) {
-          del_addr[g].addEventListener("click", function(event) {
-            event.preventDefault();
-            $(function() {
-              $(event.target).parent().parent().slideUp();
-
-              setTimeout(function() {
-                $(event.target).parent().parent().remove();
-              }, 1000);
-            });
-          });
-        };
-
-      };
-    });
   </script>
 
   <script>
-    var address = document.querySelector(".add-address");
-    $(".time-from").mask("99:99", {
-      placeholder: "09:00"
-    });
-    $(".time-to").mask("99:99", {
-      placeholder: "18:00"
-    });
-    $("#add-address input[type='tel']").mask("+375(99) 999-99-99", {
-      placeholder: "+375(__) ___-__-__"
-    });
 
-    address.addEventListener("click", function(event) {
-      event.preventDefault();
-      $(function() {
-        $('#add-address h3').html("Добавить адрес");
-        $('#add-address').arcticmodal();
-      });
-    });
-
-    var add_address_phone = document.querySelector(".add-phone .plus");
-    add_address_phone.addEventListener("click", function(event) {
-      event.preventDefault();
-      $(function() {
-
-      });
-    });
-
-    $("#equally-week").change(
-      function() {
-        if (this.checked) {
-          $(".days").slideUp();
-          $(".days").addClass("eq");
-          $(".days").slideDown();
-          $(".title .week-days").css("color", "#50E6C9");
-          $(".title .equally").css("color", "#000");
-          $("#friday").parent().insertAfter($("#monday").parent());
-          $("#saturday").parent().insertAfter($("#tuesday").parent());
-          $("#sunday").parent().insertAfter($("#wednesday").parent());
-        } else {
-          $(".days").slideUp();
-          $(".days").removeClass("eq");
-          $(".days").slideDown();
-          $(".title .equally").css("color", "#50E6C9");
-          $(".title .week-days").css("color", "#000");
-          $("#friday").parent().insertAfter($("#thursday").parent());
-          $("#saturday").parent().insertAfter($("#friday").parent());
-          $("#sunday").parent().insertAfter($("#saturday").parent());
-        }
-      });
-
-      $(".day-check").change(
-        function() {
-
-          if (this.checked) {
-
-            var temp = $(this).parent().find(".from-to");
-            $(temp).find("input").removeAttr("disabled");
-
-          /*  $(".from-to input").attr("disabled","true");*/
-
-          } else {
-
-            var temp = $(this).parent().find(".from-to");
-            $(temp).find("input").attr("disabled","true");
-            $(temp).find("input").attr("value"," ");
-          }
-        });
   </script>
 
   <svg style="display: none;">
