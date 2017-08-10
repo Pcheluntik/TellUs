@@ -276,6 +276,9 @@ input.full-button {
 header {
   .container-fluid {
     .nav-pannel {
+      position: fixed;
+      top: 0;
+      width: 90%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -3576,9 +3579,29 @@ input {
   }
 }
 
-
-@media (max-width: 1185px) {
+@media (max-width: 1130px) {
+  .search {
+    position: relative;
+    z-index: 30;
+  }
   footer {
+    .main-footer {
+    flex-direction: column;
+    .footer-nav, .contacts {
+      margin: 0 auto;
+    }
+  }
+
+}
+.popular-stock .popular-stock_list .box.w2 {
+  width: 100%;
+}
+}
+
+@media (max-width: 769px) {
+  footer {
+    .main-footer {
     display: none;
   }
+}
 }
