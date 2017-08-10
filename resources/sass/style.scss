@@ -35,7 +35,6 @@ a {
   color: rgb(51,51,51);
 }
 /*Текстовые стили*/
-
 .text {
   p {
     @include regularText($fontRegularSize: 1.25rem);
@@ -134,11 +133,13 @@ a {
   background-color: #fff;
 }
 /*Основные стили*/
+
 .button:after,
 body {
   @include regularText();
   background-color: rgb(242,242,242);
 }
+
 
 body {
   position: relative;
@@ -276,9 +277,10 @@ input.full-button {
 header {
   .container-fluid {
     .nav-pannel {
-      position: fixed;
+      position: relative;
       top: 0;
-      width: 90%;
+      width: 100%;
+      padding: 0 5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -306,10 +308,13 @@ header {
           margin-top: 28px;
           list-style: none;
           z-index: 1;
+
           .mobail-menu {
             display: none;
           }
-          li, menu {
+
+          li,
+          menu {
             margin-right: 30px;
 
             &:last-of-type {
@@ -488,6 +493,19 @@ header {
       }
     }
 
+
+
+
+
+  }
+}
+
+#search_from_header,
+#search_ok {
+  display: none;
+}
+
+
     .search {
       margin-top: 100px;
 
@@ -519,12 +537,6 @@ header {
           cursor: pointer;
         }
       }
-
-      #search_from_header,
-      #search_ok {
-        display: none;
-      }
-
       input[type="text"] {
         width: 50%;
         padding: 15px 36px;
@@ -541,10 +553,8 @@ header {
           outline-color: transparent;
         }
       }
-    }
-  }
-}
 
+}
 h1 {
   @include boldText($fontBoldSize: 5rem);
   margin-bottom: 65px;
@@ -583,6 +593,38 @@ h2.black-bcg {
     background-image: url("../img/subtitle_black.svg");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+}
+
+
+.nav-pannel.special {
+  nav ul
+  {
+    margin-top: 0 !important;
+
+    li a:not(.button) {
+
+  }}
+  .logo {
+    margin-top: 5px !important;
+  }
+  nav ul li.nav-search .search_panel input[type="text"] {
+    border-top: 1px solid #f7f3f3 !important;
+    border-left: 1px solid #f7f3f3 !important;
+    border-right: 1px solid #f7f3f3 !important;
+  }
+
+  .button:after {
+    background-color: #fff;
+  }
+}
+@keyframes opas {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -1200,9 +1242,11 @@ h4 {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+
     .logo {
       width: 182px;
     }
+
     ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1339,6 +1383,36 @@ h4 {
           }
         }
 
+        .mobile-menu {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../img/mobile-menu.svg");
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+            background-size: contain;
+            top: 0;
+            left: -20px;
+          }
+
+          &:hover {
+            &::before {
+              background-image: url("../img/mobile-menu_active.svg");
+              opacity: 0.9;
+            }
+          }
+
+          &:active {
+            &::before {
+              background-image: url("../img/profile_active.svg");
+              opacity: 1;
+            }
+          }
+        }
+
         .full-button:hover {
           color: rgb(51,51,51);
 
@@ -1359,6 +1433,7 @@ h4 {
   font-size: 0.87rem;
 }
 /*Категории*/
+
 .category-page.top {
   div {
     width: 55%;
@@ -1527,6 +1602,7 @@ h4 {
   }
 }
 /*Страница организации*/
+
 .organisation-page {
   position: relative;
   display: flex;
@@ -1653,7 +1729,6 @@ h4 {
   }
 }
 /*Звезды для отзывов*/
-
 #reviewStars-input input:checked ~ label,
 #reviewStars-input label,
 #reviewStars-input label:hover,
@@ -1842,7 +1917,6 @@ h4 {
   }
 }
 /*Список организаций*/
-
 .organisation-list {
   display: flex;
   flex-direction: row;
@@ -2003,7 +2077,6 @@ h4 {
   }
 }
 /*Пагинация*/
-
 .pagination {
   display: flex;
   flex-direction: row;
@@ -2974,10 +3047,10 @@ h4 {
     }
   }
 }
+
 #authorization {
   width: 50%;
 }
-
 /*
 
 #partner {
@@ -2990,6 +3063,7 @@ h4 {
 }
 
 */
+
 #partner {
   width: 50%;
 }
@@ -3068,12 +3142,14 @@ h4 {
       p {
         margin-right: 5px;
       }
+
       .equally {
         color: #50E6C9;
         transition: 0.3s;
       }
+
       .week-days {
-        color:#000;
+        color: #000;
         transition: 0.3s;
       }
     }
@@ -3476,16 +3552,15 @@ input {
 }
 /*статистика*/
 /* Ширина слайдера */
+
 #slider {
   width: 325px;
 }
 /* Контейнер слайдера */
-
 .ui-slider {
   position: relative;
 }
 /* Ползунок */
-
 .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
@@ -3511,13 +3586,11 @@ input {
   overflow: hidden;
 }
 /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
-
 .ui-slider-horizontal {
   height: 3px;
   /* задаем высоту согласно дизайна */
 }
 /* позиционируем ползунки */
-
 .ui-slider-horizontal .ui-slider-handle {
   top: -5px;
   margin-left: -6px;
@@ -3536,7 +3609,6 @@ input {
   right: 0;
 }
 /* оформление полосы по которой ходит ползунок */
-
 .ui-widget-content {
   height: 3px;
   background: #fff;
@@ -3554,13 +3626,11 @@ input {
   }
 }
 /* оформление активного участка (между двумя ползунками) */
-
 .ui-widget-header {
   border: 1px solid #D4D4D4;
   background: rgba(8,201,238,1);
 }
 /* скругление для полосы слайдера */
-
 .ui-corner-all {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -3578,30 +3648,31 @@ input {
     opacity: 1;
   }
 }
-
 @media (max-width: 1130px) {
   .search {
     position: relative;
     z-index: 30;
   }
+
   footer {
     .main-footer {
-    flex-direction: column;
-    .footer-nav, .contacts {
-      margin: 0 auto;
+      flex-direction: column;
+
+      .contacts,
+      .footer-nav {
+        margin: 0 auto;
+      }
     }
   }
 
+  .popular-stock .popular-stock_list .box.w2 {
+    width: 100%;
+  }
 }
-.popular-stock .popular-stock_list .box.w2 {
-  width: 100%;
-}
-}
-
 @media (max-width: 769px) {
   footer {
     .main-footer {
-    display: none;
+      display: none;
+    }
   }
-}
 }
