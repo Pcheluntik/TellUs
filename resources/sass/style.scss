@@ -142,7 +142,7 @@ body {
 
 body {
   position: relative;
-  min-width: 1300px;
+  min-width: 100%;
 
   &.main-page:after {
     content: "";
@@ -165,7 +165,7 @@ body {
 .content {
   min-width: 769px;
   max-width: 1185px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -298,12 +298,15 @@ header {
       nav {
         ul {
           @include flex-row();
+          justify-content: flex-end;
           padding: 0;
           margin-top: 28px;
           list-style: none;
           z-index: 1;
-
-          li {
+          .mobail-menu {
+            display: none;
+          }
+          li, menu {
             margin-right: 30px;
 
             &:last-of-type {
@@ -1194,7 +1197,9 @@ h4 {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-
+    .logo {
+      width: 182px;
+    }
     ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3568,5 +3573,12 @@ input {
     font-size: 1rem;
     color: #000;
     opacity: 1;
+  }
+}
+
+
+@media (max-width: 1185px) {
+  footer {
+    display: none;
   }
 }

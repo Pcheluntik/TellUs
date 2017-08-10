@@ -5943,7 +5943,7 @@ body {
 
 body {
   position: relative;
-  min-width: 1300px; }
+  min-width: 100%; }
   body.main-page:after {
     content: "";
     position: absolute;
@@ -5962,7 +5962,7 @@ body {
 .content {
   min-width: 769px;
   max-width: 1185px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto; }
 
 .button {
@@ -6108,15 +6108,21 @@ header .container-fluid .nav-pannel {
     -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
     align-content: flex-start;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     padding: 0;
     margin-top: 28px;
     list-style: none;
     z-index: 1; }
-    header .container-fluid .nav-pannel nav ul li {
+    header .container-fluid .nav-pannel nav ul .mobail-menu {
+      display: none; }
+    header .container-fluid .nav-pannel nav ul li, header .container-fluid .nav-pannel nav ul menu {
       margin-right: 30px; }
-      header .container-fluid .nav-pannel nav ul li:last-of-type {
+      header .container-fluid .nav-pannel nav ul li:last-of-type, header .container-fluid .nav-pannel nav ul menu:last-of-type {
         margin-right: 0; }
-      header .container-fluid .nav-pannel nav ul li a:not(.button) {
+      header .container-fluid .nav-pannel nav ul li a:not(.button), header .container-fluid .nav-pannel nav ul menu a:not(.button) {
         font-family: "Gilroy Light", "Arial", sans-serif;
         color: #333333;
         font-size: 1.25rem;
@@ -6127,7 +6133,7 @@ header .container-fluid .nav-pannel {
         transition: all 0.3s;
         position: relative;
         z-index: 1; }
-        header .container-fluid .nav-pannel nav ul li a:not(.button):after {
+        header .container-fluid .nav-pannel nav ul li a:not(.button):after, header .container-fluid .nav-pannel nav ul menu a:not(.button):after {
           content: "";
           position: absolute;
           width: 0;
@@ -6138,18 +6144,18 @@ header .container-fluid .nav-pannel {
           -webkit-transition: all 0.3s;
           -o-transition: all 0.3s;
           transition: all 0.3s; }
-        header .container-fluid .nav-pannel nav ul li a:not(.button):hover {
+        header .container-fluid .nav-pannel nav ul li a:not(.button):hover, header .container-fluid .nav-pannel nav ul menu a:not(.button):hover {
           color: #05aed9;
           text-decoration: none; }
-          header .container-fluid .nav-pannel nav ul li a:not(.button):hover:after {
+          header .container-fluid .nav-pannel nav ul li a:not(.button):hover:after, header .container-fluid .nav-pannel nav ul menu a:not(.button):hover:after {
             width: 100%; }
-      header .container-fluid .nav-pannel nav ul li .button {
+      header .container-fluid .nav-pannel nav ul li .button, header .container-fluid .nav-pannel nav ul menu .button {
         margin-top: 10px;
         z-index: 1; }
-      header .container-fluid .nav-pannel nav ul li.nav-search {
+      header .container-fluid .nav-pannel nav ul li.nav-search, header .container-fluid .nav-pannel nav ul menu.nav-search {
         position: relative;
         padding-left: 20px; }
-        header .container-fluid .nav-pannel nav ul li.nav-search::before {
+        header .container-fluid .nav-pannel nav ul li.nav-search::before, header .container-fluid .nav-pannel nav ul menu.nav-search::before {
           content: "";
           position: absolute;
           background-image: url("../img/search.png");
@@ -6159,7 +6165,7 @@ header .container-fluid .nav-pannel {
           background-size: contain;
           top: 26px;
           left: -10px; }
-        header .container-fluid .nav-pannel nav ul li.nav-search .search_panel {
+        header .container-fluid .nav-pannel nav ul li.nav-search .search_panel, header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel {
           position: absolute;
           right: 0;
           top: 0;
@@ -6172,31 +6178,31 @@ header .container-fluid .nav-pannel {
           -webkit-transition: opacity 1s, width 0.3s ease-out;
           z-index: -5;
           opacity: 0; }
-          header .container-fluid .nav-pannel nav ul li.nav-search .search_panel input[type="text"] {
+          header .container-fluid .nav-pannel nav ul li.nav-search .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel input[type="text"] {
             width: 0; }
-          header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label {
+          header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label, header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel label {
             left: 92%; }
-            header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label:hover {
+            header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label:hover, header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel label:hover {
               background-image: url("../img/search_active.svg");
               cursor: pointer; }
-        header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel {
+        header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel, header .container-fluid .nav-pannel nav ul menu.nav-search:hover .search_panel {
           width: 562px;
           opacity: 1;
           z-index: 5; }
-          header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel input[type="text"] {
+          header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul menu.nav-search:hover .search_panel input[type="text"] {
             padding: 15px 36px;
             width: 100%; }
-        header .container-fluid .nav-pannel nav ul li.nav-search:active .search_panel, header .container-fluid .nav-pannel nav ul li.nav-search:focus .search_panel {
+        header .container-fluid .nav-pannel nav ul li.nav-search:active .search_panel, header .container-fluid .nav-pannel nav ul li.nav-search:focus .search_panel, header .container-fluid .nav-pannel nav ul menu.nav-search:active .search_panel, header .container-fluid .nav-pannel nav ul menu.nav-search:focus .search_panel {
           width: 562px;
           opacity: 1;
           z-index: 5; }
-          header .container-fluid .nav-pannel nav ul li.nav-search:active .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul li.nav-search:focus .search_panel input[type="text"] {
+          header .container-fluid .nav-pannel nav ul li.nav-search:active .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul li.nav-search:focus .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul menu.nav-search:active .search_panel input[type="text"], header .container-fluid .nav-pannel nav ul menu.nav-search:focus .search_panel input[type="text"] {
             padding: 15px 36px;
             width: 100%; }
-      header .container-fluid .nav-pannel nav ul li.profile {
+      header .container-fluid .nav-pannel nav ul li.profile, header .container-fluid .nav-pannel nav ul menu.profile {
         position: relative;
         padding-left: 20px; }
-        header .container-fluid .nav-pannel nav ul li.profile::before {
+        header .container-fluid .nav-pannel nav ul li.profile::before, header .container-fluid .nav-pannel nav ul menu.profile::before {
           content: "";
           position: absolute;
           background-image: url("../img/profile.svg");
@@ -6206,16 +6212,16 @@ header .container-fluid .nav-pannel {
           background-size: contain;
           top: 28px;
           left: -5px; }
-        header .container-fluid .nav-pannel nav ul li.profile:hover::before {
+        header .container-fluid .nav-pannel nav ul li.profile:hover::before, header .container-fluid .nav-pannel nav ul menu.profile:hover::before {
           background-image: url("../img/profile_active.svg");
           opacity: 0.9; }
-        header .container-fluid .nav-pannel nav ul li.profile:active::before {
+        header .container-fluid .nav-pannel nav ul li.profile:active::before, header .container-fluid .nav-pannel nav ul menu.profile:active::before {
           background-image: url("../img/profile_active.svg");
           opacity: 1; }
-      header .container-fluid .nav-pannel nav ul li.shopper {
+      header .container-fluid .nav-pannel nav ul li.shopper, header .container-fluid .nav-pannel nav ul menu.shopper {
         position: relative;
         padding-left: 20px; }
-        header .container-fluid .nav-pannel nav ul li.shopper::before {
+        header .container-fluid .nav-pannel nav ul li.shopper::before, header .container-fluid .nav-pannel nav ul menu.shopper::before {
           content: "";
           position: absolute;
           background-image: url("../img/shopper.svg");
@@ -6225,10 +6231,10 @@ header .container-fluid .nav-pannel {
           background-size: contain;
           top: 30px;
           left: -15px; }
-        header .container-fluid .nav-pannel nav ul li.shopper:hover::before {
+        header .container-fluid .nav-pannel nav ul li.shopper:hover::before, header .container-fluid .nav-pannel nav ul menu.shopper:hover::before {
           background-image: url("../img/shopper_active.svg");
           opacity: 0.9; }
-        header .container-fluid .nav-pannel nav ul li.shopper:active::before {
+        header .container-fluid .nav-pannel nav ul li.shopper:active::before, header .container-fluid .nav-pannel nav ul menu.shopper:active::before {
           background-image: url("../img/shopper_active.svg");
           opacity: 1; }
 
@@ -6840,6 +6846,8 @@ h4 {
     -ms-flex-direction: row;
     -webkit-flex-direction: row;
     flex-direction: row; }
+    .main-footer .footer-nav .logo {
+      width: 182px; }
     .main-footer .footer-nav ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -9024,3 +9032,7 @@ input:focus {
     font-size: 1rem;
     color: #000;
     opacity: 1; }
+
+@media (max-width: 1185px) {
+  footer {
+    display: none; } }

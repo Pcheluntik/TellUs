@@ -45,7 +45,7 @@ $(document).ready(function() {
 
   //Отрисовка статистики
   function bar_draw(data_array, label_array) {
-    console.log($("#statistic-bar"));
+
  $("#statistic-bar").remove();
   console.log(1);
   new RGraph.SVG.Bar({
