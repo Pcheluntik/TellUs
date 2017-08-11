@@ -6216,10 +6216,10 @@ header .container-fluid .nav-pannel {
           margin: 0;
           width: 0;
           margin-top: 5px;
-          transition: opacity 1s, width 0.3s ease-out;
-          -o-transition: opacity 1s, width 0.3s ease-out;
-          -moz-transition: opacity 1s, width 0.3s ease-out;
-          -webkit-transition: opacity 1s, width 0.3s ease-out;
+          transition: opacity 0.5s, width 0.5s ease-out;
+          -o-transition: opacity 0.5s, width 0.5s ease-out;
+          -moz-transition: opacity 0.5s, width 0.5s ease-out;
+          -webkit-transition: opacity 0.5s, width 0.5s ease-out;
           z-index: -5;
           opacity: 0; }
           header .container-fluid .nav-pannel nav ul li.nav-search .search_panel input[type="text"],
@@ -6329,7 +6329,10 @@ header .container-fluid .nav-pannel {
   display: none; }
 
 .search {
-  margin-top: 100px; }
+  margin-top: 100px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
   .search h1 {
     padding-bottom: 0;
     margin-bottom: 65px;
@@ -9143,7 +9146,7 @@ input:focus {
   position: absolute; }
   #mobile-menu ul {
     list-style: none;
-    margin-top: 70px; }
+    margin-top: 55px; }
     #mobile-menu ul li {
       font-size: 1.5rem;
       padding-top: 15px;
@@ -9222,7 +9225,7 @@ input:focus {
 
 @media (max-width: 1100px) {
   header .container-fluid .nav-pannel {
-    padding: 0 1%; }
+    padding: 5px 1%; }
     header .container-fluid .nav-pannel nav ul {
       margin-top: 29px; }
       header .container-fluid .nav-pannel nav ul li {
@@ -9289,7 +9292,7 @@ input:focus {
   footer .main-footer {
     display: none; } }
 
-@media (max-width: 740px) {
+@media (max-width: 758px) {
   html {
     font-size: 10px; }
   header .container-fluid .nav-pannel .logo {
@@ -9314,17 +9317,15 @@ input:focus {
     .search_panel label {
       top: 9px; }
   .search_panel form {
-    min-width: 296px; }
+    min-width: 267px; }
   .search_panel input[type="text"] {
     padding: 15px 38px 15px 15px;
-    min-width: 296px;
+    min-width: 267px;
     width: 100%; }
-  .search {
-    margin-top: 60px !important; }
   body.main-page:after {
-    top: 205px;
-    width: 50%;
-    height: 310px; }
+    top: 131px;
+    width: 32%;
+    height: 386px; }
   .category h2 {
     margin-top: 71px;
     margin-bottom: 56px; }
@@ -9357,15 +9358,19 @@ input:focus {
       margin-top: 60px; }
   .how-it-work h2 {
     margin-bottom: 30px; }
+  .popular-stock .popular-stock_list .box {
+    width: 296px !important; }
   .popular-stock .popular-stock_list .box.w2 {
-    width: 320px !important; }
+    width: 296px !important; }
   header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel,
   header .container-fluid .nav-pannel nav ul menu.nav-search:hover .search_panel {
     width: 243px;
     top: 20px; }
   header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label,
   header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel label {
-    left: 87%; } }
+    left: 87%; }
+  #mobile-menu ul li.shopper::before {
+    top: 17px; } }
 
 @media (max-width: 340px) {
   body.main-page:after {

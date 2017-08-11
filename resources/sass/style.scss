@@ -420,10 +420,10 @@ header {
                 margin: 0;
                 width: 0;
                 margin-top: 5px;
-                transition: opacity 1s, width 0.3s ease-out;
-                -o-transition: opacity 1s, width 0.3s ease-out;
-                -moz-transition: opacity 1s, width 0.3s ease-out;
-                -webkit-transition: opacity 1s, width 0.3s ease-out;
+                transition: opacity 0.5s, width 0.5s ease-out;
+                -o-transition: opacity 0.5s, width 0.5s ease-out;
+                -moz-transition: opacity 0.5s, width 0.5s ease-out;
+                -webkit-transition: opacity 0.5s, width 0.5s ease-out;
                 z-index: -5;
                 opacity: 0;
 
@@ -577,7 +577,7 @@ header {
 
 .search {
   margin-top: 100px;
-
+  transition: 0.3s;
   h1 {
     padding-bottom: 0;
     margin-bottom: 65px;
@@ -3673,7 +3673,7 @@ input {
 
   ul {
     list-style: none;
-    margin-top: 70px;
+    margin-top: 55px;
 
     li {
       font-size: 1.5rem;
@@ -3787,7 +3787,7 @@ input {
 }
 @media (max-width: 1100px) {
   header .container-fluid .nav-pannel {
-    padding: 0 1%;
+    padding: 5px 1%;
 
     nav ul {
       margin-top: 29px;
@@ -3901,7 +3901,7 @@ input {
     }
   }
 }
-@media (max-width: 740px) {
+@media (max-width: 758px) {
   html {
     font-size: 10px;
   }
@@ -3945,23 +3945,19 @@ input {
   }
 
   .search_panel form {
-    min-width: 296px;
+    min-width: 267px;
   }
 
   .search_panel input[type="text"] {
     padding: 15px 38px 15px 15px;
-    min-width: 296px;
+    min-width: 267px;
     width: 100%;
   }
 
-  .search {
-    margin-top: 60px !important;
-  }
-
   body.main-page:after {
-    top: 205px;
-    width: 50%;
-    height: 310px;
+    top: 131px;
+      width: 32%;
+      height: 386px;
   }
 
   .category h2 {
@@ -4006,8 +4002,11 @@ input {
     margin-bottom: 30px;
   }
 
+  .popular-stock .popular-stock_list .box {
+    width: 296px !important;
+  }
   .popular-stock .popular-stock_list .box.w2 {
-    width: 320px !important;
+    width: 296px !important;
   }
 
   header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel,
@@ -4019,6 +4018,10 @@ input {
   header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label,
   header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel label {
     left: 87%;
+  }
+
+  #mobile-menu ul li.shopper::before {
+    top:17px;
   }
 }
 @media (max-width: 340px) {
