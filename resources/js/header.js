@@ -34,4 +34,14 @@ $(document).ready(function() {
   });
 
 
+  var menu = document.querySelector(".mobile-menu");
+  
+  menu.addEventListener("click", function(event) {
+    event.preventDefault();
+    $(function() {
+      $('#mobile-menu').arcticmodal();
+    });
+  });
+
+
 });

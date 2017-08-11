@@ -148,4 +148,36 @@ $(document).ready(function() {
     };
   });
 
+
+  delete_tag();
+  //Удаление тега по щелчку на крестик
+  function delete_tag() {
+    var del_tag = $(".delete-tag")
+    var tag = $(".input-field .tag")
+    for (var k = 0; k < del_tag.length; k++) {
+      del_tag[k].addEventListener("click", function(event) {
+        event.preventDefault();
+        $(function() {
+          $(event.target).parent().remove();
+        });
+      });
+    };
+  };
+
+  $("#company-tegs").on('input', function() {
+    var txt = $(this).val();
+    $("#tegs-list").find("option").each(function() {
+      if ($(this).val() == txt) {
+        $("#company-tegs").val("");
+        text = $(this).val().toLowerCase();
+        $(".tegs-control").append(function(i) {
+          return "<div><div class='tag'><p>#" + text + "</p></div><div class='delete-tag'></div></div>";
+        });
+        delete_tag();
+      }
+    })
+  });
+
+
+
 });
