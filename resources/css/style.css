@@ -9250,7 +9250,8 @@ input:focus {
     padding-top: 30px; }
   .new-stock {
     padding-top: 30px; }
-  .new-stock .new-stock_carousel .slick-next, .new-stock .new-stock_carousel .slick-prev {
+  .new-stock .new-stock_carousel .slick-next,
+  .new-stock .new-stock_carousel .slick-prev {
     background-size: 17px 30px;
     background-position: 40%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -9286,3 +9287,74 @@ input:focus {
         width: 651px !important; }
   footer .main-footer {
     display: none; } }
+
+@media (max-width: 740px) {
+  html {
+    font-size: 10px; }
+  header .container-fluid .nav-pannel .logo {
+    width: 146px; }
+  header .container-fluid .nav-pannel nav {
+    width: 50%; }
+    header .container-fluid .nav-pannel nav ul {
+      margin-top: 23px; }
+      header .container-fluid .nav-pannel nav ul li a {
+        font-size: 0 !important; }
+        header .container-fluid .nav-pannel nav ul li a.button {
+          display: none; }
+  .search_panel {
+    margin-top: 30px;
+    margin-bottom: 40px; }
+    .search_panel label {
+      top: 9px; }
+  .search_panel form {
+    min-width: 296px; }
+  .search_panel input[type="text"] {
+    padding: 15px 38px 15px 15px;
+    min-width: 296px;
+    width: 100%; }
+  .search {
+    margin-top: 60px !important; }
+  body.main-page:after {
+    top: 205px;
+    width: 50%;
+    height: 310px; }
+  .category h2 {
+    margin-top: 71px;
+    margin-bottom: 56px; }
+  .category_main-list ul li {
+    width: 50%;
+    max-width: 50%;
+    margin-top: 0; }
+  .category_main-list ul li:last-of-type {
+    padding-right: 34px; }
+  .category_main-list {
+    padding-bottom: 0px; }
+  .reason .reason-cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 20px; }
+  .reason .reason-cols .col {
+    width: 100%;
+    margin-top: 10px; }
+  .how-it-work .work_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .how-it-work .work_list .worked {
+      width: 100%;
+      margin-top: 60px; }
+  .how-it-work h2 {
+    margin-bottom: 30px; }
+  .popular-stock .popular-stock_list .box.w2 {
+    width: 320px !important; } }
+
+@media (max-width: 340px) {
+  body.main-page:after {
+    top: 205px;
+    width: 50%;
+    height: 310px; } }

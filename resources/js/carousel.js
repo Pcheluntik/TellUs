@@ -47,7 +47,6 @@ $(document).ready(function(){
       columnWidth : '.box',
       gutter: 10,
       isFitWidth: true
-
     });
   });
 
