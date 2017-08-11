@@ -9249,7 +9249,8 @@ input:focus {
   .reason {
     padding-top: 30px; }
   .new-stock {
-    padding-top: 30px; }
+    padding-top: 30px;
+    width: 93%; }
   .new-stock .new-stock_carousel .slick-next,
   .new-stock .new-stock_carousel .slick-prev {
     background-size: 17px 30px;
@@ -9301,6 +9302,12 @@ input:focus {
         font-size: 0 !important; }
         header .container-fluid .nav-pannel nav ul li a.button {
           display: none; }
+  header .container-fluid .nav-pannel nav ul li.nav-search .search_panel {
+    left: -192px; }
+    header .container-fluid .nav-pannel nav ul li.nav-search .search_panel form {
+      position: absolute;
+      left: 0;
+      top: 40px; }
   .search_panel {
     margin-top: 30px;
     margin-bottom: 40px; }
@@ -9328,7 +9335,7 @@ input:focus {
   .category_main-list ul li:last-of-type {
     padding-right: 34px; }
   .category_main-list {
-    padding-bottom: 0px; }
+    padding-bottom: 0; }
   .reason .reason-cols {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9351,7 +9358,14 @@ input:focus {
   .how-it-work h2 {
     margin-bottom: 30px; }
   .popular-stock .popular-stock_list .box.w2 {
-    width: 320px !important; } }
+    width: 320px !important; }
+  header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel,
+  header .container-fluid .nav-pannel nav ul menu.nav-search:hover .search_panel {
+    width: 243px;
+    top: 20px; }
+  header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label,
+  header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel label {
+    left: 87%; } }
 
 @media (max-width: 340px) {
   body.main-page:after {

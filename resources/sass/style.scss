@@ -3833,6 +3833,7 @@ input {
 
   .new-stock {
     padding-top: 30px;
+    width: 93%;
   }
 
   .new-stock .new-stock_carousel .slick-next,
@@ -3924,13 +3925,25 @@ input {
       }
     }
   }
-.search_panel {
-margin-top: 30px;
-margin-bottom: 40px;
-  label {
-  top: 9px;
-}
-}
+
+  header .container-fluid .nav-pannel nav ul li.nav-search .search_panel {
+    left: -192px;
+    form {
+      position: absolute;
+      left: 0;
+      top: 40px;
+    }
+  }
+
+  .search_panel {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    label {
+      top: 9px;
+    }
+  }
+
   .search_panel form {
     min-width: 296px;
   }
@@ -3958,42 +3971,56 @@ margin-bottom: 40px;
 
   .category_main-list ul li {
     width: 50%;
-max-width: 50%;
-margin-top: 0;
-
+    max-width: 50%;
+    margin-top: 0;
   }
+
   .category_main-list ul li:last-of-type {
     padding-right: 34px;
   }
 
   .category_main-list {
-    padding-bottom: 0px;
-}
-.reason .reason-cols {
-  flex-direction: column;
-  padding-bottom: 20px;
-}
-.reason .reason-cols .col {
-  width: 100%;
-  margin-top: 10px;
-}
+    padding-bottom: 0;
+  }
 
-.how-it-work .work_list {
-  flex-direction: column;
-  .worked {
+  .reason .reason-cols {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .reason .reason-cols .col {
     width: 100%;
-        margin-top: 60px;
+    margin-top: 10px;
+  }
+
+  .how-it-work .work_list {
+    flex-direction: column;
+
+    .worked {
+      width: 100%;
+      margin-top: 60px;
+    }
+  }
+
+  .how-it-work h2 {
+    margin-bottom: 30px;
+  }
+
+  .popular-stock .popular-stock_list .box.w2 {
+    width: 320px !important;
+  }
+
+  header .container-fluid .nav-pannel nav ul li.nav-search:hover .search_panel,
+  header .container-fluid .nav-pannel nav ul menu.nav-search:hover .search_panel {
+    width: 243px;
+    top: 20px;
+  }
+
+  header .container-fluid .nav-pannel nav ul li.nav-search .search_panel label,
+  header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel label {
+    left: 87%;
   }
 }
-.how-it-work h2 {
-  margin-bottom: 30px;
-}
-
-.popular-stock .popular-stock_list .box.w2 {
-  width: 320px !important;
-}
-}
-
 @media (max-width: 340px) {
   body.main-page:after {
     top: 205px;
