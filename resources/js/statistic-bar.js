@@ -81,7 +81,7 @@ $(document).ready(function() {
     var rating_procent = quantity_month_grades * 100 / quantity_views; //процент общего количество оценок
     var good_reviews_procent = good_month_grades * 100 / quantity_month_grades; //количество положительных
     var bad_reviews_procent = bad_month_grades * 100 / quantity_month_grades; //количество отрицательных
-
+    var rating_text =  quantity_month_grades;
     //Удаляем предыдущие диаграммы
     $("#rating-diagramm svg").remove();
     $("#good-review-diagramm svg").remove();
@@ -97,20 +97,27 @@ $(document).ready(function() {
       animationStep: 5,
       foregroundBorderWidth: 7,
       backgroundBorderWidth: 4,
-      percent: rating_procent
+      percent: rating_procent,
+      /*text: rating_text,*/
+      noPercentageSign: true,
+      percentageTextSize: 0,
     });
 
     $("#good-review-diagramm").circliful({
       animationStep: 5,
       foregroundBorderWidth: 7,
       backgroundBorderWidth: 4,
-      percent: good_reviews_procent
+      percent: good_reviews_procent,
+      noPercentageSign: true,
+      percentageTextSize: 0,
     });
     $("#bad-review-diagramm").circliful({
       animationStep: 5,
       foregroundBorderWidth: 7,
       backgroundBorderWidth: 4,
-      percent: bad_reviews_procent
+      percent: bad_reviews_procent,
+      noPercentageSign: true,
+      percentageTextSize: 0,
     });
   }
 

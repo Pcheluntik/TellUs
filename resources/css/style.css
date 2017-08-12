@@ -5849,6 +5849,10 @@ html {
 a {
   color: #333333; }
 
+input:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; }
+
 /*Текстовые стили*/
 .text p {
   font-family: "Gilroy Light", "Arial", sans-serif;
@@ -7074,7 +7078,8 @@ h4 {
   padding-top: 14px;
   padding-bottom: 14px;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 0.87rem; }
+  font-size: 0.87rem;
+  position: relative; }
 
 /*Категории*/
 .category-page.top {
@@ -7629,6 +7634,9 @@ h4 {
         opacity: 1;
         width: 485px; }
 
+.organisation-list-page h1 {
+  margin-bottom: 40px; }
+
 .organisation-list-page form {
   position: relative;
   z-index: 30;
@@ -8035,15 +8043,6 @@ h4 {
           top: 94px;
           margin: 0 auto;
           width: 44%; }
-    .statistic .diagramm div:after {
-      content: "";
-      width: 111px;
-      height: 111px;
-      background-color: #fff;
-      position: absolute;
-      top: 87px;
-      left: 59px;
-      border-radius: 50%; }
 
 .statistic-quantity {
   position: relative;
@@ -8273,6 +8272,30 @@ h4 {
     margin-bottom: 33px; }
     .profile-settings .password input {
       width: 60% !important; }
+  .profile-settings .add-tegs {
+    position: relative; }
+    .profile-settings .add-tegs #add-tag {
+      position: absolute;
+      right: 0;
+      top: 1px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: transparent; }
+      .profile-settings .add-tegs #add-tag:after, .profile-settings .add-tegs #add-tag:before {
+        position: absolute;
+        left: 18px;
+        top: 10px;
+        content: ' ';
+        height: 20px;
+        width: 2px;
+        background-color: #1fd2df; }
+      .profile-settings .add-tegs #add-tag:after {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
+      .profile-settings .add-tegs #add-tag:focus {
+        outline: none; }
   .profile-settings h3 {
     margin-bottom: 38px; }
   .profile-settings input[type="submit"] {
@@ -9386,10 +9409,19 @@ input:focus {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
+    .content-for-profile .profile-content {
+      max-width: 100%;
+      padding-left: 78px; }
     .content-for-profile .profile-list {
       position: absolute;
-      height: 100%; }
+      height: 94%;
+      top: 169px;
+      background-color: #2f3336;
+      width: 86px; }
+      .content-for-profile .profile-list li {
+        height: 73px; }
     .content-for-profile .profile-menu {
       width: 100%;
       display: -webkit-box;
@@ -9400,7 +9432,11 @@ input:focus {
       -webkit-box-direction: normal;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+      height: 169px; }
+      .content-for-profile .profile-menu .image {
+        height: 169px;
+        width: 50%; }
     .content-for-profile .profile-con {
       width: 50%; }
   .category-page.top img {

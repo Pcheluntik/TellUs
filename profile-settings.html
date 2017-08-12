@@ -179,7 +179,7 @@
           <div class="profile-content">
             <div class="profile-settings">
               <h3>Настройки профиля</h3>
-              <form action="">
+              <form action="" autocomplete="off">
                 <div class="input-field">
                   <label for="company-name">Название компании</label>
                   <input type="text" name="company-name" id="company-name" required placeholder="Введите название вашей компании">
@@ -201,15 +201,10 @@
 
 
 
-                <div class="input-field">
+                <div class="input-field add-tegs">
                   <label for="company-tegs">Ключевые слова</label>
-                  <input type="text" name="tegs" id="company-tegs" placeholder="Начните вводить или выберите из списка" list="tegs-list">
-                  <datalist class="" id="tegs-list">
-                      <option value="Алкоголь"></option>
-                      <option value="Вода"></option>
-                      <option value="Еда"></option>
-                      <option value="Животные"></option>
-                    </datalist>
+                  <input type="text" id="company-tegs" placeholder="Введите ключевое слово">
+                  <button id="add-tag"></button>
                 </div>
                 <div class="input-field tegs-control">
                   <div>
@@ -458,7 +453,7 @@
         <div class="box-modal popup" id="add-address">
           <div class="box-modal_close arcticmodal-close close-popup"></div>
           <h3>Добавление адреса</h3>
-          <form action="">
+          <form action="" autocomplete="off">
             <input type="text" name="address" value="" placeholder="Улица, дом, офис">
             <input type="tel" name="address-phone" value="" placeholder="+375 (29) __-__-___">
             <div class="add-phone">

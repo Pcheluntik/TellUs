@@ -164,7 +164,7 @@ $(document).ready(function() {
     };
   };
 
-  $("#company-tegs").on('input', function() {
+/*  $("#company-tegs").on('input', function() {
     var txt = $(this).val();
     $("#tegs-list").find("option").each(function() {
       if ($(this).val() == txt) {
@@ -176,8 +176,21 @@ $(document).ready(function() {
         delete_tag();
       }
     })
-  });
+  });*/
+  console.log($("#add-tag"));
+  var add = $("#add-tag");
+  add[0].addEventListener("click", function(event) {
+    event.preventDefault();
+    var txt = $("#company-tegs").val();
+    if( txt != "") {
+      var text = txt.toLowerCase();
+      $(".tegs-control").append(function(i) {
+        return "<div><div class='tag'><p>#" + text + "</p></div><div class='delete-tag'></div></div>";
 
+      });
+      delete_tag();
+    };
+  });
 
 
 });
