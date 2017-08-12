@@ -90,6 +90,8 @@
         </nav>
       </div>
     </div>
+
+    <!--Мобильное меню-->
     <div style="display: none;">
       <div class="box-modal mobile" id="mobile-menu">
         <div class="box-modal_close arcticmodal-close close-mobile"></div>
@@ -426,27 +428,28 @@
         </div>
       </div>
 
-
+<!--Форма авторизации-->
       <div style="display: none;">
         <div class="box-modal popup" id="authorization">
           <div class="box-modal_close arcticmodal-close close-popup"></div>
           <h4>Авторизация</h4>
           <form action="">
-            <input type="text" name="auth-login" value="" placeholder="Логин">
-            <input type="password" name="auth-pass" value="" placeholder="Пароль">
-            <input type="submit" name="" class="full-button" value="Войти">
+            <input type="text" name="auth-login" required value="" placeholder="Логин">
+            <input type="password" name="auth-pass" required value="" placeholder="Пароль">
+            <input type="submit" name="" class="full-button" required value="Войти">
           </form>
         </div>
       </div>
 
+<!--Форма партнера-->
       <div style="display: none;">
         <div class="box-modal popup" id="partner">
           <div class="box-modal_close arcticmodal-close close-popup"></div>
           <h4>Стать партнером</h4>
           <form action="">
-            <input type="text" name="partner-name" value="" placeholder="Как к вам обращаться">
-            <input type="text" name="partner-company" value="" placeholder="Название сети">
-            <input type="tel" name="partner-phone" value="" placeholder="+375 (__) ___-__-__">
+            <input type="text" name="partner-name" value="" required placeholder="Как к вам обращаться">
+            <input type="text" name="partner-company" value="" required placeholder="Название сети">
+            <input type="tel" name="partner-phone" value="" required placeholder="+375 (__) ___-__-__">
             <input type="submit" name="" class="full-button" value="Стать партнером">
           </form>
         </div>
