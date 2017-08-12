@@ -9521,7 +9521,38 @@ input:focus {
   #reviewStars-input #star-3 {
     left: 0; }
   #reviewStars-input #star-4 {
-    left: 0; } }
+    left: 0; }
+  .organisation-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    .organisation-page .stock_image {
+      width: 100%; }
+    .organisation-page .description {
+      width: 100%; }
+  .review {
+    padding: 22px 24px; }
+    .review h3 {
+      text-align: center; }
+    .review .full-button {
+      margin-top: 13px; }
+    .review .review-textareas textarea {
+      width: 100%; }
+    .review .bad-review {
+      margin-top: 10px; }
+  .org-addresses h2 {
+    margin-top: 30px;
+    margin-bottom: 42px; }
+  .org-address {
+    width: 100%; }
+    .org-address:nth-child(2n) {
+      margin-right: 15px; }
+    .org-address .address-content {
+      padding: 27px 40px; }
+  .org-addresses-list {
+    margin-bottom: 20px; } }
 
 @media (max-width: 340px) {
   body.main-page:after {
