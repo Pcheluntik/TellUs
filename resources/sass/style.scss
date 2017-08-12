@@ -4041,6 +4041,20 @@ input {
         width: 50%;
       }
     }
+
+    .category-page.top {
+      img {
+        width: 50%;
+        margin: 0 25%;
+      }
+      div h1 {
+            margin-top: 47px;
+            margin-bottom: 30px;
+      }
+    }
+    .category {
+      margin-top: -20px;
+    }
 }
 @media (max-width: 758px) {
   html {
@@ -4051,6 +4065,10 @@ input {
     p {
           width: 70%;
     }
+  }
+
+  .category {
+    margin-top: -20px;
   }
   header .container-fluid .nav-pannel .logo {
     width: 146px;
@@ -4199,6 +4217,10 @@ input {
   .category-page.top {
     img {
       width: 100%;
+      margin: 0;
+    }
+    div h1 {
+          margin-top: 47px;
     }
   }
 

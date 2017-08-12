@@ -9402,13 +9402,23 @@ input:focus {
       -ms-flex-direction: row;
       flex-direction: row; }
     .content-for-profile .profile-con {
-      width: 50%; } }
+      width: 50%; }
+  .category-page.top img {
+    width: 50%;
+    margin: 0 25%; }
+  .category-page.top div h1 {
+    margin-top: 47px;
+    margin-bottom: 30px; }
+  .category {
+    margin-top: -20px; } }
 
 @media (max-width: 758px) {
   html {
     font-size: 10px; }
   .search p {
     width: 70%; }
+  .category {
+    margin-top: -20px; }
   header .container-fluid .nav-pannel .logo {
     width: 146px; }
   header .container-fluid .nav-pannel nav {
@@ -9498,7 +9508,10 @@ input:focus {
   .category_main-list .category_show-more:before {
     left: -6px; }
   .category-page.top img {
-    width: 100%; }
+    width: 100%;
+    margin: 0; }
+  .category-page.top div h1 {
+    margin-top: 47px; }
   .organisation-list .organisation {
     width: 90%; }
   #reviewStars-input input:checked ~ label,
