@@ -3780,6 +3780,7 @@ input {
   .search {
     position: relative;
     z-index: 30;
+    margin-top: 40px;
   }
 
   footer {
@@ -4019,12 +4020,38 @@ input {
 
   #map-container {
     height: 500px;}
+
+    .content-for-profile .profile-menu .profile-list ul li a {
+      font-size: 0 !important;
+    }
+
+    .content-for-profile {
+      flex-direction: column;
+
+      .profile-list {
+        position: absolute;
+        height: 100%;
+      }
+      .profile-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .profile-con {
+        width: 50%;
+      }
+    }
 }
 @media (max-width: 758px) {
   html {
     font-size: 10px;
   }
 
+  .search {
+    p {
+          width: 70%;
+    }
+  }
   header .container-fluid .nav-pannel .logo {
     width: 146px;
   }
@@ -4076,7 +4103,7 @@ input {
 
   body.main-page:after {
     top: 131px;
-    width: 32%;
+    width: 54%;
     height: 386px;
   }
 
@@ -4269,6 +4296,10 @@ input {
   }
   .org-addresses-list {
     margin-bottom: 20px;
+  }
+
+  #authorization {
+    width: 80%;
   }
 }
 @media (max-width: 340px) {

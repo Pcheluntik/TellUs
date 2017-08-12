@@ -9221,7 +9221,8 @@ input:focus {
       display: none; }
   .search {
     position: relative;
-    z-index: 30; }
+    z-index: 30;
+    margin-top: 40px; }
   footer .main-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9377,11 +9378,37 @@ input:focus {
     .org-address:nth-child(2n) {
       margin-right: 0; }
   #map-container {
-    height: 500px; } }
+    height: 500px; }
+  .content-for-profile .profile-menu .profile-list ul li a {
+    font-size: 0 !important; }
+  .content-for-profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .content-for-profile .profile-list {
+      position: absolute;
+      height: 100%; }
+    .content-for-profile .profile-menu {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    .content-for-profile .profile-con {
+      width: 50%; } }
 
 @media (max-width: 758px) {
   html {
     font-size: 10px; }
+  .search p {
+    width: 70%; }
   header .container-fluid .nav-pannel .logo {
     width: 146px; }
   header .container-fluid .nav-pannel nav {
@@ -9411,7 +9438,7 @@ input:focus {
     width: 100%; }
   body.main-page:after {
     top: 131px;
-    width: 32%;
+    width: 54%;
     height: 386px; }
   .category h2 {
     margin-top: 71px;
@@ -9552,7 +9579,9 @@ input:focus {
     .org-address .address-content {
       padding: 27px 40px; }
   .org-addresses-list {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  #authorization {
+    width: 80%; } }
 
 @media (max-width: 340px) {
   body.main-page:after {
