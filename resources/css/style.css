@@ -8140,6 +8140,9 @@ h4 {
             -webkit-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
             transform: rotate(-45deg); }
+          .content-for-profile .control-reviews .review .control-panel .delete-review button:focus {
+            outline: none;
+            border: none; }
         .content-for-profile .control-reviews .review .control-panel .delete-review .review-description {
           height: 27px;
           display: -webkit-box;
@@ -8273,7 +8276,8 @@ h4 {
     .profile-settings .password input {
       width: 60% !important; }
   .profile-settings .add-tegs {
-    position: relative; }
+    position: relative;
+    margin-bottom: 4px !important; }
     .profile-settings .add-tegs #add-tag {
       position: absolute;
       right: 0;
@@ -8336,8 +8340,7 @@ h4 {
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      margin-left: 161px;
-      margin-top: -26px; }
+      margin-left: 27%; }
       .profile-settings .input-field.tegs-control > div {
         display: -webkit-box;
         display: -webkit-flex;
@@ -8521,16 +8524,18 @@ h4 {
     .company-address .control-panel button {
       background-color: transparent;
       border: none;
-      padding-left: 15px;
+      padding-left: 17px;
       color: #06afd9;
       position: relative;
-      height: 20px; }
+      height: 20px;
+      font-size: 1rem;
+      line-height: 26px; }
       .company-address .control-panel button.delete-address:after, .company-address .control-panel button.delete-address:before {
         position: absolute;
-        left: 0;
+        left: 7px;
         top: 6px;
         content: ' ';
-        height: 16px;
+        height: 14px;
         width: 2px;
         background-color: #06afd9; }
       .company-address .control-panel button.delete-address:before {
@@ -8546,10 +8551,18 @@ h4 {
         left: 0;
         top: 6px;
         fill: #08c9ee;
-        height: 16px;
-        width: 16px;
+        height: 14px;
+        width: 14px;
         -o-object-fit: contain;
         object-fit: contain; }
+      .company-address .control-panel button:focus {
+        outline: none;
+        border: none;
+        color: #0e85a2; }
+        .company-address .control-panel button:focus svg {
+          fill: #0e85a2; }
+      .company-address .control-panel button.delete-address:focus:after, .company-address .control-panel button.delete-address:focus:before {
+        background-color: #0e85a2; }
 
 .popup.close {
   display: none; }
@@ -9446,7 +9459,44 @@ input:focus {
     margin-top: 47px;
     margin-bottom: 30px; }
   .category {
-    margin-top: -20px; } }
+    margin-top: -20px; }
+  .profile-settings .dk_toggle:after {
+    border-top-color: #000; }
+  .profile-settings .company-bonus-procent input {
+    margin-left: 6%; }
+    .profile-settings .company-bonus-procent input + p {
+      left: 198px; }
+  .profile-settings .dk_toggle:before {
+    border-bottom-color: #000; }
+  .profile-settings .input-field label {
+    display: block;
+    margin-top: 0;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .profile-settings .add-tegs {
+    width: 100%; }
+    .profile-settings .add-tegs input {
+      width: 72%; }
+  .profile-settings .dk_toggle:after {
+    border-top-color: #000; }
+  .profile-settings .dk_toggle:before {
+    border-bottom-color: #000; }
+  .profile-settings .pre-photo {
+    width: 111px;
+    height: 111px;
+    margin-right: 8px; }
+  .profile-settings #dropzone {
+    padding-left: 0;
+    padding-bottom: 0; }
+    .profile-settings #dropzone .browser span {
+      padding: 0 0px; }
+    .profile-settings #dropzone .title {
+      right: 1px;
+      bottom: 32px; }
+    .profile-settings #dropzone .plus {
+      float: left;
+      margin-left: 7px; } }
 
 @media (max-width: 758px) {
   html {
@@ -9630,10 +9680,42 @@ input:focus {
   .org-addresses-list {
     margin-bottom: 20px; }
   #authorization {
-    width: 80%; } }
+    width: 80%; }
+  .profile-settings .input-field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .about-page .content {
+    padding: 29px 32px; }
+  .text blockquote {
+    padding: 68px 30px 28px;
+    margin-left: 0; }
+  .text img {
+    margin-top: 15px; }
+  .text p {
+    margin-bottom: 11px; }
+  .text .image-signature {
+    margin-bottom: 18px; }
+  .text ol {
+    padding-left: 10px;
+    margin: 0; }
+    .text ol li {
+      margin-bottom: 9px; }
+  .text ul {
+    padding-left: 10px;
+    margin: 0; }
+    .text ul li {
+      margin-bottom: 9px; }
+  .text .vertical-img {
+    width: 100%; } }
 
 @media (max-width: 340px) {
   body.main-page:after {
     top: 205px;
     width: 50%;
     height: 310px; } }
+
+input:not([type="submit"]):focus {
+  border: 1px solid #ccc; }
