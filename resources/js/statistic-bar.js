@@ -95,13 +95,13 @@ $(document).ready(function() {
       //Отрисовываем диаграммы
       var rat_dia = Circles.create( {
         id: "rating-diagramm",
-        radius: 80,
+        radius: 81,
         value: rating_procent,
         maxValue: 100,
         text: function() {
           return "<p>" + quantity_month_grades + "</p><p>оценок рейтинга</p>";
         },
-        colors: ['#abebf4', '#15d1f1'],
+        colors: ['#ddd', '#15d1f1'],
         wrpClass: 'circles-wrp',
         textClass: 'circles-text',
         valueStrokeClass: 'circles-valueStroke',
@@ -112,13 +112,13 @@ $(document).ready(function() {
 
   var good_dia = Circles.create( {
     id: "good-review-diagramm",
-    radius: 80,
+    radius: 81,
     value: good_reviews_procent,
     maxValue: 100,
     text: function() {
       return "<p>" + good_month_grades + "</p><p>положительные</p>";
     },
-    colors: ['#abebf4', '#15d1f1'],
+    colors: ['#ddd', '#15d1f1'],
     wrpClass: 'circles-wrp',
     textClass: 'circles-text',
     valueStrokeClass: 'circles-valueStroke',
@@ -129,13 +129,13 @@ $(document).ready(function() {
 
   var bad_dia = Circles.create( {
     id: "bad-review-diagramm",
-    radius: 80,
+    radius: 81,
     value: good_reviews_procent,
     maxValue: 100,
     text: function() {
       return "<p>" + bad_month_grades + "</p><p>отрицательные</p>";
     },
-    colors: ['#abebf4', '#15d1f1'],
+    colors: ['#ddd', '#15d1f1'],
     wrpClass: 'circles-wrp',
     textClass: 'circles-text',
     valueStrokeClass: 'circles-valueStroke',
