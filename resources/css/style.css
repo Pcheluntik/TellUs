@@ -7607,7 +7607,7 @@ h4 {
       width: 0;
       height: 585px;
       top: -50px;
-      left: -50px;
+      left: 25%;
       z-index: 10;
       opacity: 0;
       -webkit-transition: 0.5s;
@@ -7632,7 +7632,8 @@ h4 {
         position: relative; }
       .organisation-list .organisation:hover:before {
         opacity: 1;
-        width: 485px; }
+        width: 485px;
+        left: -50px; }
 
 .organisation-list-page h1 {
   margin-bottom: 40px; }
@@ -8629,7 +8630,8 @@ h4 {
     .popup .close-popup:focus {
       outline: none; }
 
-#authorization, #shopper {
+#authorization,
+#shopper {
   width: 50%; }
 
 /*
@@ -9327,9 +9329,10 @@ input:focus {
         header .container-fluid .nav-pannel nav ul li:last-of-type {
           margin-left: -10px; }
         header .container-fluid .nav-pannel nav ul li.profile .profile-submenu {
-          width: auto; }
+          width: 250px; }
           header .container-fluid .nav-pannel nav ul li.profile .profile-submenu ul li:last-of-type {
-            margin: 0 13px; }
+            margin: 0 13px;
+            margin-top: 10px; }
   .category_main-list {
     padding-bottom: 37px; }
     .category_main-list ul {
@@ -9739,7 +9742,8 @@ input:focus {
       padding: 27px 40px; }
   .org-addresses-list {
     margin-bottom: 20px; }
-  #authorization, #shopper {
+  #authorization,
+  #shopper {
     width: 80%; }
   #seller {
     width: 90%; }
@@ -9932,10 +9936,15 @@ input:focus {
     height: 310px; }
   .about-page h1 {
     font-size: 4rem; }
-  #authorization, #shopper {
+  #authorization,
+  #shopper {
     width: 100%; }
   #seller {
-    width: 100%; } }
+    width: 80%; }
+    #seller input {
+      width: 80%; }
+  .btns a {
+    text-align: center; } }
 
 input:not([type="submit"]):focus {
   border: 1px solid #ccc; }

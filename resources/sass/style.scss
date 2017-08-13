@@ -40,6 +40,7 @@ input:focus {
   -webkit-tap-highlight-color: transparent;
 }
 /*Текстовые стили*/
+
 .text {
   p {
     @include regularText($fontRegularSize: 1.25rem);
@@ -138,7 +139,6 @@ input:focus {
   background-color: #fff;
 }
 /*Основные стили*/
-
 .button:after,
 body {
   @include regularText();
@@ -1454,7 +1454,6 @@ h4 {
   position: relative;
 }
 /*Категории*/
-
 .category-page.top {
   div {
     width: 55%;
@@ -1625,7 +1624,6 @@ h4 {
   }
 }
 /*Страница организации*/
-
 .organisation-page {
   position: relative;
   display: flex;
@@ -1752,6 +1750,7 @@ h4 {
   }
 }
 /*Звезды для отзывов*/
+
 #reviewStars-input input:checked ~ label,
 #reviewStars-input label,
 #reviewStars-input label:hover,
@@ -1940,6 +1939,7 @@ h4 {
   }
 }
 /*Список организаций*/
+
 .organisation-list {
   display: flex;
   flex-direction: row;
@@ -1986,7 +1986,7 @@ h4 {
       width: 0;
       height: 585px;
       top: -50px;
-      left: -50px;
+      left: 25%;
       z-index: 10;
       opacity: 0;
       transition: 0.5s;
@@ -2021,6 +2021,7 @@ h4 {
       &:before {
         opacity: 1;
         width: 485px;
+        left: -50px;
       }
     }
   }
@@ -2104,6 +2105,7 @@ h4 {
   }
 }
 /*Пагинация*/
+
 .pagination {
   display: flex;
   flex-direction: row;
@@ -3137,7 +3139,8 @@ h4 {
   }
 }
 
-#authorization, #shopper {
+#authorization,
+#shopper {
   width: 50%;
 }
 /*
@@ -3152,7 +3155,6 @@ h4 {
 }
 
 */
-
 #partner {
   width: 50%;
 }
@@ -3598,18 +3600,18 @@ body.overlay {
     left: -27px;
     opacity: 0;
 
-      ul {
-        flex-direction: column;
-        li {
-          text-align: left;
-          margin-bottom: 17px;
-          &:last-of-type {
+    ul {
+      flex-direction: column;
 
-            margin-top: 10px;
-          }
+      li {
+        text-align: left;
+        margin-bottom: 17px;
+
+        &:last-of-type {
+          margin-top: 10px;
         }
       }
-
+    }
 
     &:before {
       content: "";
@@ -3654,15 +3656,16 @@ input {
 }
 /*статистика*/
 /* Ширина слайдера */
-
 #slider {
   width: 325px;
 }
 /* Контейнер слайдера */
+
 .ui-slider {
   position: relative;
 }
 /* Ползунок */
+
 .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
@@ -3688,11 +3691,13 @@ input {
   overflow: hidden;
 }
 /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+
 .ui-slider-horizontal {
   height: 3px;
   /* задаем высоту согласно дизайна */
 }
 /* позиционируем ползунки */
+
 .ui-slider-horizontal .ui-slider-handle {
   top: -5px;
   margin-left: -6px;
@@ -3711,6 +3716,7 @@ input {
   right: 0;
 }
 /* оформление полосы по которой ходит ползунок */
+
 .ui-widget-content {
   height: 3px;
   background: #fff;
@@ -3728,11 +3734,13 @@ input {
   }
 }
 /* оформление активного участка (между двумя ползунками) */
+
 .ui-widget-header {
   border: 1px solid #D4D4D4;
   background: rgba(8,201,238,1);
 }
 /* скругление для полосы слайдера */
+
 .ui-corner-all {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -3843,21 +3851,21 @@ input {
 }
 
 .btns {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      a {
-        margin-top: 10px;
-        margin-right: 5px;
-      }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 
-
+  a {
+    margin-top: 10px;
+    margin-right: 5px;
+  }
 }
 
 #seller {
   width: 80%;
+
   input[type="submit"] {
     width: 320px;
   }
@@ -3870,13 +3878,9 @@ input {
   header .container-fluid .nav-pannel nav > ul {
     position: relative;
 
-     &>li:nth-child(-n+3) {
-    display: none;
-
+    & > li:nth-child(-n+3) {
+      display: none;
     }
-
-
-
   }
 
   .search {
@@ -3918,14 +3922,14 @@ input {
 
         &.profile {
           .profile-submenu {
-            width: auto;
+            width: 250px;
+
+
             ul {
-
               li {
-
                 &:last-of-type {
                   margin: 0 13px;
-
+                  margin-top: 10px;
                 }
               }
             }
@@ -4318,24 +4322,23 @@ input {
       .profile-submenu {
         width: 188px;
         left: -150px;
+
         &:before {
           left: 143px;
         }
+
         ul {
-
           li {
-
-            &:last-of-type {
-
-
-            }
+            &:last-of-type {}
           }
         }
       }
     }
+
     li.nav-search .search_panel {
-    left: -192px;
-}
+      left: -192px;
+    }
+
     form {
       position: absolute;
       left: 0;
@@ -4581,12 +4584,14 @@ input {
     margin-bottom: 20px;
   }
 
-  #authorization, #shopper {
+  #authorization,
+  #shopper {
     width: 80%;
   }
 
   #seller {
     width: 90%;
+
     input[type="submit"] {
       margin: 0 auto;
       display: block;
@@ -4682,10 +4687,12 @@ input {
     .add-tegs #add-tag {
       top: 13px;
     }
+
     .pre-photo {
       margin-left: 0;
       margin-bottom: 10px;
     }
+
     .zone {
       width: 100%;
 
@@ -4696,8 +4703,6 @@ input {
       .plus {
         top: -23px;
       }
-
-
 
       #dropzone {
         .browser span {
@@ -4795,45 +4800,55 @@ input {
 
   .company-address {
     padding: 10px;
+
     .main-address-information {
       flex-direction: column;
     }
+
     .phones {
       width: 100%;
       border-right: none;
     }
+
     .work-time {
       width: 100%;
       flex-direction: column;
       padding-left: 0;
     }
   }
+
   .add-address {
     padding: 10px;
   }
+
   .profile-settings .password {
     padding-bottom: 0;
   }
+
   .profile-settings input[type="submit"] + p {
     width: 100%;
   }
 
   #add-address {
     padding: 10px;
+
     .days {
       flex-direction: column;
       align-items: center;
     }
+
     .days.eq {
       height: auto;
       align-items: flex-start;
+
       .day {
         width: 100%;
       }
     }
-     input[type="submit"] {
-    align-self: center;
-    margin: 0 8%;
+
+    input[type="submit"] {
+      align-self: center;
+      margin: 0 8%;
     }
 
     .add-phone input {
@@ -4841,9 +4856,9 @@ input {
     }
   }
 
-  .btns  {
+  .btns {
     justify-content: center;
-}
+  }
 }
 @media (max-width: 370px) {
   body.main-page:after {
@@ -4858,12 +4873,23 @@ input {
     }
   }
 
-  #authorization, #shopper {
+  #authorization,
+  #shopper {
     width: 100%;
   }
 
   #seller {
-    width: 100%;
+    width: 80%;
+
+    input {
+      width: 80%;
+    }
+  }
+
+  .btns {
+    a {
+      text-align: center;
+    }
   }
 }
 
