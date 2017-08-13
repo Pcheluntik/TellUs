@@ -9066,6 +9066,17 @@ body.overlay {
     top: 60px;
     left: -27px;
     opacity: 0; }
+    .profile:not(.auth) .profile-submenu ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .profile:not(.auth) .profile-submenu ul li {
+        text-align: left;
+        margin-bottom: 17px; }
+        .profile:not(.auth) .profile-submenu ul li:last-of-type {
+          margin-top: 10px; }
     .profile:not(.auth) .profile-submenu:before {
       content: "";
       position: absolute;
@@ -9255,9 +9266,9 @@ input:focus {
 @media (max-width: 1210px) {
   header .container-fluid .nav-pannel nav ul li.mobile-menu {
     display: block; }
-  header .container-fluid .nav-pannel nav ul {
+  header .container-fluid .nav-pannel nav > ul {
     position: relative; }
-    header .container-fluid .nav-pannel nav ul li:nth-child(-n+3) {
+    header .container-fluid .nav-pannel nav > ul > li:nth-child(-n+3) {
       display: none; }
   .search {
     position: relative;
@@ -9286,6 +9297,10 @@ input:focus {
         margin-right: 13px; }
         header .container-fluid .nav-pannel nav ul li:last-of-type {
           margin-left: -10px; }
+        header .container-fluid .nav-pannel nav ul li.profile .profile-submenu {
+          width: auto; }
+          header .container-fluid .nav-pannel nav ul li.profile .profile-submenu ul li:last-of-type {
+            margin: 0 13px; }
   .category_main-list {
     padding-bottom: 37px; }
     .category_main-list ul {
@@ -9526,12 +9541,17 @@ input:focus {
         font-size: 0 !important; }
         header .container-fluid .nav-pannel nav ul li a.button {
           display: none; }
+  header .container-fluid .nav-pannel nav ul li.profile .profile-submenu {
+    width: 188px;
+    left: -150px; }
+    header .container-fluid .nav-pannel nav ul li.profile .profile-submenu:before {
+      left: 143px; }
   header .container-fluid .nav-pannel nav ul li.nav-search .search_panel {
     left: -192px; }
-    header .container-fluid .nav-pannel nav ul li.nav-search .search_panel form {
-      position: absolute;
-      left: 0;
-      top: 40px; }
+  header .container-fluid .nav-pannel nav ul form {
+    position: absolute;
+    left: 0;
+    top: 40px; }
   .search_panel {
     margin-top: 30px;
     margin-bottom: 40px; }
