@@ -51,9 +51,11 @@ $(document).ready(function() {
         $(".days").slideDown();
         $(".title .week-days").css("color", "#50E6C9");
         $(".title .equally").css("color", "#000");
+        if ($(window).width() > '758') {
         $("#friday").parent().insertAfter($("#monday").parent());
         $("#saturday").parent().insertAfter($("#tuesday").parent());
         $("#sunday").parent().insertAfter($("#wednesday").parent());
+      }
         //Блокируем общий инпут
         var ch = $(".day-check");
         for (var y = 0; y < ch.lenght; y++) {
@@ -72,9 +74,11 @@ $(document).ready(function() {
         $(".days").slideDown();
         $(".title .equally").css("color", "#50E6C9");
         $(".title .week-days").css("color", "#000");
+         if ($(window).width() > '758') {
         $("#friday").parent().insertAfter($("#thursday").parent());
         $("#saturday").parent().insertAfter($("#friday").parent());
         $("#sunday").parent().insertAfter($("#saturday").parent());
+      }
         //Блокируем все инпуты
         $(".days input[type=text]").attr("disabled");
         $(".from-to-for-all input").removeAttr("disabled");
@@ -102,22 +106,15 @@ $(document).ready(function() {
       change: function(value, label) { // callback event
 
         if (label == "Скидка") {
-
-          $(".company-bonus-procent").slideDown(); {
-
-          }
+          $(".company-bonus-procent").slideDown();
+          $(".company-present-procent").slideUp();
         } else {
           $(".company-bonus-procent").slideUp();
           $(".company-bonus-procent").val(" ");
-        }
-
-        if (label == "Подарок") {
           $(".company-present-procent").slideDown();
-
-        } else {
-          $(".company-present-procent").slideUp();
-          $(".company-present-procent").val(" ");
         }
+
+
       }
     });
 

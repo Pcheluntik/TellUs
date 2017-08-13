@@ -4217,6 +4217,10 @@ input {
       }
     }
   }
+
+  .popup .close-popup {
+    right: 8px;
+  }
 }
 @media (max-width: 758px) {
   html {
@@ -4727,6 +4731,29 @@ input {
   }
   .profile-settings input[type="submit"] + p {
     width: 100%;
+  }
+
+  #add-address {
+    padding: 10px;
+    .days {
+      flex-direction: column;
+      align-items: center;
+    }
+    .days.eq {
+      height: auto;
+      align-items: flex-start;
+      .day {
+        width: 100%;
+      }
+    }
+     input[type="submit"] {
+    align-self: center;
+    margin: 0 8%;
+    }
+
+    .add-phone input {
+      width: 69%;
+    }
   }
 }
 @media (max-width: 340px) {
