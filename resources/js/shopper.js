@@ -11,4 +11,15 @@ for (i = 0; i < shop.length; i++) {
   });
 };
 
+var shop = document.querySelectorAll(".seller-btn");
+
+for (i = 0; i < shop.length; i++) {
+  shop[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    $(function() {
+      $('#seller').arcticmodal();
+    });
+  });
+};
+
 });

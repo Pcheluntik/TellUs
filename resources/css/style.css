@@ -8598,6 +8598,8 @@ h4 {
     margin-bottom: 10px; }
   .popup input[type="submit"] {
     width: 200px;
+    display: block;
+    margin: 0 auto;
     border: none; }
   .popup .close-popup {
     position: absolute;
@@ -9263,10 +9265,32 @@ input:focus {
     #mobile-menu .close-mobile:focus {
       outline: none; }
 
-.full-button.shopper-btn {
-  margin: 0 auto;
-  width: 216px;
-  display: block; }
+.btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .btns a {
+    margin-top: 10px;
+    margin-right: 5px; }
+
+#seller {
+  width: 80%; }
+  #seller input[type="submit"] {
+    width: 320px; }
 
 @media (max-width: 1210px) {
   header .container-fluid .nav-pannel nav ul li.mobile-menu {
@@ -9717,6 +9741,11 @@ input:focus {
     margin-bottom: 20px; }
   #authorization, #shopper {
     width: 80%; }
+  #seller {
+    width: 90%; }
+    #seller input[type="submit"] {
+      margin: 0 auto;
+      display: block; }
   .content-for-profile .profile-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9890,14 +9919,23 @@ input:focus {
       margin: 0 8%; }
     #add-address .add-phone input {
       width: 69%; }
-  .full-button.shopper-btn {
-    width: 156px; } }
+  .btns {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 
-@media (max-width: 340px) {
+@media (max-width: 370px) {
   body.main-page:after {
     top: 205px;
     width: 50%;
-    height: 310px; } }
+    height: 310px; }
+  .about-page h1 {
+    font-size: 4rem; }
+  #authorization, #shopper {
+    width: 100%; }
+  #seller {
+    width: 100%; } }
 
 input:not([type="submit"]):focus {
   border: 1px solid #ccc; }
