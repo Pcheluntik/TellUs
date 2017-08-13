@@ -3135,7 +3135,7 @@ h4 {
   }
 }
 
-#authorization {
+#authorization, #shopper {
   width: 50%;
 }
 /*
@@ -3838,6 +3838,10 @@ input {
       outline: none;
     }
   }
+}
+
+.full-button.shopper-btn {
+      margin-left: 36%;
 }
 @media (max-width: 1210px) {
   header .container-fluid .nav-pannel nav ul li.mobile-menu {
@@ -4558,7 +4562,7 @@ input {
     margin-bottom: 20px;
   }
 
-  #authorization {
+  #authorization, #shopper {
     width: 80%;
   }
 
@@ -4635,6 +4639,7 @@ input {
 
     .pagination {
       margin: 20px -56px;
+      width: 100%;
 
       a {
         font-size: 10px;

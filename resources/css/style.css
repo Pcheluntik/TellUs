@@ -8627,7 +8627,7 @@ h4 {
     .popup .close-popup:focus {
       outline: none; }
 
-#authorization {
+#authorization, #shopper {
   width: 50%; }
 
 /*
@@ -9263,6 +9263,9 @@ input:focus {
     #mobile-menu .close-mobile:focus {
       outline: none; }
 
+.full-button.shopper-btn {
+  margin-left: 36%; }
+
 @media (max-width: 1210px) {
   header .container-fluid .nav-pannel nav ul li.mobile-menu {
     display: block; }
@@ -9710,7 +9713,7 @@ input:focus {
       padding: 27px 40px; }
   .org-addresses-list {
     margin-bottom: 20px; }
-  #authorization {
+  #authorization, #shopper {
     width: 80%; }
   .content-for-profile .profile-menu {
     -webkit-box-orient: vertical;
@@ -9761,7 +9764,8 @@ input:focus {
       width: 65px;
       margin: 5px 0 11px; }
     .content-for-profile .control-reviews .pagination {
-      margin: 20px -56px; }
+      margin: 20px -56px;
+      width: 100%; }
       .content-for-profile .control-reviews .pagination a {
         font-size: 10px; }
       .content-for-profile .control-reviews .pagination ul li.active:hover a {
