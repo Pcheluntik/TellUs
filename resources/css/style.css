@@ -8026,10 +8026,12 @@ h4 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row; }
-    .statistic .diagramm svg {
-      width: 120%; }
-      .statistic .diagramm svg:first-of-type {
-        margin-left: -30px; }
+    .statistic .diagramm svg:first-of-type {
+      margin-left: -30px; }
+    .statistic .diagramm .circles-text {
+      top: 0;
+      width: 100%;
+      position: absolute; }
     .statistic .diagramm div {
       position: relative; }
       .statistic .diagramm div p {
