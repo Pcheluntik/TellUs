@@ -9264,7 +9264,9 @@ input:focus {
       outline: none; }
 
 .full-button.shopper-btn {
-  margin-left: 36%; }
+  margin: 0 auto;
+  width: 216px;
+  display: block; }
 
 @media (max-width: 1210px) {
   header .container-fluid .nav-pannel nav ul li.mobile-menu {
@@ -9887,7 +9889,9 @@ input:focus {
       align-self: center;
       margin: 0 8%; }
     #add-address .add-phone input {
-      width: 69%; } }
+      width: 69%; }
+  .full-button.shopper-btn {
+    width: 156px; } }
 
 @media (max-width: 340px) {
   body.main-page:after {
