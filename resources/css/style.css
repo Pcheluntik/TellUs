@@ -8188,6 +8188,10 @@ h4 {
   background-color: #bbb;
   margin-left: 33px;
   border-radius: 10px; }
+  .profile-settings .pre-photo .dk_toggle:after {
+    border-top-color: #000; }
+  .profile-settings .pre-photo .dk_toggle:before {
+    border-bottom-color: #000; }
   .profile-settings .pre-photo img {
     -o-object-fit: cover;
     object-fit: cover; }
@@ -9460,6 +9464,11 @@ input:focus {
     margin-bottom: 30px; }
   .category {
     margin-top: -20px; }
+  .profile-settings input[type="submit"] {
+    max-height: 62px;
+    max-width: 239px;
+    margin-right: 20px;
+    padding: 9px 14px; }
   .profile-settings .dk_toggle:after {
     border-top-color: #000; }
   .profile-settings .company-bonus-procent input {
@@ -9490,7 +9499,7 @@ input:focus {
     padding-left: 0;
     padding-bottom: 0; }
     .profile-settings #dropzone .browser span {
-      padding: 0 0px; }
+      padding: 0; }
     .profile-settings #dropzone .title {
       right: 1px;
       bottom: 32px; }
@@ -9681,12 +9690,103 @@ input:focus {
     margin-bottom: 20px; }
   #authorization {
     width: 80%; }
-  .profile-settings .input-field {
+  .content-for-profile .profile-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    height: 100%;
+    position: relative; }
+    .content-for-profile .profile-menu .profile-list {
+      top: 100%;
+      width: 60px;
+      height: 100%; }
+      .content-for-profile .profile-menu .profile-list ul {
+        padding-top: 10px; }
+        .content-for-profile .profile-menu .profile-list ul li a svg {
+          width: 20px;
+          height: 20px;
+          left: 20px; }
+    .content-for-profile .profile-menu .image {
+      width: 100%; }
+    .content-for-profile .profile-menu .profile-con {
+      width: 100%; }
+  .content-for-profile .control-reviews {
+    padding: 0; }
+    .content-for-profile .control-reviews .review .control-panel {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .content-for-profile .control-reviews .review .control-panel .delete-review button:after,
+      .content-for-profile .control-reviews .review .control-panel .delete-review button:before {
+        left: 7px;
+        top: 1px; }
+      .content-for-profile .control-reviews .review .control-panel .delete-review .review-description {
+        height: 16px; }
+        .content-for-profile .control-reviews .review .control-panel .delete-review .review-description p {
+          height: 100%;
+          line-height: 20px; }
+        .content-for-profile .control-reviews .review .control-panel .delete-review .review-description svg {
+          width: 15px;
+          height: 15px;
+          margin-left: 5px; }
+    .content-for-profile .control-reviews .review .review-text {
+      padding: 10px; }
+    .content-for-profile .control-reviews .review .rating p {
+      width: 65px;
+      margin: 5px 0 11px; }
+    .content-for-profile .control-reviews .pagination {
+      margin: 20px -56px; }
+      .content-for-profile .control-reviews .pagination a {
+        font-size: 10px; }
+      .content-for-profile .control-reviews .pagination ul li.active:hover a {
+        font-size: 10px; }
+  .profile-settings {
+    padding: 10px; }
+    .profile-settings .add-tegs #add-tag {
+      top: 13px; }
+    .profile-settings .pre-photo {
+      margin-left: 0;
+      margin-bottom: 10px; }
+    .profile-settings .zone {
+      width: 100%; }
+      .profile-settings .zone .title {
+        display: none; }
+      .profile-settings .zone .plus {
+        top: -23px; }
+      .profile-settings .zone #dropzone .browser span {
+        padding-left: 53px; }
+      .profile-settings .zone #dropzone input {
+        height: 100%; }
+    .profile-settings .input-field.tegs-control {
+      margin-left: 0; }
+      .profile-settings .input-field.tegs-control > div {
+        margin-top: 3px; }
+    .profile-settings .company-bonus-procent input {
+      margin-left: 0;
+      width: 41% !important; }
+      .profile-settings .company-bonus-procent input + p {
+        left: 33%;
+        top: 52%; }
+    .profile-settings .password input {
+      width: 100% !important; }
+    .profile-settings .input-field {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .profile-settings .input-field select,
+      .profile-settings .input-field textarea,
+      .profile-settings .input-field input {
+        width: 100%; }
+      .profile-settings .input-field label {
+        -webkit-align-self: start;
+        -ms-flex-item-align: start;
+        align-self: start; }
   .about-page .content {
     padding: 29px 32px; }
   .text blockquote {
@@ -9709,6 +9809,31 @@ input:focus {
     .text ul li {
       margin-bottom: 9px; }
   .text .vertical-img {
+    width: 100%; }
+  .company-address {
+    padding: 10px; }
+    .company-address .main-address-information {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .company-address .phones {
+      width: 100%;
+      border-right: none; }
+    .company-address .work-time {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-left: 0; }
+  .add-address {
+    padding: 10px; }
+  .profile-settings .password {
+    padding-bottom: 0; }
+  .profile-settings input[type="submit"] + p {
     width: 100%; } }
 
 @media (max-width: 340px) {
