@@ -19,13 +19,14 @@ $(document).ready(function() {
   var data_array = [450, 300, 48, 156, 376, 50, 220]; //Данные количества для графика
   var label_array = [month[5], month[6], month[7], month[8], month[9], month[10], month[11]] // Подписи для графика
 
+
   var bar = new RGraph.Bar({
     id: 'bar',
     data: data_array,
     options: {
       hmargin: 1,
-      xaxisLabels: label_array,
-
+      tooltipsEvent: 'mousemove',
+      labels: ["январь","январь","январь","январь","январь","январь","zz"],
       tooltips: [data_array[0] + " пользователей <br><span>просмотрело ваш профиль</span> ",
         data_array[1] + " пользователей <br><span>просмотрело ваш профиль</span> ",
         data_array[2] + " пользователей <br><span>просмотрело ваш профиль</span> ",
@@ -40,38 +41,13 @@ $(document).ready(function() {
       backgroundGridBorder: false,
       eventsClick: myClick
     }
-  });/*on('draw', function(obj) {
-    // Добавляем обработчики на каждый блок
-    for (var i = 0; i < obj.coords.length; ++i) {
-      (function(index, rect) {
-        // Меняем курсор на pointer
-        rect.addEventListener('mousemove', function(e) {
-          e.target.style.cursor = 'pointer';
-          /*    e.target.style.fill = "red";
-        }, false);
+  });
+  //Расчет размеров холста
+    var bar_ctx = $("#bar");
+    var bar_width = $("#statistic-bar").width();
+    bar_ctx.attr("width", bar_width);
 
-        rect.addEventListener('mouseover', function(e) {
-
-        }, false);
-
-
-        //
-        // При нажатии на него
-        //
-        rect.addEventListener('click', function(e) {
-          /*При нажатии на блок перерисовываем статистику внизу
-          quantity_views -- количество просмотров страницы за этот месяц,
-          quantity_month_grades -- количество отзывов за этот месяц,
-           good_month_grades -- количество хороших отзывов за этот месяц,
-            bad_month_grades -- количество плохих отзывов за этот месяц
-
-          diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades);
-        }, false);
-      })(i, obj.coords[i].object);
-    }*/
-
-
-
+      //Функция для перерисовки диаграмм при нажатии на статистику
   function myClick (e, shape)
     {
 
@@ -87,95 +63,26 @@ $(document).ready(function() {
 
   bar.draw();
 
-  $()
-
-
-  /*bar_draw(data_array, label_array);*/
-
   //Отрисовка статистики
   function bar_draw(data_array, label_array) {
     bar.original_data = data_array;
-    console.log(bar.original_data);
+    bar.original_label = label_array;
+
     RGraph.redraw();
-    //  $("#statistic-bar").empty();
-    console.log($("#statistic-bar"));
-    /*  var bar =  new RGraph.SVG.Bar({
-
-        id: 'statistic-bar',
-        data: data_array,
-        options: {
-          hmargin: 1,
-          xaxisLabels: label_array,
-
-          tooltips: [data_array[0] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-            data_array[1] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-            data_array[2] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-            data_array[3] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-            data_array[4] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-            data_array[5] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-            data_array[6] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-          ],
-
-          colors: ['Gradient(#66eeba:#00c9ff)'],
-          yaxis: false,
-          backgroundGridVlines: false,
-          backgroundGridBorder: false,
-
-        }
-      }).on('draw', function (obj)
-    {
-        // Loop through all the bars
-        for (var i=0; i<obj.coords.length; ++i) {
-            (function (index, rect)
-            {
-                // Change the pointer when hovering over the rect
-                rect.addEventListener('mousemove', function (e)
-                {
-                    e.target.style.cursor = 'pointer';
-                }, false);
-
-
-
-                //
-                // Do this when the rect is clicked
-                //
-                rect.addEventListener('click', function (e)
-                {
-                    if (!state2.selected[index]) {
-
-                        // Add the highlight
-                        highlight(obj, rect, index);
-
-                        state2.selected[index] = true;
-
-                        // The notify function simply tells the server what
-                        // bars are selected
-                        //
-                        notify();
-
-                    } else {
-                        state2.selected[index] = null;
-                    }
-                }, false);
-            })(i, obj.coords[i].object);
-        }
-
-        // Read the state2 variable and cover the relevant bars
-        for (var i=0; i<obj.data.length; ++i) {
-            if (state2.selected[i]) {
-                highlight(obj, obj.coords[i].object, i);
-            }
-        }
-    }).draw();
-*/
   }
 
-  $(window).resize(function() {
-      var bar_ctx = $("#bar").getContext();
-      var bar_width = $(".profile-content").outerWidth(true);
-      bar_ctx.canvas.width  = bar_width;
-        RGraph.redraw();
-  });
+
+  //Изменение размеров холста canvas при ресайзе
+  setTimeout(function() {
+    $(window).resize(function() {
+        var bar_ctx = $("#bar");
+        var bar_width = $("#statistic-bar").width();
+        bar_ctx.attr("width", bar_width);
+          RGraph.redraw();
+    });
+  }, 1000);
+
+
 
   $("#statistic-bar svg rect").click(diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades))
   /*Функция для отрисовки диаграмм с количеством оценок*/
@@ -187,9 +94,8 @@ $(document).ready(function() {
     var good_reviews_procent = good_month_grades * 100 / quantity_month_grades; //количество положительных
     var bad_reviews_procent = bad_month_grades * 100 / quantity_month_grades; //количество отрицательных
     var rating_text = quantity_month_grades;
-    //Удаляем предыдущие диаграммы
 
-    console.log("перерисованы диаграммы");
+    //Удаляем предыдущие диаграммы
     $("#rating-diagramm svg").remove();
     $("#good-review-diagramm svg").remove();
     $("#bad-review-diagramm svg").remove();
@@ -274,19 +180,15 @@ $(document).ready(function() {
 
       $("#from-date").html(month[from - 1]);
       $("#to-date").html(month[to - 1]);
-      console.log(from + " from");
-      console.log(to + " to");
       for (var u = from; u < to; u++) {
         label_array.push(month[u - 1]);
         data_array.push((u - 1) * 10);
-        console.log(label_array);
-        console.log(data_array);
+
       }
       bar_draw(data_array, label_array);
     },
     slide: function(event, ui) {
-      jQuery("input#minCost").val();
-      jQuery("input#maxCost").val();
+
     }
   });
 });
