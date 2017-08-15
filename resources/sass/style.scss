@@ -1368,7 +1368,17 @@ h4 {
       li {
         margin-left: 10px;
         padding-left: 35px;
+        &:first-of-type {
+          margin-top: -15px;text-align: center;
+        }
+        p{
+          text-align: center;
 
+          span {
+            color: #aaa;
+            font-size: 15px;
+          }
+        }
         &:nth-child(3) {
           margin-left: 0;
           padding-left: 24px;
@@ -2445,9 +2455,7 @@ h4 {
   position: relative;
   box-shadow: rgba(96, 96, 96, 0.5) 0 0 25px !important;
 
-  span:not(.quantity_views) {
-    color: #aeaeaf;
-  }
+
 
   &:before {
     content: "";
@@ -4177,11 +4185,14 @@ input {
 
     .profile-list {
       position: absolute;
-      height: 94%;
+
       top: 169px;
       background-color: #2f3336;
       width: 86px;
-
+      ul {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+      }
       li {
         height: 73px;
       }
