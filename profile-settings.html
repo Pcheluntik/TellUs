@@ -15,12 +15,12 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <!--Всплывающие окна-->
-  <script src="resources\js\jquery.arcticmodal-0.3.min.js"></script>
-  <link rel="stylesheet" href="resources\js\jquery.arcticmodal-0.3.css">
-  <script src="resources\js\maskedinput.min.js"></script>
+  <script src="resources/js/jquery.arcticmodal-0.3.min.js"></script>
+  <link rel="stylesheet" href="resources/js/jquery.arcticmodal-0.3.css">
+  <script src="resources/js/maskedinput.min.js"></script>
 
   <script src="resources/js/dropkick/jquery.dropkick-min.js"></script>
-  <link rel="stylesheet" href="resources\js\dropkick\dropkick.css">
+  <link rel="stylesheet" href="resources/js/dropkick/dropkick.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
           <a href="index.html">
           <img src="resources/img/logo.png" alt="TellUs" width="182" height="64">
           </a>
-               </div>
+        </div>
         <nav>
           <ul>
 
@@ -104,7 +104,7 @@
         <div class="content-for-profile">
           <div class="profile-menu">
             <div class="image">
-              <img src="resources\img\new-stock2.jpg" alt="">
+              <img src="resources/img/new-stock2.jpg" alt="">
             </div>
             <div class="profile-con">
               <div class="profile-description">
@@ -199,8 +199,6 @@
                     </select>
                 </div>
 
-
-
                 <div class="input-field add-tegs">
                   <label for="company-tegs">Ключевые слова</label>
                   <input type="text" id="company-tegs" placeholder="Введите ключевое слово">
@@ -221,11 +219,9 @@
                   </div>
                 </div>
 
-
                 <div class="input-field">
                   <label for="company-photo">Фото заведения</label>
                   <div class="pre-photo">
-
                   </div>
                   <div class="zone">
                     <div id="dropzone">
@@ -241,7 +237,6 @@
                     <div class="reqs">Формат фото JPG или PNG, размер файла до 10 Мб.</div>
                   </div>
                 </div>
-
 
                 <div class="input-field">
                   <label for="company-bonus">Выберите тип бонуса</label>
@@ -402,8 +397,8 @@
                   <input type="submit" class="full-button" value="Сохранить изменения">
                   <p>После сохранения изменения будут отправлены модератору</p>
                 </div>
+              </form>
             </div>
-            </form>
           </div>
         </div>
       </div>
@@ -414,10 +409,9 @@
     <div class="container-fluid">
       <div class="content">
         <div class="main-footer">
-
           <div class="footer-nav">
             <a class="logo" href="index.html">
-              <img src="resources\img\logo.png" alt="TellUs" width="182" height="64">
+              <img src="resources/img/logo.png" alt="TellUs" width="182" height="64">
             </a>
             <ul>
               <li>
@@ -431,7 +425,8 @@
           <div class="contacts">
             <ul>
               <li>
-                <p>+375445852882</p>
+                <p> <span>Свяжитесь с нами:</span>
+                  <br>+375445852882</p>
               </li>
               <li class="profile"><a href="" class="profile">Профиль</a></li>
               <li>
@@ -441,121 +436,119 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="copyright container-fluid">
-        <div class="content">
-          ©TellUs,2017 ИП "Игнатов Никита Александрович" УНП 192710796
-        </div>
+    <div class="copyright container-fluid">
+      <div class="content">
+        ©TellUs,2017 ИП "Игнатов Никита Александрович" УНП 192710796
       </div>
-
-
-      <div style="display: none;">
-        <div class="box-modal popup" id="add-address">
-          <div class="box-modal_close arcticmodal-close close-popup"></div>
-          <h3>Добавление адреса</h3>
-          <form action="" autocomplete="off">
-            <input type="text" name="address" value="" placeholder="Улица, дом, офис">
-            <input type="tel" name="address-phone" value="" placeholder="+375 (29) __-__-___">
-            <div class="add-phone">
-              <div class="plus"></div><input type="tel" name="address-phone-2" value="" placeholder="+375 (29) __-__-___">
-            </div>
-            <div class="address-work-time">
-              <div class="title">
-                <p>Рабочее время <span class="equally">одинаково</span></p>
-
-                <input type="checkbox" id="equally-week">
-                <label for="equally-week"></label>
-
-                <p class="week-days">по дням недели</p>
-              </div>
-              <div class="days">
-                <div class="day">
-                  <input type="checkbox" class="day-check" id="monday" value="" checked>
-                  <label for="monday">пн</label>
-                  <div class="from-to">
-                    <input type="text" id="mon-time-from" class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="mon-time-to" class="time-to" value="18:00">
-                  </div>
-                </div>
-
-                <div class="day">
-                  <input type="checkbox" class="day-check" value="" id="tuesday" checked>
-                  <label for="tuesday">вт</label>
-                  <div class="from-to">
-                    <input type="text" id="tue-time-from" class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="tue-time-to" class="time-to" value="18:00">
-                  </div>
-                </div>
-
-
-                <div class="day">
-                  <input type="checkbox" class="day-check" value="" id="wednesday" checked>
-                  <label for="wednesday">ср</label>
-                  <div class="from-to">
-                    <input type="text" id="wed-time-from" class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="wed-time-to" class="time-to" value="18:00">
-                  </div>
-                </div>
-
-
-                <div class="day">
-                  <input type="checkbox" class="day-check" value="" id="thursday" checked>
-                  <label for="thursday">чт</label>
-                  <div class="from-to">
-                    <input type="text" id="thu-time-from" class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="thu-time-to" class="time-to" value="18:00">
-                  </div>
-                </div>
-
-                <div class="day">
-                  <input type="checkbox" class="day-check" value="" id="friday" checked>
-                  <label for="friday">пт</label>
-                  <div class="from-to">
-                    <input type="text" id="fri-time-from" class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="fri-time-to" class="time-to" value="18:00">
-                  </div>
-                </div>
-
-
-                <div class="day">
-                  <input type="checkbox" class="day-check" value="" id="saturday">
-                  <label for="saturday">сб</label>
-                  <div class="from-to">
-                    <input type="text" id="sat-time-from" disabled class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="sat-time-to" disabled class="time-to" value="18:00">
-                  </div>
-                </div>
-
-                <div class="day">
-                  <input type="checkbox" class="day-check" value="" id="sunday">
-                  <label for="sunday">вс</label>
-                  <div class="from-to">
-                    <input type="text" id="sun-time-from" disabled class="time-from" value="09:00">
-                    <p>-</p>
-                    <input type="text" id="sun-time-to" disabled class="time-to" value="18:00">
-                  </div>
-                </div>
-
-                <div class="from-to-for-all">
-                  <input type="text" id="mon-time-from" class="time-from" value="09:00">
-                  <p>-</p>
-                  <input type="text" id="mon-time-to" class="time-to" value="18:00">
-                </div>
-              </div>
-            </div>
-            <input type="submit" name="" class="full-button add-address-btn" value="Сохранить">
-          </form>
-        </div>
-      </div>
-
+    </div>
   </footer>
 
+  <div style="display: none;">
+    <div class="box-modal popup" id="add-address">
+      <div class="box-modal_close arcticmodal-close close-popup"></div>
+      <h3>Добавление адреса</h3>
+      <form action="" autocomplete="off">
+        <input type="text" name="address" value="" placeholder="Улица, дом, офис">
+        <input type="tel" name="address-phone" value="" placeholder="+375 (29) __-__-___">
+        <div class="add-phone">
+          <div class="plus"></div><input type="tel" name="address-phone-2" value="" placeholder="+375 (29) __-__-___">
+        </div>
+        <div class="address-work-time">
+          <div class="title">
+            <p>Рабочее время <span class="equally">одинаково</span></p>
+
+            <input type="checkbox" id="equally-week">
+            <label for="equally-week"></label>
+
+            <p class="week-days">по дням недели</p>
+          </div>
+          <div class="days">
+            <div class="day">
+              <input type="checkbox" class="day-check" id="monday" value="" checked>
+              <label for="monday">пн</label>
+              <div class="from-to">
+                <input type="text" id="mon-time-from" class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="mon-time-to" class="time-to" value="18:00">
+              </div>
+            </div>
+
+            <div class="day">
+              <input type="checkbox" class="day-check" value="" id="tuesday" checked>
+              <label for="tuesday">вт</label>
+              <div class="from-to">
+                <input type="text" id="tue-time-from" class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="tue-time-to" class="time-to" value="18:00">
+              </div>
+            </div>
+
+
+            <div class="day">
+              <input type="checkbox" class="day-check" value="" id="wednesday" checked>
+              <label for="wednesday">ср</label>
+              <div class="from-to">
+                <input type="text" id="wed-time-from" class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="wed-time-to" class="time-to" value="18:00">
+              </div>
+            </div>
+
+
+            <div class="day">
+              <input type="checkbox" class="day-check" value="" id="thursday" checked>
+              <label for="thursday">чт</label>
+              <div class="from-to">
+                <input type="text" id="thu-time-from" class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="thu-time-to" class="time-to" value="18:00">
+              </div>
+            </div>
+
+            <div class="day">
+              <input type="checkbox" class="day-check" value="" id="friday" checked>
+              <label for="friday">пт</label>
+              <div class="from-to">
+                <input type="text" id="fri-time-from" class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="fri-time-to" class="time-to" value="18:00">
+              </div>
+            </div>
+
+
+            <div class="day">
+              <input type="checkbox" class="day-check" value="" id="saturday">
+              <label for="saturday">сб</label>
+              <div class="from-to">
+                <input type="text" id="sat-time-from" disabled class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="sat-time-to" disabled class="time-to" value="18:00">
+              </div>
+            </div>
+
+            <div class="day">
+              <input type="checkbox" class="day-check" value="" id="sunday">
+              <label for="sunday">вс</label>
+              <div class="from-to">
+                <input type="text" id="sun-time-from" disabled class="time-from" value="09:00">
+                <p>-</p>
+                <input type="text" id="sun-time-to" disabled class="time-to" value="18:00">
+              </div>
+            </div>
+
+            <div class="from-to-for-all">
+              <input type="text" id="mon-time-from" class="time-from" value="09:00">
+              <p>-</p>
+              <input type="text" id="mon-time-to" class="time-to" value="18:00">
+            </div>
+          </div>
+        </div>
+        <input type="submit" name="" class="full-button add-address-btn" value="Сохранить">
+      </form>
+    </div>
+  </div>
 
   <div style="display: none;">
     <div class="box-modal popup" id="partner">
@@ -570,10 +563,6 @@
     </div>
   </div>
 
-  <script src="resources\js\popap.js"></script>
-  <script src="resources\js\profile.js"></script>
-
-
 
   <script>
     /*Функция проверки картинки профиля*/
@@ -583,7 +572,6 @@
         dataType: 'json',
         maxFileSize: 256 * 1014,
         allowedTypes: 'image/*',
-
 
         /*Вызывает после успешной загрузки файла*/
         onUploadSuccess: function(id, response) {
@@ -614,18 +602,8 @@
     });
   </script>
 
-  <script type="text/javascript" charset="utf-8">
-
-  </script>
-
-  <script>
-
-  </script>
-
   <svg style="display: none;">
-
     <symbol viewBox="0 0 18.18 17" id="star">
-
       <path d="M1018.21,1225.7a1.263,1.263,0,0,0,.33-1.3,1.293,1.293,0,0,0-1.06-.87l-4.41-.62a0.6,0.6,0,0,1-.43-0.31l-1.97-3.89a1.319,1.319,0,0,0-2.34,0l-1.97,3.89a0.577,0.577,0,0,1-.43.31l-4.41.62a1.293,1.293,0,0,0-1.06.87,1.263,1.263,0,0,0,.33,1.3l3.19,3.03a0.558,0.558,0,0,1,.17.5l-0.75,4.27a1.226,1.226,0,0,0,.28,1.04,1.356,1.356,0,0,0,1.61.31l3.94-2.02a0.574,0.574,0,0,1,.54,0l3.94,2.02a1.434,1.434,0,0,0,.61.14,1.321,1.321,0,0,0,1-.45,1.226,1.226,0,0,0,.28-1.04l-0.75-4.27a0.558,0.558,0,0,1,.17-0.5Z"
         transform="translate(-1000.41 -1218)" />
     </symbol>
@@ -649,7 +627,11 @@
     </symbol>
     </svg>
 
-      <script src="resources\js\header.js"></script>
+
+  <script src="resources/js/popap.js"></script>
+  <script src="resources/js/profile.js"></script>
+  <script src="resources/js/header.js"></script>
+
 </body>
 
 </html>
