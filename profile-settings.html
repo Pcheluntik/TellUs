@@ -24,22 +24,16 @@
 </head>
 
 <body>
-
-
-
-
   <header>
     <div class="container-fluid">
-
       <div class="nav-pannel">
         <div class="logo">
-          <a href="index.html">
-          <img src="resources/img/logo.png" alt="TellUs" width="182" height="64">
+          <a href="#">
+            <img src="resources/img/logo.png" alt="TellUs" width="182" height="64">
           </a>
         </div>
         <nav>
           <ul>
-
             <li>
               <a href="category.html">Категории</a>
             </li>
@@ -47,9 +41,8 @@
               <a href="about.html">О нас</a>
             </li>
             <li class="shopper">
-              <a href="about.html">Тайный покупатель</a>
+              <a href="shopper.html">Тайный покупатель</a>
             </li>
-
             <li class="nav-search">
               <a href="">Поиск</a>
               <div class="search_panel">
@@ -90,6 +83,45 @@
             </li>
           </ul>
         </nav>
+      </div>
+    </div>
+
+    <!--Мобильное меню-->
+    <div style="display: none;">
+      <div class="box-modal mobile" id="mobile-menu">
+        <div class="box-modal_close arcticmodal-close close-mobile"></div>
+        <ul>
+          <li class="shopper">
+            <a href="shopper.html">Тайный покупатель</a>
+          </li>
+          <li>
+            <a href="about.html">О нас</a>
+          </li>
+          <li>
+            <a href="category.html">Категории</a>
+            <ul>
+              <li><a href="">Рестораны</a></li>
+              <li><a href="">Косметика и парфюмерия</a></li>
+              <li><a href="">Магазины одежды</a></li>
+              <li><a href="">Магазины бытовой техники</a></li>
+              <li><a href="">Цветочные магазины</a></li>
+              <li><a href="">Парикмахерские</a></li>
+              <li><a href="category_shops.html">Бары</a></li>
+              <li><a href="">Автомойки</a></li>
+              <li><a href="">СТО</a></li>
+              <li><a href="">Продуктовые магазины</a></li>
+              <li><a href="">Магазины электроники</a></li>
+              <li><a href="">Веломагазины</a></li>
+              <li><a href="">Медицинские центры</a></li>
+              <li><a href="">Автозапчасти</a></li>
+              <li><a href="">Спа-центры</a></li>
+              <li><a href="">Стоматология</a></li>
+              <li><a href="">Банки</a></li>
+              <li><a href="">Зоо-товары</a></li>
+              <li><a href="">Бижутерия</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -425,7 +457,8 @@
           <div class="contacts">
             <ul>
               <li>
-                <p> <span>Свяжитесь с нами:</span>
+                <p>
+                  <span>Свяжитесь с нами:</span>
                   <br>+375445852882</p>
               </li>
               <li class="profile"><a href="" class="profile">Профиль</a></li>
@@ -539,9 +572,9 @@
             </div>
 
             <div class="from-to-for-all">
-              <input type="text" id="mon-time-from" class="time-from" value="09:00">
+              <input type="text" id="all-time-from" class="time-from" value="09:00">
               <p>-</p>
-              <input type="text" id="mon-time-to" class="time-to" value="18:00">
+              <input type="text" id="all-time-to" class="time-to" value="18:00">
             </div>
           </div>
         </div>
