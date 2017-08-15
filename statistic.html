@@ -14,9 +14,13 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <script src="resources\js\jquery-3.1.1.min.js"></script>
-  <script src="resources\js\RGraph.svg.common.core.js"></script>
+<!--  <script src="resources\js\RGraph.svg.common.core.js"></script>
   <script src="resources\js\RGraph.svg.common.tooltips.js"></script>
-  <script src="resources\js\RGraph.svg.bar.js"></script>
+  <script src="resources\js\RGraph.svg.bar.js"></script> -->
+  <script src="resources\js\RGraph.common.core.js"></script>
+<script src="resources\js\RGraph.common.dynamic.js"></script>
+<script src="resources\js\RGraph.common.tooltips.js"></script>
+<script src="resources\js\RGraph.bar.js"></script>
 
 
   <script src="resources\js\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
@@ -201,7 +205,8 @@
                   </div>
                 </div>
               </div>
-              <div id="statistic-bar"> </div>
+              <div id="statistic-bar">
+              <canvas id="bar" width="724" height="350">[No canvas support]</canvas></div>
               <div class="statistic-quantity">
                 <p>Возможность увидеть, что нужно вашим клиентам, поток клиентов, узнавших о вас у нас на сайте, а так же это дешево и вы сможете быть на равне с заведениями любого класса</p>
                 <div class="diagramm">

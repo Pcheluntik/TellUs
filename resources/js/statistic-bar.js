@@ -19,8 +19,8 @@ $(document).ready(function() {
   var data_array = [450, 300, 48, 156, 376, 50, 220]; //Данные количества для графика
   var label_array = [month[5], month[6], month[7], month[8], month[9], month[10], month[11]] // Подписи для графика
 
-  var bar = new RGraph.SVG.Bar({
-    id: 'statistic-bar',
+  var bar = new RGraph.Bar({
+    id: 'bar',
     data: data_array,
     options: {
       hmargin: 1,
@@ -37,16 +37,17 @@ $(document).ready(function() {
       colors: ['Gradient(#66eeba:#00c9ff)'],
       yaxis: false,
       backgroundGridVlines: false,
-      backgroundGridBorder: false
+      backgroundGridBorder: false,
+      eventsClick: myClick
     }
-  }).on('draw', function(obj) {
+  });/*on('draw', function(obj) {
     // Добавляем обработчики на каждый блок
     for (var i = 0; i < obj.coords.length; ++i) {
       (function(index, rect) {
         // Меняем курсор на pointer
         rect.addEventListener('mousemove', function(e) {
           e.target.style.cursor = 'pointer';
-          /*    e.target.style.fill = "red";*/
+          /*    e.target.style.fill = "red";
         }, false);
 
         rect.addEventListener('mouseover', function(e) {
@@ -63,17 +64,30 @@ $(document).ready(function() {
           quantity_month_grades -- количество отзывов за этот месяц,
            good_month_grades -- количество хороших отзывов за этот месяц,
             bad_month_grades -- количество плохих отзывов за этот месяц
-          */
+
           diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades);
         }, false);
       })(i, obj.coords[i].object);
-    }
+    }*/
 
-  });
+
+
+  function myClick (e, shape)
+    {
+
+/*
+            quantity_views -- количество просмотров страницы за этот месяц,
+            quantity_month_grades -- количество отзывов за этот месяц,
+             good_month_grades -- количество хороших отзывов за этот месяц,
+              bad_month_grades -- количество плохих отзывов за этот месяц
+*/
+            diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades);
+
+    }
 
   bar.draw();
 
-
+  $()
 
 
   /*bar_draw(data_array, label_array);*/
@@ -156,6 +170,12 @@ $(document).ready(function() {
 */
   }
 
+  $(window).resize(function() {
+      var bar_ctx = $("#bar").getContext();
+      var bar_width = $(".profile-content").outerWidth(true);
+      bar_ctx.canvas.width  = bar_width;
+        RGraph.redraw();
+  });
 
   $("#statistic-bar svg rect").click(diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades))
   /*Функция для отрисовки диаграмм с количеством оценок*/
