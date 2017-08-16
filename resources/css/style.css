@@ -6079,6 +6079,8 @@ input.full-button {
   .search_panel form {
     max-width: 604px;
     position: relative; }
+    .search_panel form:focus {
+      width: 600px; }
   .search_panel label {
     position: absolute;
     width: 29px;
@@ -6100,7 +6102,8 @@ input.full-button {
       -webkit-box-shadow: 0 13px 60px -15px #37e6dd;
       box-shadow: 0 13px 60px -15px #37e6dd; }
     .search_panel input[type="text"]:focus {
-      outline-color: transparent; }
+      outline-color: transparent;
+      width: 50%; }
 
 header .container-fluid .nav-pannel {
   position: relative;
@@ -6226,6 +6229,9 @@ header .container-fluid .nav-pannel {
           -webkit-transition: opacity 0.5s, width 0.5s ease-out;
           z-index: -5;
           opacity: 0; }
+          header .container-fluid .nav-pannel nav ul li.nav-search .search_panel:focus,
+          header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel:focus {
+            width: 600px; }
           header .container-fluid .nav-pannel nav ul li.nav-search .search_panel input[type="text"],
           header .container-fluid .nav-pannel nav ul menu.nav-search .search_panel input[type="text"] {
             width: 0;
@@ -6399,7 +6405,9 @@ h2.black-bcg {
 .nav-pannel.special nav ul li.nav-search .search_panel input[type="text"] {
   border-top: 1px solid #f7f3f3 !important;
   border-left: 1px solid #f7f3f3 !important;
-  border-rightзу: 1px solid #f7f3f3 !important; }
+  border-right: 1px solid #f7f3f3 !important; }
+  .nav-pannel.special nav ul li.nav-search .search_panel input[type="text"]:focus {
+    width: 50%; }
 
 .nav-pannel.special .button:after {
   background-color: #fff; }
@@ -8021,7 +8029,6 @@ h4 {
   .statistic #statistic-bar {
     width: 100%;
     height: 350px;
-    margin-bottom: 88px;
     position: relative; }
   .statistic #slider-range {
     width: 100%;
@@ -8042,7 +8049,8 @@ h4 {
     flex-grow: 0;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-bottom: 30px; }
     .statistic .diagramm .circles-maxValueStroke {
       stroke-width: 3px; }
     .statistic .diagramm .circles-text {
@@ -8101,7 +8109,9 @@ h4 {
     width: 332px;
     color: #2f3336;
     opacity: 0.7;
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .quantity-views {
   border-right: 1px solid lightgrey;
@@ -8638,7 +8648,7 @@ h4 {
     .popup .close-popup:after, .popup .close-popup:before {
       position: absolute;
       left: 18px;
-      top: 10px;
+      top: 9px;
       content: ' ';
       height: 20px;
       width: 2px;
@@ -9623,10 +9633,14 @@ input:focus {
       top: 9px; }
   .search_panel form {
     min-width: 267px; }
+    .search_panel form:focus {
+      width: 100%; }
   .search_panel input[type="text"] {
     padding: 15px 38px 15px 15px;
     min-width: 267px;
     width: 100%; }
+    .search_panel input[type="text"]:focus {
+      width: 100%; }
   body.main-page:after {
     top: 131px;
     width: 54%;
@@ -9977,6 +9991,3 @@ input:focus {
       width: 80%; }
   .btns a {
     text-align: center; } }
-
-input:not([type="submit"]):focus {
-  border: 1px solid #ccc; }
