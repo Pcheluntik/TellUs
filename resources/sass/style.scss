@@ -54,6 +54,7 @@ input:focus {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    color: #fff;
     img {
       width: 50%;
       max-height: 432px;
@@ -67,12 +68,12 @@ input:focus {
     }
 
 
-    div + img {
-        padding-right: 20px;
+    div ~ img {
+        margin-left: 20px;
     }
 
-    img + div {
-      padding-left: 20px;
+    img ~ div {
+      margin-left: 20px;
     }
   }
 
@@ -149,7 +150,6 @@ input:focus {
     background-color: $colorBlackBackground;
     border: none;
     @include regularText($colorRegularFont: #fff);
-    margin-left: 58px;
     padding: 90px 50px 73px;
     position: relative;
 
@@ -162,6 +162,12 @@ input:focus {
       height: 10px;
       background-repeat: no-repeat;
       background-image: url("../img/subtitle_black.svg");
+    }
+    h4 {
+      color: #fff;
+    }
+    p {
+      @include regularText($colorRegularFont: #fff);
     }
   }
 

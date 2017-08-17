@@ -5873,7 +5873,8 @@ input:focus {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #fff; }
   .text .actor img {
     width: 50%;
     max-height: 432px;
@@ -5884,10 +5885,10 @@ input:focus {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center; }
-  .text .actor div + img {
-    padding-right: 20px; }
-  .text .actor img + div {
-    padding-left: 20px; }
+  .text .actor div ~ img {
+    margin-left: 20px; }
+  .text .actor img ~ div {
+    margin-left: 20px; }
 
 .text .shopper-may-be {
   display: -webkit-box;
@@ -5958,7 +5959,6 @@ input:focus {
   font-family: "Gilroy Light", "Arial", sans-serif;
   color: #fff;
   font-size: 1.25rem;
-  margin-left: 58px;
   padding: 90px 50px 73px;
   position: relative; }
   .text blockquote:before {
@@ -5970,6 +5970,12 @@ input:focus {
     height: 10px;
     background-repeat: no-repeat;
     background-image: url("../img/subtitle_black.svg"); }
+  .text blockquote h4 {
+    color: #fff; }
+  .text blockquote p {
+    font-family: "Gilroy Light", "Arial", sans-serif;
+    color: #fff;
+    font-size: 1.25rem; }
 
 .text .image-signature {
   font-family: "Gilroy Light", "Arial", sans-serif;
