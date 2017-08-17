@@ -4355,6 +4355,22 @@ input {
   .popup .close-popup {
     right: 8px;
   }
+
+  .text .actor {
+    flex-direction: column;
+    margin-bottom: 10px;
+    blockquote {
+      margin: 0;
+    }
+    div {
+      margin:  0 !important;
+    }
+    img {
+      width: 100%;
+      margin: 0 !important;
+      object-position: top;
+    }
+  }
 }
 @media (max-width: 758px) {
   html {
@@ -4848,6 +4864,7 @@ input {
   .text img {
     margin-top: 15px;
   }
+
 
   .text p {
     margin-bottom: 11px;

@@ -9648,7 +9648,23 @@ input:focus {
       float: left;
       margin-left: 7px; }
   .popup .close-popup {
-    right: 8px; } }
+    right: 8px; }
+  .text .actor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px; }
+    .text .actor blockquote {
+      margin: 0; }
+    .text .actor div {
+      margin: 0 !important; }
+    .text .actor img {
+      width: 100%;
+      margin: 0 !important;
+      -o-object-position: top;
+      object-position: top; } }
 
 @media (max-width: 758px) {
   html {
