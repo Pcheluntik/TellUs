@@ -5,12 +5,12 @@ $(document).ready(function() {
   offset: 100
   });
 
-  jQuery('p').addClass("hid").viewportChecker({
-  classToAdd: 'vis animated fadeIn',
+  jQuery('.text p').addClass("hid").viewportChecker({
+  classToAdd: 'vis animated flipInX',
   offset: 100
   });
   jQuery('.text ul').addClass("hid").viewportChecker({
-  classToAdd: 'vis animated bounceInDown',
+  classToAdd: 'vis animated flipInX',
   offset: 100
   });
 
