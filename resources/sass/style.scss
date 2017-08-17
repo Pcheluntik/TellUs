@@ -50,6 +50,31 @@ input:focus {
     margin-bottom: 40px;
   }
 
+  .actor {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    img {
+      width: 50%;
+      max-height: 432px;
+      object-fit: cover;
+      margin-top: 0;
+
+    }
+    div {
+      align-self: center;
+
+    }
+
+
+    div + img {
+        padding-right: 20px;
+    }
+
+    img + div {
+      padding-left: 20px;
+    }
+  }
 
 
   .shopper-may-be {

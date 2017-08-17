@@ -5863,6 +5863,32 @@ input:focus {
 .text h2 {
   margin-bottom: 40px; }
 
+.text .actor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 20px; }
+  .text .actor img {
+    width: 50%;
+    max-height: 432px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-top: 0; }
+  .text .actor div {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .text .actor div + img {
+    padding-right: 20px; }
+  .text .actor img + div {
+    padding-left: 20px; }
+
 .text .shopper-may-be {
   display: -webkit-box;
   display: -webkit-flex;
