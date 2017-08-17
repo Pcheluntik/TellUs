@@ -10059,3 +10059,9 @@ input:focus {
       width: 80%; }
   .btns a {
     text-align: center; } }
+
+.hid {
+  opacity: 0; }
+
+.vis {
+  opacity: 1; }

@@ -4378,7 +4378,7 @@ input {
         object-position: top;
       }
     }
-    
+
   .search {
     p {
       width: 70%;
@@ -4991,4 +4991,11 @@ input {
       text-align: center;
     }
   }
+}
+
+.hid{
+opacity:0;
+}
+.vis{
+opacity:1;
 }
