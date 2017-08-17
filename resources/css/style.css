@@ -9650,7 +9650,9 @@ input:focus {
       float: left;
       margin-left: 7px; }
   .popup .close-popup {
-    right: 8px; } }
+    right: 8px; }
+  .search p {
+    width: 50%; } }
 
 @media (max-width: 758px) {
   html {
@@ -9672,7 +9674,7 @@ input:focus {
       -o-object-position: top;
       object-position: top; }
   .search p {
-    width: 70%; }
+    width: 50%; }
   .category {
     margin-top: -20px; }
   header .container-fluid .nav-pannel .logo {

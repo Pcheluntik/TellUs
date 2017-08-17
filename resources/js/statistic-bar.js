@@ -42,6 +42,7 @@ $(document).ready(function() {
       eventsClick: myClick
     }
   });
+
   //Расчет размеров холста
     var bar_ctx = $("#bar");
     var bar_width = $("#statistic-bar").width();
@@ -50,7 +51,6 @@ $(document).ready(function() {
       //Функция для перерисовки диаграмм при нажатии на статистику
   function myClick (e, shape)
     {
-
 /*
             quantity_views -- количество просмотров страницы за этот месяц,
             quantity_month_grades -- количество отзывов за этот месяц,
@@ -60,8 +60,14 @@ $(document).ready(function() {
             diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades);
 
     }
+if($(window).width()<640)
+{
+  adaptive(data_array, label_array);
+}
+else {
+    bar.draw();
+}
 
-  bar.draw();
 
   //Отрисовка статистики
   function bar_draw(data_array, label_array) {
@@ -75,13 +81,28 @@ $(document).ready(function() {
   //Изменение размеров холста canvas при ресайзе
   setTimeout(function() {
     $(window).resize(function() {
+      if($(window).width()>640)
+      {
         var bar_ctx = $("#bar");
         var bar_width = $("#statistic-bar").width();
         bar_ctx.attr("width", bar_width);
           RGraph.redraw();
+
+      }
+      else {
+      adaptive(data_array, label_array);
+      }
     });
   }, 1000);
 
+/*Для адаптива*/
+  function adaptive(data_array, label_array) {
+    $("#statistic-bar").empty();
+    console.log($("#statistic-bar").html());
+    for(var b = 0; b<data_array.length;b++) {
+      $("#statistic-bar").append("<p>"+label_array[b]+"-"+data_array[b]+"пользователей</p>");
+    }
+  }
 
 
   $("#statistic-bar svg rect").click(diagramms(quantity_views, quantity_month_grades, good_month_grades, bad_month_grades))
@@ -185,7 +206,14 @@ $(document).ready(function() {
         data_array.push((u - 1) * 10);
 
       }
-      bar_draw(data_array, label_array);
+      if($(window).width()<640)
+      {
+        adaptive(data_array, label_array);
+      }
+      else {
+        bar_draw(data_array, label_array);
+      }
+
     },
     slide: function(event, ui) {
 
