@@ -4356,27 +4356,29 @@ input {
     right: 8px;
   }
 
-  .text .actor {
-    flex-direction: column;
-    margin-bottom: 10px;
-    blockquote {
-      margin: 0;
-    }
-    div {
-      margin:  0 !important;
-    }
-    img {
-      width: 100%;
-      margin: 0 !important;
-      object-position: top;
-    }
-  }
 }
 @media (max-width: 758px) {
   html {
     font-size: 10px;
   }
 
+
+    .text .actor {
+      flex-direction: column;
+      margin-bottom: 10px;
+      blockquote {
+        margin: 0;
+      }
+      div {
+        margin:  0 !important;
+      }
+      img {
+        width: 100%;
+        margin: 0 !important;
+        object-position: top;
+      }
+    }
+    
   .search {
     p {
       width: 70%;
