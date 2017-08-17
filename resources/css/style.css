@@ -8716,8 +8716,7 @@ h4 {
     .popup .close-popup:focus {
       outline: none; }
 
-#authorization,
-#shopper {
+#authorization {
   width: 50%; }
 
 /*
@@ -9374,6 +9373,9 @@ input:focus {
   .btns a {
     margin-top: 10px;
     margin-right: 5px; }
+
+#shopper {
+  width: 80%; }
 
 #seller {
   width: 80%; }

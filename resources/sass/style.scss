@@ -3206,8 +3206,7 @@ width: 92%;
   }
 }
 
-#authorization,
-#shopper {
+#authorization {
   width: 50%;
 }
 /*
@@ -3929,7 +3928,9 @@ input {
     margin-right: 5px;
   }
 }
-
+#shopper {
+  width: 80%;
+}
 #seller {
   width: 80%;
 
