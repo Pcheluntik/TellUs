@@ -46,10 +46,24 @@ input:focus {
     @include regularText($fontRegularSize: 1.25rem);
     margin-bottom: 33px;
   }
-
-  .vertical-img {
-    width: 50%;
+  h2 {
+    margin-bottom: 40px;
   }
+
+
+
+  .shopper-may-be {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .vertical-img {
+
+      object-fit: cover;
+    max-height: 342px;
+      width: 40%;
+    }
+  }
+
 
   img {
     margin-top: 33px;

@@ -5860,8 +5860,28 @@ input:focus {
   font-size: 1.25rem;
   margin-bottom: 33px; }
 
-.text .vertical-img {
-  width: 50%; }
+.text h2 {
+  margin-bottom: 40px; }
+
+.text .shopper-may-be {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+  .text .shopper-may-be .vertical-img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-height: 342px;
+    width: 40%; }
 
 .text img {
   margin-top: 33px; }
