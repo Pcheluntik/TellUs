@@ -6686,6 +6686,18 @@ h3 {
     flex-direction: row;
     padding-left: 0;
     position: relative; }
+    .new-stock .new-stock_carousel .stock_image {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%; }
+      .new-stock .new-stock_carousel .stock_image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f00; }
     .new-stock .new-stock_carousel .slick-slide:not(.tag) {
       margin-right: 16px; }
       .new-stock .new-stock_carousel .slick-slide:not(.tag) h4 {
@@ -6862,18 +6874,7 @@ h3 {
   margin-bottom: 30px;
   -webkit-box-shadow: 0 21px 12px -10px rgba(0, 0, 0, 0.13);
   box-shadow: 0 21px 12px -10px rgba(0, 0, 0, 0.13);
-  background-color: #fff;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%; }
-  .stock_image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f00; }
+  background-color: #fff; }
   .stock_image .stock_way {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-weight: bold;
