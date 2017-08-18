@@ -83,11 +83,14 @@ else {
     $(window).resize(function() {
       if($(window).width()>640)
       {
+      $("#statistic-bar").empty();
+        console.log("empty");
+        $("#statistic-bar").html('<canvas id="bar" width="724" height="350">[No canvas support]</canvas></div>');
+console.log("add " + $("#statistic-bar").html());
         var bar_ctx = $("#bar");
         var bar_width = $("#statistic-bar").width();
         bar_ctx.attr("width", bar_width);
           RGraph.redraw();
-
       }
       else {
       adaptive(data_array, label_array);
@@ -179,8 +182,44 @@ else {
     });
   }
 
+  $('input[name=date-from-to]').nativeMultiple({
+      stylesheet: "slider",
+      onCreate: function() {
+          console.log(this);
+      },
+      onChange: function(first_value, second_value) {
+      
+        label_array.length = 0;
+        data_array.length = 0;
+        var from = first_value;
+        var to = second_value;
+        if (from > 12) {
+          from = from - 12;
+        }
+        if (to > 12) {
+          to = to - 12;
+        }
+        $("#from-date").html(month[from - 1]);
+        $("#to-date").html(month[to - 1]);
+        for (var u = from; u < to; u++) {
+          label_array.push(month[u - 1]);
+          data_array.push((u - 1) * 10);
 
-  jQuery("#slider").slider({
+        }
+        if($(window).width()<640)
+        {
+          adaptive(data_array, label_array);
+        }
+        else {
+          bar_draw(data_array, label_array);
+        }
+      },
+     onSlide: function(first_value, second_value) {
+
+      }
+  });
+
+/*  jQuery("#slider").slider({
     min: 13,
     max: 24,
     values: [12, 24],
@@ -218,5 +257,5 @@ else {
     slide: function(event, ui) {
 
     }
-  });
+  });*/
 });

@@ -641,6 +641,10 @@ header {
   h1 {
     padding-bottom: 0;
     margin-bottom: 65px;
+    position: relative;
+z-index: 30;
+width: 70%;
+
     text-shadow: 0 0 1px #ccc;
   }
 
@@ -970,8 +974,8 @@ h3 {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #f00;
-      }  
+        background-color: #ccc;
+      }
     }
 
     .slick-slide:not(.tag) {
@@ -1724,11 +1728,12 @@ h4 {
 .organisation-page {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-between;
   padding-top: 80px;
 
   .description {
-    width: 55%;
+    width: 49%;
 
     p {
       margin-bottom: 140px;
@@ -1736,11 +1741,9 @@ h4 {
   }
 
   .stock_image {
-    position: absolute;
-    left: 0;
-    top: 90px;
-    width: 494px;
-    height: 501px;
+    max-width: 500px;
+    width: 100%;
+    height: 383px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 3px 29px 0 rgba(0, 0, 0, 0.35);
 
@@ -1748,6 +1751,7 @@ h4 {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
 }
@@ -2061,6 +2065,22 @@ h4 {
       }
     }
 
+    .stock_image {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+      }
+    }
+
     p:not(.stock-way) {
       color: $colorFontAtBlackBcg;
       transition: 0.5s;
@@ -2123,7 +2143,9 @@ h4 {
     }
   }
 }
-
+.org-info {
+  margin-top: -50px;
+}
 .organisation-list-page {
   h1 {
     margin-bottom: 40px;
@@ -3859,6 +3881,7 @@ input {
   left: 0;
   top: 0;
   position: absolute;
+  min-height: 100vh;
 
   ul {
     list-style: none;
@@ -4001,6 +4024,10 @@ input {
   }
 }
 @media (max-width: 1100px) {
+
+  .category-page.top {
+    flex-direction: column;
+  }
   header .container-fluid .nav-pannel {
     padding: 5px 1%;
 
@@ -4197,7 +4224,8 @@ input {
       position: relative;
       width: 49%;
       height: 353px;
-      top: 0;
+
+
       margin-bottom: 0;
       align-self: center;
     }
@@ -4394,6 +4422,9 @@ input {
 @media (max-width: 758px) {
   html {
     font-size: 10px;
+  }
+  .org-info {
+    margin-top: -20px;
   }
 
   .text .actor {
