@@ -73,7 +73,6 @@ else {
   function bar_draw(data_array, label_array) {
     bar.original_data = data_array;
     bar.original_label = label_array;
-
     RGraph.redraw();
   }
 
@@ -85,8 +84,7 @@ else {
       {
       $("#statistic-bar").empty();
         console.log("empty");
-        $("#statistic-bar").html('<canvas id="bar" width="724" height="350">[No canvas support]</canvas></div>');
-console.log("add " + $("#statistic-bar").html());
+        $("#statistic-bar").html('<canvas id="bar" width="724" height="350">[No canvas support]</canvas>');
         var bar_ctx = $("#bar");
         var bar_width = $("#statistic-bar").width();
         bar_ctx.attr("width", bar_width);
@@ -185,14 +183,14 @@ console.log("add " + $("#statistic-bar").html());
   $('input[name=date-from-to]').nativeMultiple({
       stylesheet: "slider",
       onCreate: function() {
-          console.log(this);
+
       },
       onChange: function(first_value, second_value) {
-      
         label_array.length = 0;
         data_array.length = 0;
         var from = first_value;
         var to = second_value;
+        //Обработка переданного номера месяца, надо отправить на сервер и вернуть значения
         if (from > 12) {
           from = from - 12;
         }
@@ -206,6 +204,8 @@ console.log("add " + $("#statistic-bar").html());
           data_array.push((u - 1) * 10);
 
         }
+
+        //отрисовка в зависимости от разрешения
         if($(window).width()<640)
         {
           adaptive(data_array, label_array);
@@ -219,43 +219,4 @@ console.log("add " + $("#statistic-bar").html());
       }
   });
 
-/*  jQuery("#slider").slider({
-    min: 13,
-    max: 24,
-    values: [12, 24],
-    range: true,
-    disabled: false,
-    stop: function(event, ui) {
-      label_array.length = 0;
-      data_array.length = 0;
-      var from = jQuery("#slider").slider("values", 0);
-      var to = jQuery("#slider").slider("values", 1);
-
-      if (from > 12) {
-        from = from - 12;
-      }
-      if (to > 12) {
-        to = to - 12;
-      }
-
-      $("#from-date").html(month[from - 1]);
-      $("#to-date").html(month[to - 1]);
-      for (var u = from; u < to; u++) {
-        label_array.push(month[u - 1]);
-        data_array.push((u - 1) * 10);
-
-      }
-      if($(window).width()<640)
-      {
-        adaptive(data_array, label_array);
-      }
-      else {
-        bar_draw(data_array, label_array);
-      }
-
-    },
-    slide: function(event, ui) {
-
-    }
-  });*/
 });

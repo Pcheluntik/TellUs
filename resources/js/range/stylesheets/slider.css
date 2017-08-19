@@ -1,16 +1,26 @@
 /**
- * 
+ *
  */
 .nativeMultiple {
 	position: relative;
 	background: white;
-	border: 1px #347EB7 solid;
+
 	border-radius: 4px;
-	height: 40px;
+	background-color: transparent;
+	height: 20px;
+}
+.nativeMultiple::after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #aaa;
+	top: 45%;
+	left: 0;
+	position: absolute;
 }
 
 .nativeMultiple > div {
-	height: 40px;
+	height: 20px;
 }
 
 .nativeMultiple > div:last-child > div {
@@ -52,9 +62,10 @@
  */
 .nativeMultiple input[type=range]::-webkit-slider-thumb {
 	border: 0;
-	height: 40px;
-	width: 60px;
-	background: #347EB7;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background: rgb(21, 209, 241);
 	cursor: pointer;
 	z-index: 20;
 	-webkit-appearance: none;
@@ -62,7 +73,7 @@
 }
 
 .nativeMultiple > div:last-child input[type=range]::-webkit-slider-thumb {
-	border-left: 1px #206AA3 solid;
+	border-left: 1px #ccc solid;
 }
 
 .nativeMultiple input[type=range]::-webkit-slider-thumb:after, .nativeMultiple input[type=range]::-webkit-slider-thumb:before {
@@ -84,14 +95,14 @@
  */
 .nativeMultiple input[type=range]::-moz-range-thumb {
 	border: 0;
-	height: 40px;
-	width: 60px;
-	background: #347EB7;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background: rgb(21, 209, 241);
 	cursor: pointer;
 	z-index: 20;
 	position: absolute;
 	top: 20px;
-	border-radius: 0;
 }
 
 .nativeMultiple input[type=range]::-moz-range-track {
@@ -114,17 +125,17 @@
 }
 
 .nativeMultiple input[type=range]::-ms-fill-lower {
-    background: transparent;
+    background:  #ccc;
 }
 
 .nativeMultiple input[type=range]::-ms-thumb {
 	border: 0;
-	height: 40px;
-	width: 60px;
-	background: #347EB7;
+	height: 20px;
+	width: 20px;
+	background: rgb(21, 209, 241);
 	cursor: pointer;
 	z-index: 20;
 	position: absolute;
 	top: 20px;
-	border-radius: 0;
+	border-radius: 50%;
 }
