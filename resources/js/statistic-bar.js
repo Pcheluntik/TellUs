@@ -1,8 +1,10 @@
 $(document).ready(function() {
+//Переменные для проверки
+var month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+var year = ['2017', '2017', '2017', '2017', '2017', '2017', '2017'];
 
-  var month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-  var year = ['2017', '2017', '2017', '2017', '2017', '2017', '2017'];
-
+  var tooltips_array = [];
+    var label_array = [];
 
   var quantity_month_grades = 500;
   var quantity_views = 800;
@@ -16,8 +18,24 @@ $(document).ready(function() {
 
   quantity_views_sql(50);
 
+
+  function tooltip_add(data_array) {
+
+    for (var i = 0; i<data_array.length; i++) {
+      tooltips_array.push(data_array[i] + " пользователей <br><span>просмотрело ваш профиль</span> ");
+    }
+    return tooltips_array;
+  }
+
+  function label_add(data_array) {
+    for (var i = 0; i<data_array.length; i++) {
+      label_array.push(month[i]);
+    }
+    return label_array;
+  }
+
   var data_array = [450, 300, 48, 156, 376, 50, 220]; //Данные количества для графика
-  var label_array = [month[5], month[6], month[7], month[8], month[9], month[10], month[11]] // Подписи для графика
+
 
 
   var bar = new RGraph.Bar({
@@ -26,15 +44,8 @@ $(document).ready(function() {
     options: {
       hmargin: 1,
       tooltipsEvent: 'mousemove',
-      labels: ["январь","январь","январь","январь","январь","январь","zz"],
-      tooltips: [data_array[0] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-        data_array[1] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-        data_array[2] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-        data_array[3] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-        data_array[4] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-        data_array[5] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-        data_array[6] + " пользователей <br><span>просмотрело ваш профиль</span> ",
-      ],
+      labels: label_add(data_array),
+      tooltips: tooltip_add(data_array),
       colors: ['Gradient(#66eeba:#00c9ff)'],
       yaxis: false,
       backgroundGridVlines: false,
@@ -71,8 +82,11 @@ else {
 
   //Отрисовка статистики
   function bar_draw(data_array, label_array) {
+    var tooltips_array = [];
+    var label_array = [];
     bar.original_data = data_array;
-    bar.original_label = label_array;
+
+
     RGraph.redraw();
   }
 
@@ -188,6 +202,7 @@ else {
       onChange: function(first_value, second_value) {
         label_array.length = 0;
         data_array.length = 0;
+        tooltips_array.length = 0;
         var from = first_value;
         var to = second_value;
         //Обработка переданного номера месяца, надо отправить на сервер и вернуть значения
@@ -204,7 +219,7 @@ else {
           data_array.push((u - 1) * 10);
 
         }
-
+        tooltip_add(data_array);
         //отрисовка в зависимости от разрешения
         if($(window).width()<640)
         {
